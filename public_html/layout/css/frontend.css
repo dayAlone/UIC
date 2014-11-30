@@ -5239,13 +5239,12 @@ body {
   width: 100%;
   margin: 0px 0 35px;
 }
-.directions .page__divider {
+.directions .page__divider,
+.application .page__divider {
   display: none;
 }
 .page__divider--blue {
   background: #0070d5;
-}
-.page__divider + .products {
   margin-top: -10px;
 }
 .page .sections-side {
@@ -5497,6 +5496,57 @@ body {
     width: 80%;
     padding: 0 30px;
   }
+}
+.application {
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+}
+.application__frame {
+  float: left;
+  width: 100%;
+  border: 1px solid #eb3037;
+  padding: 35px 25px;
+  position: relative;
+}
+.application__frame label {
+  float: left;
+  width: 100%;
+  text-transform: uppercase;
+  color: #1d2a3a;
+  font-size: 13px;
+}
+.application__frame .row {
+  margin-right: -5px;
+  margin-left: -5px;
+}
+.application__frame .row > [class*='col-'] {
+  padding: 0 5px;
+}
+.application__frame .row+.row {
+  margin-top: 25px;
+}
+.application__frame input[type="text"] {
+  background: #eaeef3;
+  float: left;
+  width: 100%;
+  border: 0;
+  line-height: 102%;
+  height: 35px;
+  padding: 0 15px;
+  -webkit-box-shadow: inset 1px 1px 2px 0 #b6b8bc;
+  box-shadow: inset 1px 1px 2px 0 #b6b8bc;
+}
+.application__frame-title {
+  position: absolute;
+  color: #eb3037;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 0 8px;
+  top: -8px;
+  left: 17px;
+  background: #fff;
 }
 .shedule {
   float: left;
@@ -5797,7 +5847,7 @@ body {
   font-size: 20px;
 }
 .index {
-  min-height: 750px;
+  min-height: 800px;
   position: relative;
 }
 .index .toolbar::before {
@@ -5964,7 +6014,7 @@ body {
 }
 .block--courses {
   background: #424f6c;
-  min-height: 357px;
+  min-height: 361px;
 }
 .block--courses h2 {
   margin-top: 0;
