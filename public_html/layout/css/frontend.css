@@ -6643,7 +6643,8 @@ body:not(.index) .page__content p.highlight {
   line-height: 26px;
 }
 body:not(.index) .page__content ul {
-  margin-top: 20px;
+  margin-top: 17px;
+  margin-bottom: 30px;
 }
 body:not(.index) .page__content ul li {
   list-style: none;
@@ -6773,8 +6774,9 @@ body:not(.index) .page__content .slide__content {
 }
 body:not(.index) .page__content li {
   font-size: 15px;
-  line-height: 23px;
+  line-height: 21px;
   margin-bottom: 9px;
+  color: #333e47;
 }
 body:not(.index) .page__content li a {
   color: #0053b3;
