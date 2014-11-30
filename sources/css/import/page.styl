@@ -261,6 +261,14 @@ body
 		margin-top 20px
 	&__frame + &__frame
 		margin-top 30px
+	&__label
+		&--small
+			line-height 39px
+			padding-right 10px
+			width auto !important
+	&__input
+		&--small
+			width 95px !important
 	&__frame
 		full-width()
 		border 1px solid #eb3037
@@ -330,7 +338,7 @@ body
 				content ""
 				border 1px solid #d1dae1
 				box-shadow inset 0 0 0 2px white
-				t(border, background)
+				t(border-color, background)
 				left 23px
 				top 14px
 			&--active
@@ -923,7 +931,7 @@ body:not(.index)
 				color #0053b3
 		p
 			color #333e47
-			font-size 14px
+			font-size 15px
 			line-height 21px
 			max-width 96%
 			margin-bottom 15px
