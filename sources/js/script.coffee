@@ -24,6 +24,10 @@ map = undefined
 
 size = ->
 	#autoHeight($('.page .tech'), '.tech__item', '.tech__title', false, true)
+	if $('.page__sidebar').height() > $('.page__picture').height()+$('.page__sidebar-content').height()
+		$('.page__sidebar-content').mod('fixed', true)
+	else
+		$('.page__sidebar-content').mod('fixed', false)
 	$('body:not(.index) .page__content > .row').css
 		minHeight : ->
 			h = $(window).height() - $('.footer').outerHeight()*2 - $('.page__content').offset().top - 25
@@ -159,6 +163,8 @@ $(document).ready ->
 				options:
 					duration: 300
 					delay: 200
+					complete: ()->
+						size()
 					begin: ()->
 						item.mod('open', true)
 						$.each items, (key, el)->

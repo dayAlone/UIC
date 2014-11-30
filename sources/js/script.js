@@ -29,6 +29,11 @@
   map = void 0;
 
   size = function() {
+    if ($('.page__sidebar').height() > $('.page__picture').height() + $('.page__sidebar-content').height()) {
+      $('.page__sidebar-content').mod('fixed', true);
+    } else {
+      $('.page__sidebar-content').mod('fixed', false);
+    }
     $('body:not(.index) .page__content > .row').css({
       minHeight: function() {
         var h;
@@ -210,6 +215,9 @@
           options: {
             duration: 300,
             delay: 200,
+            complete: function() {
+              return size();
+            },
             begin: function() {
               item.mod('open', true);
               return $.each(items, function(key, el) {

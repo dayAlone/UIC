@@ -16,7 +16,7 @@ body
 		height 100%
 		width 100%
 		background-size cover
-		max-height 900px
+		height 900px
 		t(height)
 	&__sidebar
 		position absolute
@@ -26,11 +26,15 @@ body
 		background #1c2537
 		height 100%
 		width 23%
+		t(height)
 		&-content
 			position absolute
 			bottom 0
 			left 0
 			width 100%
+			&--fixed
+				top 900px
+				bottom auto
 	&__content
 		> .row
 			background white

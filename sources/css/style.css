@@ -2016,7 +2016,7 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  max-height: 900px;
+  height: 900px;
   -webkit-transition-property: height;
   -moz-transition-property: height;
   -o-transition-property: height;
@@ -2036,12 +2036,26 @@ body {
   background: #1c2537;
   height: 100%;
   width: 23%;
+  -webkit-transition-property: height;
+  -moz-transition-property: height;
+  -o-transition-property: height;
+  -ms-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 .page__sidebar-content {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
+}
+.page__sidebar-content--fixed {
+  top: 900px;
+  bottom: auto;
 }
 .page__content {
   position: relative;
