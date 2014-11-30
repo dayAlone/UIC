@@ -1,6 +1,13 @@
 <?
 $aMenuLinks = Array(
 	Array(
+		"ТКС-холдинг", 
+		"http://tkc-group.ru", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
 		"аргус пайплайн сервис", 
 		"http://oooaps.ru", 
 		Array(), 
@@ -24,13 +31,6 @@ $aMenuLinks = Array(
 	Array(
 		"спецнефтегаз-т", 
 		"#", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"уиц ронктд “спектр”", 
-		"http://uic-spektr.ru", 
 		Array(), 
 		Array(), 
 		"" 
