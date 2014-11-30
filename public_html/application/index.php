@@ -82,11 +82,11 @@ $APPLICATION->SetPageProperty('show_courses', 'true');
   <div class="application__frame application__frame--short"><div class="application__frame-title">сведения об обучении</div></div>
   <div class="application__tabs">
     <div class="row no-gutter">
-      <div class="col-xs-3"><a href="#" class="application__tabs-item application__tabs-item--active">Обучение <br>(повышение квалификации) по программе:</a></div>
-      <div class="col-xs-9"><a href="#" class="application__tabs-item ">Повышение квалификации по программе “методы наразрушающего контроля: автоматизированный ультразвуковой контроль при строительстве объектов промысловых и магистральных газопроводов ОАО ”газпром”</a></div>
+      <div class="col-xs-3"><a href="#tab1" class="application__tabs-item application__tabs-item--active">Обучение <br>(повышение квалификации) по программе:</a></div>
+      <div class="col-xs-9"><a href="#tab2" class="application__tabs-item ">Повышение квалификации по программе “методы наразрушающего контроля: автоматизированный ультразвуковой контроль при строительстве объектов промысловых и магистральных газопроводов ОАО ”газпром”</a></div>
     </div>
   </div>
-  <div class="application__frame">
+  <div class="application__frame application__tabs-content" id="tab1">
     <div class="row">
       <div class="col-xs-12">
         <select name="programm" class="application__chosen" data-placeholder="Выберите программу обучения">
@@ -122,6 +122,47 @@ $APPLICATION->SetPageProperty('show_courses', 'true');
         <input type="text" name="last_date">
       </div>
     </div>
+  </div>
+  <div class="application__frame application__tabs-content application__tabs-content--disable" id="tab2">
+    <div class="row">
+      <div class="col-xs-6">
+        <label for="">фио слушателя</label>
+        <input type="text" name="fio">
+      </div>
+      <div class="col-xs-6">
+        <label for="">профессия (должность) слушателя</label>
+        <input type="text" name="count">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6">
+        <label for="">имеющийся уровень по узк</label>
+        <input type="text" name="fio">
+      </div>
+      <div class="col-xs-6">
+        <label for="">номер удостоверения по узк и дата выдачи</label>
+        <input type="text" name="count">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6">
+        <label for="">опыт работы по узк</label>
+        <input type="text" name="count">
+      </div>
+      <div class="col-xs-6">
+        <label for="">желаемый срок обучения</label>
+        <label class="application__label application__label--small xxs-margin-left">начало</label>
+        <input type="text" name="start" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
+        <label class="application__label application__label--small">окончание</label>
+        <input type="text" name="end" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
+      </div>
+    </div>
+    <small>
+      Требования, предъявляемые к дефектоскопистам (специалистам), направленным на курсы повышения квалификации по автоматизированному ультразвуковому контролю:<br>
+      - специалисты должны быть аттестованны в соответствии с ПБ 03-440-02 «Правилами аттестации персонала в области неразрушающего  контроля» по ультразвуковому методу НК на 2 уровень допуска;<br>
+      - иметь опыт работы не менее 3 лет в области НК;<br>
+      - рекомендуется иметь среднее профессиональное или высшее профильное образование.<br>
+    </small>
   </div>
 </form>
 <?

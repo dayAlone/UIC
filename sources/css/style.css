@@ -2382,12 +2382,29 @@ body {
 .application__input--small {
   width: 95px !important;
 }
+.application__tabs-content {
+  margin-top: 0 !important;
+}
+.application__tabs-content--disable {
+  display: none;
+}
 .application__frame {
   float: left;
   width: 100%;
   border: 1px solid #eb3037;
   padding: 35px 25px;
   position: relative;
+}
+.application__frame small {
+  font-size: 10px;
+  opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
+  line-height: 12px !important;
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: -10px;
 }
 .application__frame--short {
   border: 0;

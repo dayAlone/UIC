@@ -204,6 +204,20 @@
 
   $(document).ready(function() {
     var closeDropdown, mapInit, openDropdown, timer, x;
+    $('.application').elem('tabs-item').click(function(e) {
+      var id;
+      id = $(this).attr('href');
+      $('.application').elem('tabs-item').mod('active', false);
+      $(this).mod('active', true);
+      $('.application').elem("tabs-content").each(function() {
+        if ("#" + $(this).attr('id') === id) {
+          return $(this).mod('disable', false);
+        } else {
+          return $(this).mod('disable', true);
+        }
+      });
+      return e.preventDefault();
+    });
     $('.directions-list__trigger').click(function(e) {
       var block, blockHeight, c, item, items;
       c = $(this).block().attr('class');

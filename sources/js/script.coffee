@@ -151,6 +151,16 @@ init_popup = ->
 		deeplinking: false
 
 $(document).ready ->
+	$('.application').elem('tabs-item').click (e)->
+		id = $(this).attr('href')
+		$('.application').elem('tabs-item').mod('active', false)
+		$(this).mod('active', true)
+		$('.application').elem("tabs-content").each ->
+			if "#" + $(this).attr('id') == id
+				$(this).mod('disable', false)
+			else
+				$(this).mod('disable', true)
+		e.preventDefault()
 
 	$('.directions-list__trigger').click (e)->
 		c           = $(this).block().attr 'class'
