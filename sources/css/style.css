@@ -2501,6 +2501,8 @@ body {
 .chosen {
   position: relative;
   z-index: 30;
+  float: left;
+  width: 100%;
 }
 .chosen-drop {
   position: absolute;
@@ -2563,13 +2565,6 @@ body {
 .chosen-results li:last-of-type {
   -webkit-border-radius: 0 0 3px 3px;
   border-radius: 0 0 3px 3px;
-}
-.chosen-container {
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  top: -1px;
-  height: 23px;
 }
 .chosen-single {
   float: left;
