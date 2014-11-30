@@ -2721,6 +2721,7 @@ body {
 }
 .block--shedule:hover,
 .block--application:hover {
+  color: #fff;
   background: #e41b3d;
 }
 .block--shedule svg,
