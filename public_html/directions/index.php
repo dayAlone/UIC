@@ -23,8 +23,8 @@ $APPLICATION->SetPageProperty('show_news', 'true');
       array(
         "IBLOCK_ID"      => 4,
         "NEWS_COUNT"     => "10",
-        "SORT_BY1"       => "SORT",
-        "SORT_ORDER1"    => "DESC",
+        "SORT_BY1"       => "NAME",
+        "SORT_ORDER1"    => "ASC",
         "DETAIL_URL"     => "/press/#ELEMENT_CODE#/",
         "CACHE_TYPE"     => "A",
         "SET_TITLE"      => "N",

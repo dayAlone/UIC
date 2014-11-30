@@ -323,7 +323,7 @@ $(document).ready ->
 			$(this).find('iframe').remove()
 
 	$('.lang-trigger__carriage').click (e)->
-		window.location.href = 'http://tkc-group.com'
+		window.location.href = 'http://uic-spektr.ru'
 		el = $(this).parents('.lang-trigger')
 		variants = el.data('variant').split(',')
 		$.each variants, (index, value)->

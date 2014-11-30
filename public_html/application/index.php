@@ -77,6 +77,22 @@ $APPLICATION->SetPageProperty('body_class', "application");?>
     </div>
   </div>
   <div class="application__frame application__frame--short"><div class="application__frame-title">сведения об обучении</div></div>
+  <div class="application__tabs">
+    <div class="row no-gutter">
+      <div class="col-xs-3"><a href="#" class="application__tabs-item application__tabs-item--active">Обучение <br>(повышение квалификации) по программе:</a></div>
+      <div class="col-xs-9"><a href="#" class="application__tabs-item ">Повышение квалификации по программе “методы наразрушающего контроля: автоматизированный ультразвуковой контроль при строительстве объектов промысловых и магистральных газопроводов ОАО ”газпром”</a></div>
+    </div>
+  </div>
+  <div class="application__frame">
+    <div class="row">
+      <div class="col-xs-2">
+        <label for="">кол-во человек</label>
+        <input type="text" name="count">
+      </div>
+      <div class="col-xs-9 col-xs-offset-1">
+      </div>
+    </div>
+  </div>
 </form>
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
