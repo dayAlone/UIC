@@ -5855,9 +5855,6 @@ body {
 }
 .index .wrap {
   background: #2c374a url("../images/bg_index.jpg") bottom center no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
 }
 .index .page__content {
   position: absolute;
