@@ -261,6 +261,8 @@ body
 		margin-top 20px
 	&__frame + &__frame
 		margin-top 30px
+	&__input + &__label
+		margin-left 20px
 	&__label
 		&--small
 			line-height 39px
@@ -292,6 +294,7 @@ body
 			margin-top 25px
 			
 		input
+			
 			&[type="text"]
 				background #eaeef3
 				full-width()
@@ -300,6 +303,8 @@ body
 				height 35px
 				padding 0 15px
 				box-shadow inset 1px 1px 2px 0 #b6b8bc
+				&::-webkit-input-placeholder
+					line-height 23px
 		&-title
 			position absolute
 			color #eb3037
@@ -350,6 +355,7 @@ body
 				&:after
 					border-color #9eb3c1
 					background #e11238
+
 .shedule
 	full-width()
 	&__item
@@ -420,7 +426,7 @@ body
 			&--open
 				margin-bottom 0
 				> .directions-list__trigger
-					background lightness(#64798f, 60%)
+					background blue !important
 					svg
 						transform rotate(90deg)
 						

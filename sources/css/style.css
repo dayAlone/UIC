@@ -2371,6 +2371,9 @@ body {
 .application__frame + .application__frame {
   margin-top: 30px;
 }
+.application__input + .application__label {
+  margin-left: 20px;
+}
 .application__label--small {
   line-height: 39px;
   padding-right: 10px;
@@ -2418,6 +2421,9 @@ body {
   padding: 0 15px;
   -webkit-box-shadow: inset 1px 1px 2px 0 #b6b8bc;
   box-shadow: inset 1px 1px 2px 0 #b6b8bc;
+}
+.application__frame input[type="text"]::-webkit-input-placeholder {
+  line-height: 23px;
 }
 .application__frame-title {
   position: absolute;
@@ -2583,7 +2589,7 @@ body {
   margin-bottom: 0;
 }
 .directions-list__section--open > .directions-list__trigger {
-  background: #8799ab;
+  background: #0082dc !important;
 }
 .directions-list__section--open > .directions-list__trigger svg {
   -webkit-transform: rotate(90deg);

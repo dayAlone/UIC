@@ -94,8 +94,10 @@ $APPLICATION->SetPageProperty('show_courses', 'true');
       </div>
       <div class="col-xs-9 col-xs-offset-1">
         <label for="">желаемый срок обучения</label>
-        <label class="application__label--small">начало</label>
-        <input type="text" name="count" class="application__input--small">
+        <label class="application__label application__label--small">начало</label>
+        <input type="text" name="start" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
+        <label class="application__label application__label--small">окончание</label>
+        <input type="text" name="end" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
       </div>
     </div>
   </div>
