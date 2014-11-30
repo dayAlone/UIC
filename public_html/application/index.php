@@ -88,6 +88,22 @@ $APPLICATION->SetPageProperty('show_courses', 'true');
   </div>
   <div class="application__frame">
     <div class="row">
+      <div class="col-xs-12">
+        <select name="programm" class="application__chosen" data-placeholder="Выберите программу обучения">
+          <option value=""></option>
+          <?
+             $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "select", array(
+                "IBLOCK_TYPE"  => "news",
+                "IBLOCK_ID"    => "4",
+                "TOP_DEPTH"    => "2",
+                "CACHE_TYPE"   => "A"
+            ),
+            false);
+          ?>
+        </select>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-xs-2">
         <label for="">кол-во человек</label>
         <input type="text" name="count">
@@ -98,6 +114,12 @@ $APPLICATION->SetPageProperty('show_courses', 'true');
         <input type="text" name="start" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
         <label class="application__label application__label--small">окончание</label>
         <input type="text" name="end" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <label for="">Дата предыдущего обучения (повышении квалификации), № удостоверения, уровень допуска, кем выдано (если раннее обучался)</label>
+        <input type="text" name="last_date">
       </div>
     </div>
   </div>
