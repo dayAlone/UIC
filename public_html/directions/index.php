@@ -22,7 +22,7 @@ $APPLICATION->SetPageProperty('show_news', 'true');
     "directions",
       array(
         "IBLOCK_ID"      => 4,
-        "NEWS_COUNT"     => "10",
+        "NEWS_COUNT"     => "100",
         "SORT_BY1"       => "NAME",
         "SORT_ORDER1"    => "ASC",
         "DETAIL_URL"     => "/press/#ELEMENT_CODE#/",

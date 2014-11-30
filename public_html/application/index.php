@@ -1,7 +1,10 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle('Заявка на обучение');
-$APPLICATION->SetPageProperty('body_class', "application");?>
+$APPLICATION->SetPageProperty('body_class', "application");
+$APPLICATION->SetPageProperty('show_news', 'true');
+$APPLICATION->SetPageProperty('show_courses', 'true');
+?>
 <form class="application">
   <div class="application__frame">
     <div class="application__frame-title">сведения о компании</div>
