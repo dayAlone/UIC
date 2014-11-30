@@ -301,7 +301,26 @@ $(document).ready ->
 	        		getCaptcha()
 
 		e.preventDefault()
-
+	$('.application__chosen').chosen
+			width: "100%"
+		.change ()->
+			drop = $(this).parent().find('.chosen-drop')
+			drop.velocity
+					properties: "transition.slideUpOut"
+					options:
+						duration: 300
+		.on "chosen:showing_dropdown", ()->
+			drop = $(this).parent().find('.chosen-drop')
+			drop.velocity
+					properties: "transition.slideDownIn"
+					options:
+						duration: 300
+		.on "chosen:hiding_dropdown", ()->
+			drop = $(this).parent().find('.chosen-drop')
+			drop.velocity
+					properties: "transition.slideUpOut"
+					options:
+						duration: 300
 	$('.modal').on 'show.bs.modal', (a,b)->
 		url = $(a.relatedTarget).data 'url'
 		id  = $(a.relatedTarget).attr 'href'

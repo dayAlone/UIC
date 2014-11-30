@@ -376,6 +376,36 @@
       });
       return e.preventDefault();
     });
+    $('.application__chosen').chosen({
+      width: "100%"
+    }).change(function() {
+      var drop;
+      drop = $(this).parent().find('.chosen-drop');
+      return drop.velocity({
+        properties: "transition.slideUpOut",
+        options: {
+          duration: 300
+        }
+      });
+    }).on("chosen:showing_dropdown", function() {
+      var drop;
+      drop = $(this).parent().find('.chosen-drop');
+      return drop.velocity({
+        properties: "transition.slideDownIn",
+        options: {
+          duration: 300
+        }
+      });
+    }).on("chosen:hiding_dropdown", function() {
+      var drop;
+      drop = $(this).parent().find('.chosen-drop');
+      return drop.velocity({
+        properties: "transition.slideUpOut",
+        options: {
+          duration: 300
+        }
+      });
+    });
     $('.modal').on('show.bs.modal', function(a, b) {
       var id, url;
       url = $(a.relatedTarget).data('url');
