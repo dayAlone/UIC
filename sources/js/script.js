@@ -29,17 +29,16 @@
   map = void 0;
 
   size = function() {
-    $('body:not(.index) .page__content > .row').height(function() {
-      var h;
-      h = $(window).height() - $('.footer').outerHeight() * 2 - $('.page__content').offset().top - 25;
-      if ($(this).height() < h) {
-        $.cookie('height', h + 25);
-        $(this).removeAttr('style');
-        return h;
+    $('body:not(.index) .page__content > .row').css({
+      minHeight: function() {
+        var h;
+        h = $(window).height() - $('.footer').outerHeight() * 2 - $('.page__content').offset().top - 25;
+        if ($(this).height() < h) {
+          $.cookie('height', h + 25);
+          $(this).removeAttr('style');
+          return h;
+        }
       }
-    });
-    $('.page__picture').height(function() {
-      return $('.page__sidebar-content').position().top + 10;
     });
     return $('[subsidiary]').each(function() {
       var $el, $parent, factor, h, offset;
@@ -214,7 +213,6 @@
             begin: function() {
               item.mod('open', true);
               return $.each(items, function(key, el) {
-                $('.page__picture').height($('.page__picture').height() + blockHeight);
                 return $(el).css({
                   'minHeight': blockHeight + $(el).height()
                 });

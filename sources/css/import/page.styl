@@ -250,6 +250,37 @@ body
 					width 80%
 					padding 0 30px
 
+.shedule
+	full-width()
+	&__item
+		full-width()
+		margin-bottom 15px
+		background #f1f3f6
+		padding 17px 20px 10px
+	&__label
+		text-transform: uppercase
+		color #8f9ea8
+		font-size 10px
+		font-weight: bold
+		margin-bottom 8px
+	&__value
+		font-weight: bold
+		font-size 20px
+	&__value + &__label
+		margin-top 25px
+	&__group
+		font-size 14px
+		.col-xs-3
+			width (100/12)*(10/3)%
+	&__divider
+		full-width()
+		margin 0px 0 23px
+		height 1px 
+		background #d0d3d7
+	p
+		font-size 16px !important
+		line-height 18px !important
+
 .directions
 	&-tabs
 		full-width()
@@ -406,6 +437,7 @@ body
 			color black
 		&__value
 			font-size 20px
+
 .index
 	min-height 750px
 	position relative
@@ -936,7 +968,7 @@ body:not(.index)
 .dropdown
 	.news &
 		float right
-		margin-top 30px
+		margin-top 24px
 	margin-left 5px
 	margin-right -10px
 	position relative
@@ -970,8 +1002,8 @@ body:not(.index)
 		z-index: 2
 		position relative
 		padding-right 10px
-		padding 8px 15px 4px 
-		line-height 8px
+		padding 9px 15px 4px
+		display inline-block
 		background blue
 		svg
 			margin-left 5px
@@ -990,9 +1022,9 @@ body:not(.index)
 	&__frame
 		background blue
 		display none
-		padding 26px 15px 5px
+		padding 30px 15px 5px
 		position absolute
-		top -4px
+		top 0px
 		left 0px
 		min-width 100%
 	&__item

@@ -24,14 +24,13 @@ map = undefined
 
 size = ->
 	#autoHeight($('.page .tech'), '.tech__item', '.tech__title', false, true)
-	$('body:not(.index) .page__content > .row').height ->
-		h = $(window).height() - $('.footer').outerHeight()*2 - $('.page__content').offset().top - 25
-		if $(this).height() < h
-			$.cookie 'height', h+25
-			$(this).removeAttr 'style'
-			return h
-	$('.page__picture').height ->
-		return $('.page__sidebar-content').position().top + 10
+	$('body:not(.index) .page__content > .row').css
+		minHeight : ->
+			h = $(window).height() - $('.footer').outerHeight()*2 - $('.page__content').offset().top - 25
+			if $(this).height() < h
+				$.cookie 'height', h+25
+				$(this).removeAttr 'style'
+				return h
 		
 
 	$('[subsidiary]').each ->
@@ -163,8 +162,6 @@ $(document).ready ->
 					begin: ()->
 						item.mod('open', true)
 						$.each items, (key, el)->
-							$('.page__picture').height($('.page__picture').height() + blockHeight)
-
 							$(el).css
 								'minHeight': blockHeight + $(el).height()
 					

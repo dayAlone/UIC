@@ -17,11 +17,34 @@
 	  				<?=date('d.m.Y', strtotime($item['PROPERTIES']['END']["VALUE"]))?>
 	  			</div>
 	  		</div>
-	  		<div class="col-xs-9">
+	  		<div class="col-xs-10">
 	  			<div class="shedule__label">
 	  				наименование программы (курса) обучения
 	  			</div>
 	  			<p><?=$item['NAME']?></p>
+	  			
+	  			<?
+	  			foreach ($item['PROPERTIES']['GROUPS']['VALUE'] as $g):?>
+	  			<div class="shedule__divider"></div>	
+	  			<div class="row shedule__group">
+	  				<div class="col-xs-2">
+	  					<div class="shedule__label">№ группы</div>
+	  					<?=$g['t_number']?>
+	  				</div>
+	  				<div class="col-xs-3 center">
+	  					<div class="shedule__label">Теория</div>
+	  					<?=$g['t_theory']?>
+	  				</div>
+	  				<div class="col-xs-3 center">
+	  					<div class="shedule__label">практика</div>
+	  					<?=$g['t_practice']?>
+	  				</div>
+	  				<div class="col-xs-3 center">
+	  					<div class="shedule__label">экзамен (зачет)</div>
+	  					<?=$g['t_exam']?>
+	  				</div>
+	  			</div>
+	  			<?endforeach;?>
 	  		</div>
 	  	</div>
 	  </div>
