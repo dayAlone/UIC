@@ -30,7 +30,7 @@ $APPLICATION->SetPageProperty('body_class', "index");
 			    "FILTER_NAME" => "shedule",
 			    "SORT_BY1"    => "PROPERTY_START",
 			    "SORT_ORDER1" => "ASC",
-			    "DETAIL_URL"  => "/press/#ELEMENT_CODE#/",
+			    "DETAIL_URL"  => "/shedule/",
 			    "CACHE_TYPE"  => "A",
 			    "SET_TITLE"   => "N",
 			    "MORE_TEXT"   => "полный график обучения",
