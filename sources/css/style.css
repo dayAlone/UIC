@@ -2504,6 +2504,12 @@ body {
   float: left;
   width: 100%;
 }
+.chosen-container {
+  float: left;
+  width: 100%;
+  margin-bottom: 8px;
+  position: relative;
+}
 .chosen-drop {
   position: absolute;
   display: none;
@@ -2580,23 +2586,19 @@ body {
   line-height: 40px;
   text-transform: uppercase;
   font-weight: bold;
-  margin-bottom: 20px;
   cursor: pointer;
 }
 .chosen-single > div {
   position: absolute;
-  top: 1px;
-  right: 0;
-  width: 24px;
-  height: 22px;
-  background: url("../images/arrow-bottom.png") center center no-repeat;
-}
-.chosen-single > div b {
-  position: absolute;
-  left: 33px;
-  width: 15px;
-  height: 22px;
-  background: url("../images/arrow-right.png") center center no-repeat;
+  top: 50%;
+  right: 15px;
+  margin-top: -5px;
+  width: 10px;
+  height: 10px;
+  background: url("../images/svg/arrow2.svg") center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
 }
 .chosen-single:hover {
   text-decoration: none;
