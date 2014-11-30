@@ -680,10 +680,14 @@ body
 	.page__sidebar &--news, .page__sidebar &--courses
 		background #3a4e6d
 		margin-top 0
+		min-height 0
+		padding-top 25px
+		padding-bottom 0
 		h2
 			text-transform: uppercase
 			margin-bottom 15px !important
 			font-size 22px  !important
+			line-height 22px !important
 			color #d9dce0   !important
 		.courses, .news
 			&__date 
@@ -691,6 +695,8 @@ body
 				span
 					background #3a4e6d
 					color #929ba8
+				&:after
+					background #728095
 			&__item
 				max-width 100%
 			&__title
@@ -700,8 +706,12 @@ body
 					border-line(blue2)
 				
 			&__more
-				margin-bottom 0
+				margin-bottom 20px
 	
+	.page__sidebar &--courses + &--news
+		background #2c374a
+		.news__date span
+			background #2c374a
 	.courses, .news
 		full-width()
 		&__item

@@ -2,6 +2,8 @@
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetPageProperty('section', array('IBLOCK'=>4, 'CODE'=>'directions', "NOEMPTY"=>true));
 require($_SERVER['DOCUMENT_ROOT'].'/include/section.php');
+$APPLICATION->SetPageProperty('show_news', 'true');
+//$APPLICATION->SetPageProperty('show_courses', 'true');
 ?>
 <?
   $APPLICATION->SetPageProperty('body_class', "directions");

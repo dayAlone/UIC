@@ -2,6 +2,7 @@
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle('О компании');
 $APPLICATION->SetPageProperty('show_news', 'true');
+$APPLICATION->SetPageProperty('show_courses', 'true');
 ?>
 <p>
 	<big>

@@ -2,6 +2,7 @@
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetPageProperty('section', array('IBLOCK'=>1, 'CODE'=>'news', "NOEMPTY"=>true));
 $APPLICATION->SetPageProperty('hide_right', true);
+$APPLICATION->SetPageProperty('show_courses', 'true');
 require($_SERVER['DOCUMENT_ROOT'].'/include/section.php');
 ?>
 <div class="page__content">
@@ -26,6 +27,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/include/section.php');
     false
   );
   else:
+    $APPLICATION->SetPageProperty('show_news', 'true');
     $APPLICATION->SetPageProperty('page_title', 'Пресс-центр');
     $APPLICATION->IncludeComponent("bitrix:news.detail","detail",Array(
       "IBLOCK_ID"     => 1,

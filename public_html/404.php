@@ -6,6 +6,8 @@ CHTTP::SetStatus("404 Not Found");
 
 include($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("404 Not Found");
+$APPLICATION->SetPageProperty('show_news', 'true');
+$APPLICATION->SetPageProperty('show_courses', 'true');
 
 $APPLICATION->IncludeComponent("bitrix:main.map", ".default", Array(
 	"LEVEL"	=>	"3",

@@ -28,6 +28,11 @@ size = ->
 		$('.page__sidebar-content').mod('fixed', true)
 	else
 		$('.page__sidebar-content').mod('fixed', false)
+
+	if $('.page__sidebar-content').outerHeight() > $('.page__sidebar').outerHeight()
+		while $('.page__sidebar-content').outerHeight() > $('.page__sidebar').outerHeight()
+			$('.page__sidebar-content .block:last').remove()
+
 	$('body:not(.index) .page__content > .row').css
 		minHeight : ->
 			h = $(window).height() - $('.footer').outerHeight()*2 - $('.page__content').offset().top - 25

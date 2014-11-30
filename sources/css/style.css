@@ -2974,12 +2974,16 @@ body {
 .page__sidebar .block--courses {
   background: #3a4e6d;
   margin-top: 0;
+  min-height: 0;
+  padding-top: 25px;
+  padding-bottom: 0;
 }
 .page__sidebar .block--news h2,
 .page__sidebar .block--courses h2 {
   text-transform: uppercase;
   margin-bottom: 15px !important;
   font-size: 22px !important;
+  line-height: 22px !important;
   color: #d9dce0 !important;
 }
 .page__sidebar .block--news .courses__date,
@@ -2994,6 +2998,12 @@ body {
 .page__sidebar .block--courses .news__date span {
   background: #3a4e6d;
   color: #929ba8;
+}
+.page__sidebar .block--news .courses__date:after,
+.page__sidebar .block--courses .courses__date:after,
+.page__sidebar .block--news .news__date:after,
+.page__sidebar .block--courses .news__date:after {
+  background: #728095;
 }
 .page__sidebar .block--news .courses__item,
 .page__sidebar .block--courses .courses__item,
@@ -3033,7 +3043,13 @@ body {
 .page__sidebar .block--courses .courses__more,
 .page__sidebar .block--news .news__more,
 .page__sidebar .block--courses .news__more {
-  margin-bottom: 0;
+  margin-bottom: 20px;
+}
+.page__sidebar .block--courses + .block--news {
+  background: #2c374a;
+}
+.page__sidebar .block--courses + .block--news .news__date span {
+  background: #2c374a;
 }
 .block .courses,
 .block .news {

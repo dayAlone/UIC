@@ -34,6 +34,11 @@
     } else {
       $('.page__sidebar-content').mod('fixed', false);
     }
+    if ($('.page__sidebar-content').outerHeight() > $('.page__sidebar').outerHeight()) {
+      while ($('.page__sidebar-content').outerHeight() > $('.page__sidebar').outerHeight()) {
+        $('.page__sidebar-content .block:last').remove();
+      }
+    }
     $('body:not(.index) .page__content > .row').css({
       minHeight: function() {
         var h;

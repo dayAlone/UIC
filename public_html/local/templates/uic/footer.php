@@ -14,6 +14,33 @@
 					Расписание<br>обучения
 				</span>
 			</a>
+			<?if($APPLICATION->GetPageProperty('show_courses')):?>
+			<div class="block block--courses">
+				<h2>Ближайшие курсы</h2>
+				<?
+				global $shedule;
+				$shedule = array(">=PROPERTY_START"=>date('Y-m-d')." 00:00:00");
+				$APPLICATION->IncludeComponent(
+				  "bitrix:news.list", 
+				  "news_index",
+				  array(
+				    "IBLOCK_ID"   => 4,
+				    "NEWS_COUNT"  => "3",
+				    "FILTER_NAME" => "shedule",
+				    "SORT_BY1"    => "PROPERTY_START",
+				    "SORT_ORDER1" => "ASC",
+				    "DETAIL_URL"  => "/shedule/",
+				    "CACHE_TYPE"  => "A",
+				    "SET_TITLE"   => "N",
+				    "MORE_TEXT"   => "полный график обучения",
+				    "PROPERTY_CODE"  => array("START"),
+				    "MORE_LINK"   => "/shedule/",
+				    "CLASS"       => "courses"
+				  ),
+				  false
+				);?>
+			</div>
+			<?endif;?>
 			<?if($APPLICATION->GetPageProperty('show_news')):?>
 			<div class="block block--news">
 				<h2>Пресс-центр</h2>
@@ -37,6 +64,7 @@
 				);?>
 			</div>
 			<?endif;?>
+			
 		</div>
 	</div>
 </div>
