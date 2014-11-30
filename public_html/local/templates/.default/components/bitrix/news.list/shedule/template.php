@@ -1,0 +1,31 @@
+<?if(count($arResult['ITEMS'])>0):?>
+<div class="shedule">
+    <?foreach ($arResult['ITEMS'] as $item):?>
+	  <div class="shedule__item">
+	  	<div class="row">
+	  		<div class="col-xs-2">
+	  			<div class="shedule__label">
+	  				Начало
+	  			</div>
+	  			<div class="shedule__value">
+	  				<?=date('d.m.Y', strtotime($item['PROPERTIES']['START']["VALUE"]))?>
+	  			</div>
+	  			<div class="shedule__label">
+	  				Конец
+	  			</div>
+	  			<div class="shedule__value">
+	  				<?=date('d.m.Y', strtotime($item['PROPERTIES']['END']["VALUE"]))?>
+	  			</div>
+	  		</div>
+	  		<div class="col-xs-9">
+	  			<div class="shedule__label">
+	  				наименование программы (курса) обучения
+	  			</div>
+	  			<p><?=$item['NAME']?></p>
+	  		</div>
+	  	</div>
+	  </div>
+	<?endforeach;?>
+</div>
+<?endif;?>
+<?=$arResult["NAV_STRING"]?>

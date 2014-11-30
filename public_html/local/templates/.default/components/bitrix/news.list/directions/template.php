@@ -1,0 +1,106 @@
+<div class="directions-list">
+<?
+function showItems($items)
+{
+  foreach ($items as $item):?>
+    <div class="directions-list__item" id="<?=$item['CODE']?>">
+      <a href="#" class="directions-list__trigger">
+        <?=svg('arrow-right')?>
+        <?=$item['NAME']?>
+      </a>
+      <div class="directions-list__content">
+        <div class="row">
+          <div class="col-xs-2">
+          <?if(strlen($item['PROPERTIES']['CODE']['VALUE']['TEXT'])>0):?>
+            <div class="directions-list__label">Код<br>профессии</div>
+            <div class="directions-list__value"><?=$item['PROPERTIES']['CODE']['VALUE']?></div>
+          <?endif;?>
+          <a class="directions-list__application" href="#"><?=svg('application')?><br>заполнить заявку <br>на этот <br>курс</a>
+          </div>
+          <div class="col-xs-10">
+          <?
+          if(count($item['PROPERTIES']['DATA']['VALUE'])==1 && strlen($item['PROPERTIES']['DATA']['VALUE'][0]['p_theory'])>0 && strlen($item['PROPERTIES']['DATA']['VALUE'][0]['p_practice'])==0 && strlen($item['PROPERTIES']['DATA']['VALUE'][0]['p_total'])==0 && strlen($item['PROPERTIES']['DATA']['VALUE'][0]['p_exam'])==0):?>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="directions-list__label">количество часов по программе</div>
+                  <div class="directions-list__value"><?=$item['PROPERTIES']['DATA']['VALUE'][0]['p_theory']?></div>
+                </div>
+              </div>
+              <?if(strlen($item['PROPERTIES']['DESCRIPTION']['VALUE']['TEXT'])>0):?>
+              <div class="directions-list__divider directions-list__divider--small"><span></span></div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="directions-list__label directions-list__label--black">Примечание</div>
+                  <div class="directions-list__description"><?= htmlspecialchars_decode($item['PROPERTIES']['DESCRIPTION']['VALUE']['TEXT'])?></div>
+                </div>
+              </div>
+              <?endif;?>
+            </div>
+          </div>
+          <?else:?>
+            <?foreach ($item['PROPERTIES']['DATA']['VALUE'] as $prop):
+            ?>
+            <?if(strlen($prop['p_title'])>0):?><div class="directions-list__section-title"><?=$prop['p_title']?></div><?endif;?>
+            <div class="row">
+              <?if(strlen($prop['p_theory'])>0):?>
+                <div class="col-xs-3">
+                  <div class="directions-list__label"><?=($prop['p_check']!='Y'?"Теория":"Теоретическое<br>обучение")?></div>
+                  <div class="directions-list__value"><?=$prop['p_theory']?></div>
+                </div>
+                <?endif;?>
+                <?if(strlen($prop['p_practice'])>0):?>
+                <div class="col-xs-3">
+                  <div class="directions-list__label"><?=($prop['p_check']!='Y'?"Практика":"производственное<br>обучение")?></div>
+                  <div class="directions-list__value"><?=$prop['p_practice']?></div>
+                </div>
+                <?endif;?>
+                <?if(strlen($prop['p_total'])>0):?>
+                <div class="col-xs-3">
+                  <div class="directions-list__label">Всего<?=($prop['p_check']!='Y'?"":"<br>&nbsp;")?></div>
+                  <div class="directions-list__value"><?=$prop['p_total']?></div>
+                </div>
+                <?endif;?>
+                <?if(strlen($prop['p_exam'])>0):?>
+                <div class="col-xs-3">
+                  <div class="directions-list__label">Экзамен<?=($prop['p_check']!='Y'?"":"<br>&nbsp;")?></div>
+                  <div class="directions-list__value"><?=$prop['p_exam']?></div>
+                </div>
+                <?endif;?>
+            </div>
+            <?endforeach;?>
+              </div>
+            </div>
+            <?if(strlen($item['PROPERTIES']['DESCRIPTION']['VALUE']['TEXT'])>0):?>
+            <div class="directions-list__divider <?=(count($item['PROPERTIES']['DATA']['VALUE'])==1?"directions-list__divider--top":"")?>"><span></span></div>
+            <div class="row">
+              <div class="col-xs-2">
+                <div class="directions-list__label directions-list__label--black">Примечание</div>
+              </div>
+              <div class="col-xs-10">
+                <div class="directions-list__description"><?= htmlspecialchars_decode($item['PROPERTIES']['DESCRIPTION']['VALUE']['TEXT'])?></div>
+              </div>
+            </div>
+            <?endif;?>
+        <?endif;?>
+      </div>
+    </div>
+  <?endforeach;
+}
+if(isset($arResult['DATA']))
+  foreach($arResult['DATA'] as $item):
+    ?>
+      <div class="directions-list__section" id="<?=$item['CODE']?>">
+        <a href="#" class="directions-list__trigger">
+          <?=svg('arrow-right')?>
+          <?=$item['NAME']?>
+        </a>
+        <div class="directions-list__content">
+          <? showItems($item['ITEMS']);?>
+        </div>
+      </div>
+    <?
+  endforeach;
+else
+  showItems($arResult['ITEMS']);
+?>
+</div>

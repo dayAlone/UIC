@@ -1,0 +1,1316 @@
+@font-face
+	font-family 'Proxima'
+	src url("../fonts/ProximaNova-Black.ttf")
+	src local('☺'), url('../fonts/ProximaNova-Black.ttf') format('truetype')
+	font-weight 800
+body
+	min-width 960px
+	background #151f31
+
+.page
+	margin-bottom 30px
+	&__picture
+		position absolute
+		top 0
+		left 0
+		height 100%
+		width 100%
+		background-size cover
+		t(height)
+	&__sidebar
+		position absolute
+		overflow hidden
+		top 0
+		left -15px
+		background #1c2537
+		height 100%
+		width 23%
+		&-content
+			position absolute
+			bottom 0
+			left 0
+			width 100%
+	&__content
+		> .row
+			background white
+			padding 25px
+		position relative
+		min-height 200px
+		t(height)
+	big
+		font-size 20px
+		line-height 30px
+	&--text
+		background white
+	.text &
+		a
+			color blue3
+	.border-left
+		&--move
+			left -40px
+		&:after
+			position absolute
+			content ""
+			background #d5dbdf
+			width 1px
+			top 0
+			left -30px
+			height 100%
+	&__divider
+		height 1px 
+		background #c6cdd2
+		width 100%
+		margin 0px 0 35px
+		.directions &
+			display none
+		&--blue
+			background #0070d5
+		& + .products
+			margin-top -10px
+	.sections-side
+		full-width()
+		h3
+			font-size 20px
+			margin-top 0
+			margin-bottom 20px
+		&__item
+			full-width()
+			height 125px
+			background-size cover
+			background-repeat no-repeat
+			background-position center center
+			margin-bottom 10px
+		&__icon
+			height 81px
+			line-height 90px
+			svg
+				middle()
+		&__frame
+			full-width()
+			height 125px
+			t(background)
+			background rgba(0,0,0,.65)
+			text-align: center
+			&:hover
+				background rgba(0,0,0,.35)
+		&__title
+			font-weight bold
+			text-transform: uppercase
+			color white
+			font-size 17px
+		&__description
+			font-size 9px
+			letter-spacing 2px
+			color #63b1ff
+			text-transform: uppercase
+			font-weight: bold
+			top -7px
+			position relative
+	.features
+		h2
+			font-size 20px
+			margin-bottom 35px
+			margin-top 0
+			padding-top 0
+		&__item
+			width 100%
+			full-width()
+			margin-bottom 30px
+					
+		&__icon
+			width 55px
+			margin-right 13px
+			text-align: center
+			float: left
+			svg
+				middle()
+				max-width 85%
+				transform translateY(-22%)
+		&__text
+			float: left
+			width 60%
+			font-size 14px
+			line-height 15px
+			color #475675
+	&__frame
+		background #ffffff
+		
+		padding 35px 45px
+		margin-top 20px
+		margin-right -15px
+		margin-left -15px
+		color #233347
+		.catalog-category &
+			padding 0
+		p
+			font-size 16px
+	&__header
+		full-width()
+		height 345px
+		margin-top -102px
+		background-color blue
+		background-position center center
+		background-repeat no-repeat
+		margin-bottom 40px
+		position relative
+		color white
+		&-title
+			width 100%
+			overflow hidden
+			font-size 46px
+			height 98px
+			line-height 105px
+			text-transform: uppercase
+			font-weight 800
+			text-align: center
+		&-breadcrumb
+			border-top 1px solid rgba(255,255,255,.5)
+			width 70%
+			margin 0 15%
+			text-align: center
+			line-height 60px
+			text-transform: uppercase
+			a, span
+				font-size 11px
+				letter-spacing 2px
+				margin 0 3px
+				color white
+				
+				opacity .5
+				font-weight bold
+			a:hover
+				opacity 1
+		&-frame
+			position absolute
+			background-position center calc(50% - 30px)
+			
+			background-repeat no-repeat
+			width 780px
+			left 50%
+			margin-left -390px
+			height 156px
+			top 50%
+			margin-top -48px
+			border 1px solid white			
+	&__title
+		padding 20px 0
+		margin 0
+		font-size 44px
+		line-height 44px
+		color #233347
+		font-weight bold
+		
+	&__sub-title
+		font-size 22px
+		margin-bottom 0
+		padding-bottom 0
+	.button
+		display inline-block
+		padding 0 25px
+		cursor pointer
+		font-size 11px
+		line-height 33px
+		margin 20px 0
+		letter-spacing 3px
+		height 30px
+		border 1px solid blue3
+		color blue3
+		background transparent
+		text-transform: uppercase
+		font-weight bold
+		t(background, color)
+		text-align: center
+		&:hover
+			background blue3
+			color white
+			text-decoration: none
+		&--black
+			border-color black
+			color black
+			&:hover
+				background black
+		&--big
+			max-width 110%
+			min-width 216px 
+			@media (min-width: scr_sm)
+				min-width 100px
+				padding 0 15px
+			@media (min-width: scr_md)
+				padding 0 32px
+				min-width 186px 
+	@media (min-width: scr_lg)
+		>.container
+			>.row
+				>.col-lg-2
+					width 20%
+				>.col-lg-8
+					width 60%
+					padding 0 30px
+				>.col-lg-10
+					width 80%
+					padding 0 30px
+
+.directions
+	&-tabs
+		full-width()
+		border-bottom: 1px solid blue
+		margin-bottom 15px
+		&__title
+			display inline-block
+			vertical-align: middle
+			line-height 20px
+			font-size 15px
+		&__item
+			height 90px
+			line-height 100px
+			padding 0 20px
+			background #eff3f6
+			width (100/3)%
+			float left
+			box-shadow -3px 0 0 0 white
+			text-align: center
+			font-weight: bold
+			color #6f8094
+			&:hover
+				color blue
+			&--active
+				background blue
+				color white
+				&:hover
+					color white
+	&-list
+		&__section
+			margin-bottom 10px
+			full-width()
+			> .directions-list__content
+				max-width 100%
+				border-top 0
+				padding-top 5px
+			&--open
+				margin-bottom 0
+				> .directions-list__trigger
+					background lightness(#64798f, 60%)
+					svg
+						transform rotate(90deg)
+						
+			> .directions-list__trigger
+				background #64798f
+				position relative
+				t(background)
+				color white
+				padding-left 50px
+				padding-right 25px
+				font-size 15px
+				svg
+					left 15px
+					path
+						fill white
+				&:hover
+					color white
+					background lightness(#64798f, 60%)
+					svg path
+						fill white
+		&__item
+			background #e2e8ed
+			full-width()
+			padding-left 50px
+			margin-bottom 8px
+			t(min-height, background)
+			&--open
+				background #f8f9fa
+				.directions-list__trigger
+					color blue
+					svg
+						transform rotate(90deg)
+						path
+							fill blue
+		&__trigger
+			full-width()
+			position relative
+			font-size 20px
+			line-height 22px
+			color black
+			padding 22px 0 15px
+			svg
+				position absolute
+				left -35px
+				top 18px
+				t(transform)
+				path
+					t(fill)
+					fill #8797a2
+			&:hover
+				color blue
+				svg
+					path
+						fill blue
+		&__content
+			display block
+			border-top 1px solid #d6d7da
+			padding 25px 0
+			max-width 95%
+			full-width()
+			display none
+			
+		&__value + .directions-list__application
+			margin-top 62px
+		&__application
+			&:hover
+				color blue
+				svg path
+					fill blue
+			svg
+				max-width 40px
+				path
+					t(fill)
+					fill #2f4458
+					
+		&__divider
+			full-width()
+			float right
+			width 83.333333333%
+			margin 15px 0 25px (100/12)*2%
+			padding-left 4px
+			&--small
+				width 100%
+				margin 10px 0 20px
+				padding 0
+			&--top
+				margin-top -10px
+				margin-bottom 30px
+			span
+				full-width()
+				border-bottom 1px solid #d6d7da
+		.row + &__section-title
+			margin-top 10px
+			padding-top 23px
+			border-top 1px solid #d6d7da
+		&__description
+			full-width()
+			margin-top -4px
+		&__section-title
+			font-size 14px
+			font-weight: bold
+			full-width()
+			border-bottom 1px solid black
+			padding 0px 0 8px
+			margin-bottom 15px
+		&__label, &__application
+			text-transform: uppercase
+			full-width()
+			color #8797a2
+			font-weight: bold
+			font-size 10px
+			margin-bottom 7px
+		&__label--black
+			color black
+		&__value
+			font-size 20px
+.index
+	min-height 750px
+	position relative
+	.toolbar::before
+		background rgba(47,57,79,.75)
+	.wrap
+		b('bg_index.jpg', bottom center no-repeat, #2c374a, cover)
+	
+	.page__content
+		position absolute
+		> .row
+			padding 0
+			background transparent
+		bottom 75px
+		width 1170px
+		color white
+		.row
+			[class*='col-']
+				padding 0 5px
+			.row
+				margin-right -5px
+				margin-left -5px
+
+.block
+	full-width()
+	padding 32px 35px 10px
+	color white
+	position relative
+	min-height 361px
+	&[subsidiary]
+		padding 0
+		.block__content
+			position absolute
+			top 50%
+			left 0
+			padding 0px 35px 0px
+			width 100%
+			transform translateY(-50%)
+	&--shedule, &--application
+		full-width()
+		text-align center
+		background #c21734
+		min-height 114px
+		font-size 12px
+		text-transform: uppercase
+		font-weight: bold
+		t(background)
+		&:hover
+			background lightness(#c21734, 50%)
+		svg
+			margin-bottom 10px
+			margin-top 5px
+		&[subsidiary]
+			.block__content
+				padding 0px
+	&--application
+		background #2c374b
+		&:hover
+			background lightness(#2c374b, 30%)
+	&--counter
+		min-height 114px
+		background #2d7bf4
+		margin 10px 0
+		text-align: center
+		&[subsidiary]
+			.block__content
+				margin-top -2px
+				padding 0 25px
+		.counter
+			&__text
+				width 40%
+				text-align left
+				vertical-align: center
+				display inline-block
+				margin-left 10px
+				line-height 17px
+				top 9px
+				position relative
+			&__number
+				display inline-block
+				position relative
+				width 44px
+				height 75px
+				line-height 98px
+				text-align: center
+				font-size 58px
+				border-radius 5px
+				background #0454CD
+				&:after
+					position absolute
+					top 50%
+					left 0
+					border-bottom 1px solid #2d7bf4
+					content ""
+					width 100%
+	&--students
+		background #16223f
+		min-height 114px
+		.students
+			&__item
+				full-width()
+				text-align: left
+				max-height 40px
+				position relative
+				top -2px
+			&__number
+				display inline-block
+				vertical-align: middle
+				font-size 35px
+				min-width 43px
+				position relative
+				top 5px
+				font-weight: bold
+			&__text
+				text-transform: uppercase
+				vertical-align: middle
+				line-height 14px
+				display inline-block
+				font-weight: bold
+				color #4281d8
+				font-size 12px
+				text-align: left
+				margin-left 8px
+	&--courses
+		background #424f6c
+		min-height 357px
+		h2
+			margin-top 0
+			font-weight: bold
+			font-size 25px
+	&--partners
+		min-height 138px
+		background white
+		margin-top 8px
+		h4
+			font-size 12px
+			text-transform: uppercase
+			font-weight bold
+			color black
+			margin-top 0
+		a
+			&:first-of-type
+				margin-right 10%
+		img
+			vertical-align: bottom
+			max-width 48%
+	&--news
+		background #2d7bf4
+		min-height 138px
+		margin-top 8px
+		padding 25px 35px 25px
+		h2
+			margin-top 0
+			font-weight: bold
+			font-size 25px
+	.page__sidebar &--application, .page__sidebar &--shedule
+		background #c21734
+		text-align: left
+		padding 25px 0 15px
+		min-height 105px
+		&:hover
+			color white
+			background lightness(#c21734, 50%)
+		svg, .block__content
+			margin-top 0
+			top 50%
+			transform translateY(-50%)
+			position absolute
+		.block__content
+			padding-top 8px
+			left 35px
+			padding-left 60px
+		svg
+			max-width 40px
+			left 0
+	.page__sidebar &--shedule
+		padding 15px 0 25px
+		&:after
+			position absolute
+			top 0
+			left 10%
+			width 80%
+			background alpha(white, .5)
+			height 1px
+			content ""
+	.page__sidebar &--news, .page__sidebar &--courses
+		background #3a4e6d
+		margin-top 0
+		h2
+			text-transform: uppercase
+			margin-bottom 15px !important
+			font-size 22px  !important
+			color #d9dce0   !important
+		.courses, .news
+			&__date 
+				margin-bottom 8px
+				span
+					background #3a4e6d
+					color #929ba8
+			&__item
+				max-width 100%
+			&__title
+				font-size 13px
+				&:hover
+					color blue2
+					border-line(blue2)
+				
+			&__more
+				margin-bottom 0
+	
+	.courses, .news
+		full-width()
+		&__item
+			full-width()
+			line-height 17px
+			& + .courses__item
+				margin-top 22px
+		&__title
+			color #b1cffd
+			text-transform: uppercase
+			font-size 12px
+			font-weight: bold
+			border-line(alpha(#b1cffd,.3))
+			&:hover
+				color blue2
+				border-line(alpha(blue2,.3))
+		&__date
+			color #4281d8
+			font-size 10px
+			text-transform: uppercase
+			font-weight: bold
+			margin-bottom 5px
+			full-width()
+			position relative
+			span
+				position relative
+				z-index 2
+				background #424f6c
+				padding-right 5px
+			&:after
+				position absolute
+				content ""
+				width 100%
+				height 1px 
+				background #4281d8
+				opacity .7
+				left 0
+				top 6px
+				z-index 0
+		&__more
+			font-size 10px
+			text-transform: uppercase
+			margin-left: 12px
+			margin-top 30px
+			display inline-block
+			color white
+			font-weight: bold
+			margin-bottom 25px
+			border-line(alpha(white,.5))
+			&:hover
+				color blue2
+				border-line(alpha(blue2,.3))
+				svg
+					path
+						fill blue2
+			svg
+				margin-left -12px
+				top 1px
+				margin-right 2px
+				position relative						
+				path
+					t(fill)
+					fill white
+	.news
+		&__item
+			max-width 45%
+			&+.news__item
+				margin-left 10%
+		&__date
+			span
+				background #337ef0
+				color #7eb0fc
+			&:after
+				background rgba(255,255,255,.4)
+		&__title
+			text-transform: none
+			font-weight: normal
+			color white
+			&:hover
+				color #2c374a
+				border-line(#2c374a)
+	&--about
+		background #2c374b
+		.button
+			color white
+			margin-bottom 0
+		h1
+			margin-top 0
+			font-weight bold
+			font-size 40px
+			line-height 40px
+			margin-bottom 0px
+		h3
+			font-size 18px
+			line-height 23px
+			color #b1cffd
+			margin-top 10px
+			margin-bottom 0px
+
+#map
+	width 100%
+	min-height 570px
+
+p.vacancy
+	font-size 15px
+	margin 20px 0 45px
+
+
+body:not(.index)
+	.page__content
+		img
+			max-width 100%
+			&.left, &.right
+				max-width 45%
+				margin-bottom: 15px
+			&.left
+				float: left
+				margin-right 20px
+			&.right
+				float: right
+				margin-right -25px
+				margin-left 20px
+		h2
+			color #0053b3
+			font-size 28px
+			line-height 34px
+			padding-top 0
+			margin-top 0
+			margin-bottom 30px
+		h3
+			font-weight normal
+			font-size 20px
+		
+		.title
+			&--bold
+				font-weight bold
+			&--blue
+				color #0053b3
+		p
+			color #333e47
+			font-size 14px
+			line-height 21px
+			max-width 96%
+			margin-bottom 15px
+			a:not(.button)
+				color #0053b3
+				border-line(#d3dced, calc(100% - 4px))
+				&:hover
+					color #67b3fc
+					border-line(#67b3fc, calc(100% - 4px))
+			&.small
+				line-height 17px
+				font-size 14px
+			&.highlight
+				display inline-block
+				width 70%
+				background #f3f4f6
+				border 1px solid #e1e4e6
+				border-top 3px solid #0053b3
+				
+				text-align: center
+				padding 35px 40px 30px
+				color black
+				font-size 18px
+				line-height 26px
+		ul
+			margin-top 20px
+			li
+				list-style none
+				position relative
+				&:after
+					content ""
+					position absolute
+					width 19px
+					height 2px
+					background #0053b3
+					left -30px
+					top 9px
+		.slide
+			
+			a.slide__trigger
+				font-size 28px
+				border-dashed(#0053b3, 28px)
+				padding-right 25px
+				position relative
+				&:after
+					content "\25B6"
+					font-size 9px
+					transform: rotate(90deg)
+					position relative
+					t(color, transform, right)
+					top 9px
+					position absolute
+					right 12px
+					display: inline-block
+					transform-origin center center
+				&:hover
+					border-dashed(#63b1ff, 28px)
+					&:after
+						color #63b1ff
+			&--open
+				a.slide__trigger
+					color #333e47
+					border-dashed(#333e47, 28px)	
+					&:after
+						right 7px
+						top 8px
+						transform: rotate(-90deg)
+					&:hover
+						color #63b1ff
+						border-dashed(#63b1ff, 28px)
+						&:after
+							color #63b1ff
+			&__content
+				display none
+				margin-top 15px
+		li
+			font-size 16px
+			line-height 23px
+			margin-bottom 9px
+			a
+				color #0053b3
+				border-line(#d3dced, 16px)
+				&:hover
+					color #67b3fc
+					border-line(#67b3fc, 16px)
+
+.catalog
+	
+	.product
+		.product__back
+			text-transform: uppercase
+			font-weight bold
+			color #2d78d6
+			border-line(#d2e2fd, 12px)
+			font-size 12px
+			display inline-block
+			margin-top 30px
+			margin-left 13px
+			svg
+				margin-left -13px
+				margin-right 4px
+		
+.side
+	p
+		max-width 80%
+		font-size 16px
+			
+.years
+	&__item
+		display inline-block
+		font-size 18px
+		font-weight bold
+		color black
+		margin-bottom 25px
+		border-line(#d4d4d4, 18px)
+		&:hover
+			color blue2
+			border-line(blue2, 18px)
+		&--active
+			background transparent 
+			color blue3
+
+.gallery
+	width 100%
+	margin-top 20px
+	text-align center
+	&__title
+		full-width()
+		margin-bottom 20px
+		position relative
+		&:after
+			position absolute
+			background #a8a8a9
+			width 100%
+			height 1px
+			top 11px
+			left 0
+			content ""
+		span
+			position relative
+			z-index 2
+			background white
+			padding 0 15px
+			font-size 23px
+			text-transform: uppercase
+			font-weight: bold
+	&__slider
+		display inline-block
+		max-width 93%
+		.slick-prev
+			background url(/layout/images/svg/arrow-left.svg) center center
+		.slick-next
+			background url(/layout/images/svg/arrow-right.svg) center center
+		.slick-prev, .slick-next
+			background-size cover
+			opacity .7
+			&.slick-disabled
+				opacity .2
+	.gallery__item
+		height 150px
+		width 150px
+		padding 0 3px
+		a
+			display inline-block
+			width 100%
+			height 150px
+			background-size cover
+			background-repeat no-repeat
+			box-shadow inset 0 0 0 1px white
+			border 1px solid #e3e6e9
+			t(border-color)
+			margin 0 5px 5px 0
+			&:hover
+				border-color #d93431
+
+
+.dropdown
+	.news &
+		float right
+		margin-top 30px
+	margin-left 5px
+	margin-right -10px
+	position relative
+	font-size 12px
+	font-weight bold
+	text-transform: uppercase
+	position relative
+	display inline-block
+	
+	&__select
+		position absolute
+		right 0
+		top 0
+		opacity 0
+		z-index 20
+		@media (min-width: scr_md)
+			display none
+	&--open
+		.dropdown__trigger
+			svg
+				path
+					fill white
+			text-decoration none
+			color white
+			.dropdown__text
+				color white
+			&:after
+				border-bottom-color white
+	&__trigger
+		color #9c9c9c
+		z-index: 2
+		position relative
+		padding-right 10px
+		padding 8px 15px 4px 
+		line-height 8px
+		background blue
+		svg
+			margin-left 5px
+			position relative
+			top -1px
+			path
+				fill white
+			
+	&__text	
+		position relative
+		max-height 26px
+		width 100px
+		display inline-block
+		&--white
+			color white
+	&__frame
+		background blue
+		display none
+		padding 26px 15px 5px
+		position absolute
+		top -4px
+		left 0px
+		min-width 100%
+	&__item
+		float: left
+		clear: both
+		font-size 11px
+		line-height 19px
+		color white
+		padding 0 px
+		&:hover
+			color white
+			text-decoration none
+	
+span.sub-collapser
+	i
+		font-style: normal
+
+.news
+	.news-list
+		&__item
+			width 100%
+			& + .news-list__item
+				margin-top 50px
+		.news-list__frame
+			padding-right 5px
+			background white
+		.news-list__date, .news-list__section
+			text-transform: uppercase
+			font-weight: bold
+			color #76767f
+			//color white
+			//background #a7b3be
+			font-size 11px
+			margin-bottom 10px
+			display inline-block
+			height 20px
+			//padding 5px 10px 0
+		.news-list__section
+			background #a5d0ff
+		.news-list__divider
+			width 100%
+			//border-top 1px solid #e5e8ec
+			margin-top -20px
+			margin-bottom 15px
+		.news-list__title
+			font-size 22px
+			color #2d78d6
+			line-height 30px
+			margin-top 0
+			border-line(#adc2eb, 22px)
+			&:hover
+				color blue2
+				border-line(blue2, 22px)
+		.news-list__text
+			margin-top 15px
+			width 100%
+			font-size 16px
+			color #233347
+	.news-item
+		&__date
+			@extends .news .news-list .news-list__date
+		&__section
+			@extends .news .news-list .news-list__section
+		&__frame
+			@extends .news .news-list .news-list__frame
+		&__divider
+			@extends .news .news-list .news-list__divider
+		.news-item__text
+			@extends .news .news-list .news-list__text
+			margin-top 20px
+			ul
+				padding-left 20px
+				margin-bottom 25px
+			p, li
+				font-size 16px
+			p
+				margin-bottom 15px
+			li
+				margin-bottom 10px
+		&__back
+			@extends .catalog .product .product__back
+		&__image
+			max-width 50%
+			margin 0 0 20px 20px
+		&__gallery
+			width 100%
+			margin-top 20px
+		&__small-image
+			@extends .gallery .gallery__item
+		.news-item__title
+			@extends .news .news-list .news-list__title
+			color black
+			background transparent
+			&:hover
+				color black
+				background transparent
+
+
+.career
+	
+	&-list
+		width 100%
+		margin-top 20px
+		&__item
+			width 100%
+			margin-bottom 25px
+		&__title
+			@extends .news .news-list .news-list__title
+			font-size 20px
+			
+	&-item
+		&__tooltip
+			@extends .news .news-list .news-list__date
+		&__title
+			@extends .news .news-item .news-item__title
+			
+		&__text
+			@extends .news .news-item .news-item__text
+			ul
+				padding-left 35px
+		&__back
+			@extends .catalog .product .product__back
+
+.search-page
+	font-size 14px
+	.page__divider
+		margin 30px 0
+	&__text
+		width 100%
+		margin-top 10px
+	&__text, &__sort
+		font-size 14px
+	&__title
+		@extends .news .news-list .news-list__title
+	small
+		width 100%
+		display inline-block
+	form
+		margin-bottom 30px
+		input[type=text]
+			background transparent
+			border 1px solid blue
+			height 35px
+			line-height 38px
+			border-radius 30px
+			padding 0 50px 0 20px
+			line-height normal
+		button[type=submit]
+			background transparent
+			border 0
+			margin-left -44px
+			display inline-block
+			svg
+				position relative
+				top 8px
+				min-height 20px
+				min-width 20px
+
+.map-columns
+	td
+		width (100/2)%
+		padding-right 60px
+	ul
+		font-size 13px
+		padding-left 0
+		&.map-level-0
+			> li
+				list-style none
+				margin-bottom 20px
+				&:after
+					display none
+				> ul
+					padding-left 20px
+					margin-top 10px
+					> li
+						&:after
+							width 12px
+							left -20px
+						> ul
+							padding-left 20px
+							margin-bottom 10px
+							margin-top 5px
+							li
+								&:after
+									width 3px
+									left -12px
+						a
+							@extends .news .news-list .news-list__title
+							font-size 12px
+							line-height 25px
+							background-position 0 10px		
+						> a
+							font-size 16px
+							font-weight normal
+							background-position 0 16px
+						
+				> a
+					@extends .news .news-list .news-list__title
+					font-size 18px
+					background-position 0 18px
+
+.pages
+	width 100%
+	margin-top 40px
+	.news-list + &
+		margin-top 40px
+	&__item
+		display inline-block
+		width 27px
+		height 27px
+		text-align: center
+		margin-right 10px
+		border 1px solid #0082dc
+		line-height 30px
+		color #0082dc
+		font-size 13px
+		background transparent !important
+		&:hover
+			color #0082dc
+		&--active
+			color white !important
+			background #0082dc !important
+
+#vacancyDetail
+	.modal-dialog
+		max-width 830px
+	.close
+		svg
+			path
+				fill white
+	.required
+		color #717b84
+		font-size 13px
+		full-width()
+		margin-top 25px
+		line-height 15px
+		span
+			color #ff6d70
+	.form
+		display block
+		padding 0
+		&__footer
+			margin-top 30px
+			padding-top 10px
+			border-top 1px solid #d5dbdf
+		.captcha
+			width 70%
+			border 1px solid #d5dbdf
+			background-position center center
+			background-repeat no-repeat
+		input
+			line-height 100%
+		.file
+			margin-top 38px
+			&-description
+				font-size 12px
+				color #233347
+				margin-top 20px
+			&-name
+				full-width()
+				font-size 12px
+				color #97a4b2
+				margin 10px 0
+			&-trigger
+				float right
+				width 105%
+				background #1c75cf
+				font-weight: bold
+				text-transform: uppercase
+				height 30px
+				line-height 34px
+				text-align: center
+				color white
+				font-size 10px
+				letter-spacing 2px
+				&.error
+					background red
+				&:hover
+					background #64b1fa
+		label[for="file"]
+			margin-top 3px
+		input, textarea
+			border-color #1c75cf
+			text-align left
+			padding-left 10px
+			padding-right 10px
+			&:focus
+				outline 0
+		textarea
+			height 123px
+		input[type=submit]
+			width 100%
+			border-radius 0
+			border-width 1px
+			text-align: center !important
+			margin-top 39px
+			background #1c75cf
+			color white
+			font-size 10px
+			letter-spacing 3px
+			&:hover
+				background #64b1fa
+				border-color #64b1fa
+		.captcha_refresh
+			margin-top 0
+			float right
+			svg
+				path
+					fill #1c75cf
+		label
+			text-align left !important
+			span
+				color #ff6d70
+	.vacancy-popup
+		&__sub
+			font-size 18px
+			color #9c9c9c
+		&__title
+			font-size 26px
+			margin-top 3px
+			
