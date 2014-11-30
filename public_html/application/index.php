@@ -76,6 +76,7 @@ $APPLICATION->SetPageProperty('body_class', "application");?>
       </div>
     </div>
   </div>
+  <div class="application__frame application__frame--short"><div class="application__frame-title">сведения об обучении</div></div>
 </form>
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');

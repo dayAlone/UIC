@@ -6,7 +6,7 @@
 body
 	min-width 960px
 	background #151f31
-
+	
 .page
 	margin-bottom 30px
 	&__picture
@@ -16,6 +16,7 @@ body
 		height 100%
 		width 100%
 		background-size cover
+		max-height 900px
 		t(height)
 	&__sidebar
 		position absolute
@@ -252,12 +253,19 @@ body
 
 .application
 	full-width()
-	margin-top 20px
+	.page &
+		margin-top 20px
+	&__frame + &__frame
+		margin-top 30px
 	&__frame
 		full-width()
 		border 1px solid #eb3037
 		padding 35px 25px
 		position relative
+		&--short
+			border 0
+			border-top 1px solid #eb3037
+			padding-bottom 0
 		label
 			full-width()
 			text-transform: uppercase

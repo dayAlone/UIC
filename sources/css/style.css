@@ -2016,6 +2016,7 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
+  max-height: 900px;
   -webkit-transition-property: height;
   -moz-transition-property: height;
   -o-transition-property: height;
@@ -2349,7 +2350,12 @@ body {
 .application {
   float: left;
   width: 100%;
+}
+.page .application {
   margin-top: 20px;
+}
+.application__frame + .application__frame {
+  margin-top: 30px;
 }
 .application__frame {
   float: left;
@@ -2357,6 +2363,11 @@ body {
   border: 1px solid #eb3037;
   padding: 35px 25px;
   position: relative;
+}
+.application__frame--short {
+  border: 0;
+  border-top: 1px solid #eb3037;
+  padding-bottom: 0;
 }
 .application__frame label {
   float: left;
