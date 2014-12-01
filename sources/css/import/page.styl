@@ -264,6 +264,10 @@ body
 	&__input + &__label
 		margin-left 20px
 	&__label
+		full-width()
+		text-transform: uppercase
+		color #1d2a3a
+		font-size 13px
 		&--small
 			line-height 39px
 			padding-right 10px
@@ -304,18 +308,6 @@ body
 		.row+.row
 			margin-top 25px
 			
-		input
-			
-			&[type="text"]
-				background #eaeef3
-				full-width()
-				border 0
-				line-height 102%
-				height 35px
-				padding 0 15px
-				box-shadow inset 1px 1px 2px 0 #b6b8bc
-				&::-webkit-input-placeholder
-					line-height 23px
 		&-title
 			position absolute
 			color #eb3037
@@ -326,6 +318,42 @@ body
 			top -8px
 			left 17px
 			background white
+	.captcha
+		float left
+		width 60%
+		height 35px
+		background-position center center
+		background-size cover
+		&_refresh
+			width 30%
+			margin-top 2px
+			svg
+				max-width 100%
+				max-height 30px
+				path
+					fill #e8333d
+			float right
+	input
+		&[type="submit"]
+			float right
+			width 120%
+			line-height 37px
+			height 35px
+			background #e8333d
+			color white
+			font-weight: bold
+			text-transform: uppercase
+			border 0
+		&[type="text"], &[type="email"]
+			background #eaeef3
+			full-width()
+			border 0
+			line-height 102%
+			height 35px
+			padding 0 15px
+			box-shadow inset 1px 1px 2px 0 #b6b8bc
+			&::-webkit-input-placeholder
+				line-height 23px
 	&__tabs
 		full-width()
 		margin-bottom -1px

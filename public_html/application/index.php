@@ -86,7 +86,7 @@ $APPLICATION->SetPageProperty('show_courses', 'true');
       <div class="col-xs-9"><a href="#tab2" class="application__tabs-item ">Повышение квалификации по программе “методы наразрушающего контроля: автоматизированный ультразвуковой контроль при строительстве объектов промысловых и магистральных газопроводов ОАО ”газпром”</a></div>
     </div>
   </div>
-  <div class="application__frame application__tabs-content" id="tab1">
+  <div class="application__frame application__tabs-content l-margin-bottom" id="tab1">
     <div class="row">
       <div class="col-xs-12">
         <select name="programm" class="application__chosen" data-placeholder="Выберите программу обучения">
@@ -123,7 +123,7 @@ $APPLICATION->SetPageProperty('show_courses', 'true');
       </div>
     </div>
   </div>
-  <div class="application__frame application__tabs-content application__tabs-content--disable" id="tab2">
+  <div class="application__frame application__tabs-content application__tabs-content--disable l-margin-bottom" id="tab2">
     <div class="row">
       <div class="col-xs-6">
         <label for="">фио слушателя</label>
@@ -163,6 +163,32 @@ $APPLICATION->SetPageProperty('show_courses', 'true');
       - иметь опыт работы не менее 3 лет в области НК;<br>
       - рекомендуется иметь среднее профессиональное или высшее профильное образование.<br>
     </small>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      <label for="" class="application__label application__label--rows">введите, пожалуйста<br>защиный код</label>
+    </div>
+    <div class="col-xs-3">
+      <?
+        include_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/classes/general/captcha.php");
+        $cpt = new CCaptcha();
+        $cpt->SetCodeLength(4);
+        $cpt->SetCode();
+        $code=$cpt->GetSID();
+      ?>
+      <div class="captcha" style="background-image:url(/include/captcha.php?captcha_sid=<?=$code?>)"></div>
+      <input type="hidden" name="captcha_code" value="<?=$code?>">
+      <a href="#" class="captcha_refresh">
+        <?=svg('refresh')?>
+      </a>
+    </div>
+    <div class="col-xs-3">
+      <label class="application__label application__label--small">сюда</label>
+      <input type="text"  class="application__input application__input--small">
+    </div>
+    <div class="col-xs-3">
+      <input type="submit" value="отправить заявку">
+    </div>
   </div>
 </form>
 <?
