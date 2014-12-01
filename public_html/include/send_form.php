@@ -100,7 +100,7 @@ if($result['status'] == 'ok') {
 		</tr>
 		<tr>
 			<td colspan="2">
-				Желаемый срок обучения. начало.: <?=$_REQUEST["date_start"]?>
+				Желаемый срок обучения. Начало: <?=$_REQUEST["date_start"]?>
 			</td>
 			<td colspan="2">
 				Окончание: <?=$_REQUEST["date_end"]?>
@@ -149,7 +149,69 @@ if($result['status'] == 'ok') {
 		$body = ob_get_contents();
 		ob_end_clean();
 		else:
-
+			ob_start();?>
+<table border="0" cellpadding="6" style="font-size:13px">
+	<tr>
+		<td colspan="4"><h2>Персональные сведения</h2></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			Фамилия, имя, отчетсво: <?=$_REQUEST["fio"]?>
+		</td>
+		<td colspan="2">
+			Дата рождения: <?=$_REQUEST["bith"]?>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="1">
+			Серия и номер: <?=$_REQUEST["passport_number"]?>
+		</td>
+		<td colspan="1">
+			Дата выдачи: <?=$_REQUEST["passport_date"]?>
+		</td>
+		<td colspan="2">
+			Кем выдан: <?=$_REQUEST["passport_who"]?>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			Адрес по прописке (с индексом): <?=$_REQUEST["address"]?>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			Телефон: <?=$_REQUEST["phone"]?>
+		</td>
+		<td colspan="2">
+			Электронная почта: <?=$_REQUEST["email"]?>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4"><h2>Cведения об обучении</h2></td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			Программа: <?=$_REQUEST["programm"]?>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			Желаемый срок обучения. Начало: <?=$_REQUEST["date_start"]?>
+		</td>
+		<td colspan="2">
+			Окончание: <?=$_REQUEST["date_end"]?>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			Дата предыдущего обучения (повышении квалификации), № удостоверения, уровень допуска, кем выдано (если раннее обучался)
+			<?=$_REQUEST["last_education"]?>
+		</td>
+	</tr>
+</table>
+		<?
+			$body = ob_get_contents();
+			ob_end_clean();
 		endif;
 		foreach ($_REQUEST as $key => $value)
 			if($text[$key]&&strlen($value)>0)

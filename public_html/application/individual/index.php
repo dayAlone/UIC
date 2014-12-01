@@ -24,7 +24,7 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
       </div>
       <div class="col-xs-2">
         <label for="">дата рождения</label>
-        <input required type="text" name="bith">
+        <input required type="text" name="bith" data-provide="datepicker" data-date-format="dd.mm.yyyy" data-date-language="ru">
       </div>
     </div>
     <div class="row">
@@ -90,7 +90,7 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
     <div class="row">
       <div class="col-xs-12">
         <label for="">Дата предыдущего обучения (повышении квалификации), № удостоверения, уровень допуска, кем выдано (если раннее обучался)</label>
-        <input required type="text" name="last_date">
+        <input required type="text" name="last_education">
       </div>
     </div>
   </div>
