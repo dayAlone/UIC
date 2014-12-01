@@ -154,15 +154,19 @@ init_popup = ->
 		deeplinking: false
 
 $(document).ready ->
+
 	$('.application').elem('tabs-item').click (e)->
 		id = $(this).attr('href')
 		$('.application').elem('tabs-item').mod('active', false)
 		$(this).mod('active', true)
+		$(this).find('input').iCheck('toggle')
 		$('.application').elem("tabs-content").each ->
 			if "#" + $(this).attr('id') == id
 				$(this).mod('disable', false)
+				$(this).find('input, select').attr('required','required')
 			else
 				$(this).mod('disable', true)
+				$(this).find('input, select').removeAttr 'required'
 			size()
 		e.preventDefault()
 	
@@ -319,6 +323,30 @@ $(document).ready ->
 	        		getCaptcha()
 
 		e.preventDefault()
+
+	$('.application').submit (e)->
+		data = new FormData(this)
+		$.ajax 
+			type        : 'POST'
+			url         : '/include/send_form.php'
+			data        : data
+			cache       : false
+			contentType : false
+			processData : false
+			mimeType    : 'multipart/form-data'
+			success     : (data) ->
+				console.log data
+				data = $.parseJSON(data)
+				if data.status == "ok"
+					$('.page__content .application').hide()
+					$('.page__content .success').removeClass('hidden')
+					size()
+				else if data.status == "error"
+					$('input[name=captcha_word]').addClass('parsley-error')
+					getCaptcha()
+
+		e.preventDefault()
+
 	$('.application__chosen').chosen
 			width: "100%"
 		.change ()->

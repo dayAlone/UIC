@@ -212,11 +212,14 @@
       id = $(this).attr('href');
       $('.application').elem('tabs-item').mod('active', false);
       $(this).mod('active', true);
+      $(this).find('input').iCheck('toggle');
       $('.application').elem("tabs-content").each(function() {
         if ("#" + $(this).attr('id') === id) {
           $(this).mod('disable', false);
+          $(this).find('input, select').attr('required', 'required');
         } else {
           $(this).mod('disable', true);
+          $(this).find('input, select').removeAttr('required');
         }
         return size();
       });
@@ -387,6 +390,32 @@
           if (data.status === "ok") {
             $('.form').hide();
             return $('.form').parents('.modal').find('.success').show();
+          } else if (data.status === "error") {
+            $('input[name=captcha_word]').addClass('parsley-error');
+            return getCaptcha();
+          }
+        }
+      });
+      return e.preventDefault();
+    });
+    $('.application').submit(function(e) {
+      var data;
+      data = new FormData(this);
+      $.ajax({
+        type: 'POST',
+        url: '/include/send_form.php',
+        data: data,
+        cache: false,
+        contentType: false,
+        processData: false,
+        mimeType: 'multipart/form-data',
+        success: function(data) {
+          console.log(data);
+          data = $.parseJSON(data);
+          if (data.status === "ok") {
+            $('.page__content .application').hide();
+            $('.page__content .success').removeClass('hidden');
+            return size();
           } else if (data.status === "error") {
             $('input[name=captcha_word]').addClass('parsley-error');
             return getCaptcha();

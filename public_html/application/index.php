@@ -6,12 +6,20 @@ $APPLICATION->SetPageProperty('show_news', 'true');
 $APPLICATION->SetPageProperty('show_courses', 'true');
 $APPLICATION->SetPageProperty('hide_application', 'true');
 ?>
-<form class="application">
+<div class="center success hidden">
+  <p class="highlight">
+    <big>Спасибо!</big><br>
+    Заявка успешно отправлена. В скором времени наш специалист с вами свяжется.
+  </p>
+</div>
+<form class="application" data-parsley-validate>
+  <input type="hidden" name="form" value="ur">
+  <input type="hidden" name="group_id" value="5">
   <div class="application__frame">
     <div class="application__frame-title">сведения о компании</div>
     <div class="row">
       <div class="col-xs-12">
-        <label for="">полное наименование организации</label>
+        <label for="">Полное наименование организации</label>
         <input required type="text" name="company">
       </div>
     </div>
@@ -62,11 +70,11 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
     <div class="row">
       <div class="col-xs-6">
         <label for="">телефон</label>
-        <input required type="text" name="phone">
+        <input required type="text" name="phone" data-parsley-pattern="/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}/" data-parsley-trigger="change">
       </div>
       <div class="col-xs-6">
         <label for="">факс</label>
-        <input required type="text" name="fax">
+        <input required type="text" name="fax" data-parsley-pattern="/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}/" data-parsley-trigger="change">
       </div>
     </div>
     <div class="row">
@@ -76,21 +84,25 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
       </div>
       <div class="col-xs-6">
         <label for="">контактный телефон</label>
-        <input required type="text" name="contact_phone">
+        <input required type="text" name="contact_phone" data-parsley-pattern="/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}/" data-parsley-trigger="change">
       </div>
     </div>
   </div>
   <div class="application__frame application__frame--short"><div class="application__frame-title">сведения об обучении</div></div>
   <div class="application__tabs">
     <div class="row no-gutter">
-      <div class="col-xs-3"><a href="#tab1" class="application__tabs-item application__tabs-item--active">Обучение <br>(повышение квалификации) по программе:</a></div>
-      <div class="col-xs-9"><a href="#tab2" class="application__tabs-item ">Повышение квалификации по программе “методы наразрушающего контроля: автоматизированный ультразвуковой контроль при строительстве объектов промысловых и магистральных газопроводов ОАО ”газпром”</a></div>
+      <div class="col-xs-3"><a href="#tab1" class="application__tabs-item application__tabs-item--active">
+        <input type="radio" name="type" checked value="1">
+        Обучение <br>(повышение квалификации) по программе:</a></div>
+      <div class="col-xs-9"><a href="#tab2" class="application__tabs-item ">
+        <input type="radio" name="type" value="2">
+        Повышение квалификации по программе “методы наразрушающего контроля: автоматизированный ультразвуковой контроль при строительстве объектов промысловых и магистральных газопроводов ОАО ”газпром”</a></div>
     </div>
   </div>
   <div class=" l-margin-bottom application__frame application__tabs-content" id="tab1">
     <div class="row">
       <div class="col-xs-12">
-        <select name="programm" class="application__chosen" data-placeholder="Выберите программу обучения">
+        <select name="programm" required class="application__chosen" data-placeholder="Выберите программу обучения">
           <option value=""></option>
           <?
              $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "select", array(
@@ -114,15 +126,15 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
       <div class="col-xs-9 col-xs-offset-1">
         <label for="">желаемый срок обучения</label>
         <label class="application__label application__label--small">начало</label>
-        <input required type="text" name="start" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
+        <input required type="text" name="date_start" class="application__input application__input--small" data-provide="datepicker" data-date-format="dd.mm.yyyy" data-date-language="ru" placeholder="<?=date('d.m.Y')?>">
         <label class="application__label application__label--small">окончание</label>
-        <input required type="text" name="end" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
+        <input required type="text" name="date_end" class="application__input application__input--small" data-provide="datepicker" data-date-format="dd.mm.yyyy" data-date-language="ru" placeholder="<?=date('d.m.Y')?>">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12">
         <label for="">Дата предыдущего обучения (повышении квалификации), № удостоверения, уровень допуска, кем выдано (если раннее обучался)</label>
-        <input required type="text" name="last_date">
+        <input required type="text" name="last_education">
       </div>
     </div>
   </div>
@@ -132,46 +144,46 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
         <label class="application__label application__label--small">на базе установки аузк </label>
       </div>
       <div class="col-xs-8">
-        <input required type="radio" id="type1" name="type">
-        <label class="application__label application__label--small" for="type1" name="type">argovision</label>
-        <input required type="radio" id="type2" name="type">
-        <label class="application__label application__label--small" for="type2" name="type">pipe wizard</label>
-        <input required type="radio" id="type3" name="type">
-        <label class="application__label application__label--small" for="type3" name="type">weld star</label>
+        <input type="radio" id="type1" name="type">
+        <label class="application__label application__label--small" for="type1" name="base" value="argovision">argovision</label>
+        <input type="radio" id="type2" name="type">
+        <label class="application__label application__label--small" for="type2" name="base" value="pipe wizard">pipe wizard</label>
+        <input type="radio" id="type3" name="type">
+        <label class="application__label application__label--small" for="type3" name="base" value="weld star">weld star</label>
       </div>
     </div>
     <div class="application__divider"></div>
     <div class="row">
       <div class="col-xs-6">
         <label for="">фио слушателя</label>
-        <input required type="text" name="fio">
+        <input type="text" name="fio">
       </div>
       <div class="col-xs-6">
         <label for="">профессия (должность) слушателя</label>
-        <input required type="text" name="count">
+        <input type="text" name="profession">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-6">
         <label for="">имеющийся уровень по узк</label>
-        <input required type="text" name="fio">
+        <input type="text" name="level">
       </div>
       <div class="col-xs-6">
         <label for="">номер удостоверения по узк и дата выдачи</label>
-        <input required type="text" name="count">
+        <input type="text" name="number">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-6">
         <label for="">опыт работы по узк</label>
-        <input required type="text" name="count">
+        <input type="text" name="skills">
       </div>
       <div class="col-xs-6">
         <label for="">желаемый срок обучения</label>
         <label class="application__label application__label--small xxs-margin-left">начало</label>
-        <input required type="text" name="start" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
+        <input type="text" name="date_start2" class="application__input application__input--small"  data-provide="datepicker" data-date-format="dd.mm.yyyy" data-date-language="ru" placeholder="<?=date('d.m.Y')?>">
         <label class="application__label application__label--small">окончание</label>
-        <input required type="text" name="end" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
+        <input type="text" name="date_end2" class="application__input application__input--small"  data-provide="datepicker" data-date-format="dd.mm.yyyy" data-date-language="ru" placeholder="<?=date('d.m.Y')?>">
       </div>
     </div>
     <small>
@@ -201,7 +213,7 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
     </div>
     <div class="col-xs-3">
       <label class="application__label application__label--small">сюда</label>
-      <input required type="text"  class="application__input application__input--small">
+      <input required type="text" name="captcha_word" class="application__input application__input--small">
     </div>
     <div class="col-xs-3">
       <input type="submit" value="отправить заявку">

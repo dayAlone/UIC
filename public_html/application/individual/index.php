@@ -6,47 +6,55 @@ $APPLICATION->SetPageProperty('show_news', 'true');
 $APPLICATION->SetPageProperty('show_courses', 'true');
 $APPLICATION->SetPageProperty('hide_application', 'true');
 ?>
-<form class="application">
+<div class="center success hidden">
+  <p class="highlight">
+    <big>Спасибо!</big><br>
+    Заявка успешно отправлена. В скором времени наш специалист с вами свяжется.
+  </p>
+</div>
+<form class="application" data-parsley-validate>
+  <input type="hidden" name="form" value="fix">
+  <input type="hidden" name="group_id" value="5">
   <div class="application__frame">
     <div class="application__frame-title">персональные сведения</div>
     <div class="row">
       <div class="col-xs-10">
         <label for="">фамилия, имя, отчетсво</label>
-        <input type="text" name="fio">
+        <input required type="text" name="fio">
       </div>
       <div class="col-xs-2">
         <label for="">дата рождения</label>
-        <input type="text" name="bith">
+        <input required type="text" name="bith">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-2">
         <label for="">серия и номер</label>
-        <input type="text" name="passport_number">
+        <input required type="text" name="passport_number">
       </div>
       <div class="col-xs-2">
         <label for="">дата выдачи</label>
-        <input type="text" name="passport_date">
+        <input required type="text" name="passport_date">
       </div>
       <div class="col-xs-8">
         <label for="">кем выдан</label>
-        <input type="text" name="passport_who">
+        <input required type="text" name="passport_who">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12">
         <label for="">адрес по прописке (с индексом)</label>
-        <input type="text" name="address">
+        <input required type="text" name="address">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-6">
         <label for="">телефон</label>
-        <input type="text" name="phone">
+        <input required type="text" name="phone">
       </div>
       <div class="col-xs-6">
         <label for="">электронная почта</label>
-        <input type="text" name="email">
+        <input required type="email" name="email">
       </div>
     </div>
   </div>
@@ -54,7 +62,7 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
     <div class="application__frame-title">сведения об обучении</div>
     <div class="row">
       <div class="col-xs-12">
-        <select name="programm" class="application__chosen" data-placeholder="Выберите программу обучения">
+        <select required name="programm" class="application__chosen" data-placeholder="Выберите программу обучения">
           <option value=""></option>
           <?
              $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "select", array(
@@ -74,15 +82,15 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
       <div class="col-xs-12 ">
         <label for="">желаемый срок обучения</label>
         <label class="application__label application__label--small">начало</label>
-        <input type="text" name="start" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
+        <input required type="text" name="date_start" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
         <label class="application__label application__label--small">окончание</label>
-        <input type="text" name="end" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
+        <input required type="text" name="date_end" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12">
         <label for="">Дата предыдущего обучения (повышении квалификации), № удостоверения, уровень допуска, кем выдано (если раннее обучался)</label>
-        <input type="text" name="last_date">
+        <input required type="text" name="last_date">
       </div>
     </div>
   </div>
@@ -99,17 +107,17 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
         $code=$cpt->GetSID();
       ?>
       <div class="captcha" style="background-image:url(/include/captcha.php?captcha_sid=<?=$code?>)"></div>
-      <input type="hidden" name="captcha_code" value="<?=$code?>">
+      <input required type="hidden" name="captcha_code" value="<?=$code?>">
       <a href="#" class="captcha_refresh">
         <?=svg('refresh')?>
       </a>
     </div>
     <div class="col-xs-3">
       <label class="application__label application__label--small">сюда</label>
-      <input type="text"  class="application__input application__input--small">
+      <input required required type="text" name="captcha_word" class="application__input application__input--small">
     </div>
     <div class="col-xs-3">
-      <input type="submit" value="отправить заявку">
+      <input required type="submit" value="отправить заявку">
     </div>
   </div>
 </form>

@@ -11,6 +11,10 @@
    "iCheck":{
       "js":"/iCheck/icheck.js"
    },
+   "datepicker":{
+      "js":["/bootstrap-datepicker/js/bootstrap-datepicker.js", "/bootstrap-datepicker/js/locales/bootstrap-datepicker.ru.js"],
+      "css": "/bootstrap-datepicker/css/datepicker.css"
+   },
    "bootstrap":{
       "js":[
          "/bootstrap/js/transition.js",
