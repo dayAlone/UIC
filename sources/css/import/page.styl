@@ -1411,13 +1411,14 @@ span.sub-collapser
 		&__back
 			@extends .catalog .product .product__back
 		&__image
-			max-width 50%
+			max-width 50% !important
 			margin 0 0 20px 20px
 		&__gallery
 			width 100%
 			margin-top 20px
 		&__small-image
-			@extends .gallery .gallery__item
+			@extends .gallery .gallery__item a
+			max-width 150%
 		.news-item__title
 			@extends .news .news-list .news-list__title
 			color black
@@ -1426,31 +1427,6 @@ span.sub-collapser
 				color black
 				background transparent
 
-
-.career
-	
-	&-list
-		width 100%
-		margin-top 20px
-		&__item
-			width 100%
-			margin-bottom 25px
-		&__title
-			@extends .news .news-list .news-list__title
-			font-size 20px
-			
-	&-item
-		&__tooltip
-			@extends .news .news-list .news-list__date
-		&__title
-			@extends .news .news-item .news-item__title
-			
-		&__text
-			@extends .news .news-item .news-item__text
-			ul
-				padding-left 35px
-		&__back
-			@extends .catalog .product .product__back
 
 .search-page
 	font-size 14px
