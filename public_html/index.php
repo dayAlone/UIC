@@ -45,7 +45,7 @@ $APPLICATION->SetPageProperty('body_class', "index");
 	<div class="col-md-4">
 		<div class="row">
 			<div class="col-xs-6">
-				<a href="#" class="block block--shedule" subsidiary data-parent="block--courses" data-factor="3"  data-offset="10">
+				<a href="/shedule/" class="block block--shedule" subsidiary data-parent="block--courses" data-factor="3"  data-offset="10">
 					<span class="block__content">
 						<?=svg('shedule')?><br>
 						Расписание обучения
@@ -53,7 +53,7 @@ $APPLICATION->SetPageProperty('body_class', "index");
 				</a>
 			</div>
 			<div class="col-xs-6">
-				<a href="#" class="block block--application" subsidiary data-parent="block--courses" data-factor="3"  data-offset="10">
+				<a href="/application/" class="block block--application" subsidiary data-parent="block--courses" data-factor="3"  data-offset="10">
 					<span class="block__content">
 						<?=svg('application')?><br>
 						Заполнить заявку

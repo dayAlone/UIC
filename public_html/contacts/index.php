@@ -1,6 +1,8 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle('Контакты');
+$APPLICATION->SetPageProperty('show_news', 'true');
+$APPLICATION->SetPageProperty('show_courses', 'true');
 $APPLICATION->SetPageProperty('body_class', "contacts");?>
 <div class="row">
   <div class="col-sm-8">

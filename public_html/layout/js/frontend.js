@@ -22715,10 +22715,11 @@ var pp_alreadyInitialized = false; // Used for the deep linking to make sure not
       $(this).mod('active', true);
       $('.application').elem("tabs-content").each(function() {
         if ("#" + $(this).attr('id') === id) {
-          return $(this).mod('disable', false);
+          $(this).mod('disable', false);
         } else {
-          return $(this).mod('disable', true);
+          $(this).mod('disable', true);
         }
+        return size();
       });
       return e.preventDefault();
     });
@@ -23150,6 +23151,7 @@ var pp_alreadyInitialized = false; // Used for the deep linking to make sure not
           center: $('#map').data('coords').split(','),
           zoom: 15
         });
+        myMap.behaviors.disable('scrollZoom');
         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
           hintContent: 'Аргус СварСервис'
         }, {

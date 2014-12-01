@@ -132,11 +132,11 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
         <label class="application__label application__label--small">на базе установки аузк </label>
       </div>
       <div class="col-xs-8">
-        <input type="radio" id="type1">
+        <input type="radio" id="type1" name="type">
         <label class="application__label application__label--small" for="type1" name="type">argovision</label>
-        <input type="radio" id="type2">
+        <input type="radio" id="type2" name="type">
         <label class="application__label application__label--small" for="type2" name="type">pipe wizard</label>
-        <input type="radio" id="type3">
+        <input type="radio" id="type3" name="type">
         <label class="application__label application__label--small" for="type3" name="type">weld star</label>
       </div>
     </div>

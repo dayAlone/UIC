@@ -160,6 +160,7 @@ $(document).ready ->
 				$(this).mod('disable', false)
 			else
 				$(this).mod('disable', true)
+			size()
 		e.preventDefault()
 	
 	$('input[type=radio], input[type=checkbox]').iCheck();
@@ -518,6 +519,7 @@ $(document).ready ->
 				center: $('#map').data('coords').split(',')
 				zoom: 15
 			}
+			myMap.behaviors.disable('scrollZoom')
 			myPlacemark = new ymaps.Placemark myMap.getCenter(), {
 				hintContent: 'Аргус СварСервис'
 			},
