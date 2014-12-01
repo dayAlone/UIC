@@ -7398,7 +7398,7 @@ span.sub-collapser i {
   margin-top: 20px;
 }
 .news .news-item__small-image {
-  max-width: 150%;
+  max-width: 150px;
 }
 .news .news-item .news-item__title {
   color: #000;
