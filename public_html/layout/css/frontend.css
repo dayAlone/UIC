@@ -5525,6 +5525,13 @@ body {
 .application__input + .application__label {
   margin-left: 20px;
 }
+.application__label {
+  float: left;
+  width: 100%;
+  text-transform: uppercase;
+  color: #1d2a3a;
+  font-size: 13px;
+}
 .application__label--small {
   line-height: 39px;
   padding-right: 10px;
@@ -5579,20 +5586,6 @@ body {
 .application__frame .row+.row {
   margin-top: 25px;
 }
-.application__frame input[type="text"] {
-  background: #eaeef3;
-  float: left;
-  width: 100%;
-  border: 0;
-  line-height: 102%;
-  height: 35px;
-  padding: 0 15px;
-  -webkit-box-shadow: inset 1px 1px 2px 0 #b6b8bc;
-  box-shadow: inset 1px 1px 2px 0 #b6b8bc;
-}
-.application__frame input[type="text"]::-webkit-input-placeholder {
-  line-height: 23px;
-}
 .application__frame-title {
   position: absolute;
   color: #eb3037;
@@ -5603,6 +5596,54 @@ body {
   top: -8px;
   left: 17px;
   background: #fff;
+}
+.application .captcha {
+  float: left;
+  width: 60%;
+  height: 35px;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+.application .captcha_refresh {
+  width: 30%;
+  margin-top: 2px;
+  float: right;
+}
+.application .captcha_refresh svg {
+  max-width: 100%;
+  max-height: 30px;
+}
+.application .captcha_refresh svg path {
+  fill: #e8333d;
+}
+.application input[type="submit"] {
+  float: right;
+  width: 120%;
+  line-height: 37px;
+  height: 35px;
+  background: #e8333d;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 0;
+}
+.application input[type="text"],
+.application input[type="email"] {
+  background: #eaeef3;
+  float: left;
+  width: 100%;
+  border: 0;
+  line-height: 102%;
+  height: 35px;
+  padding: 0 15px;
+  -webkit-box-shadow: inset 1px 1px 2px 0 #b6b8bc;
+  box-shadow: inset 1px 1px 2px 0 #b6b8bc;
+}
+.application input[type="text"]::-webkit-input-placeholder,
+.application input[type="email"]::-webkit-input-placeholder {
+  line-height: 23px;
 }
 .application__tabs {
   float: left;
