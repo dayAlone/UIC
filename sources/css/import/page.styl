@@ -945,8 +945,9 @@ body
 			background #2c374a
 	.courses, .news
 		full-width()
-		&__item + &__item
-			margin-top 22px
+		&__item + .news__item, &__item + .courses__item
+			body:not(.index) &
+				margin-top 25px
 		&__item
 			full-width()
 			line-height 17px
