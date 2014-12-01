@@ -15,7 +15,7 @@ function showItems($items)
             <div class="directions-list__label">Код<br>профессии</div>
             <div class="directions-list__value"><?=$item['PROPERTIES']['CODE']['VALUE']?></div>
           <?endif;?>
-          <a class="directions-list__application" href="#"><?=svg('application')?><br>заполнить заявку <br>на этот <br>курс</a>
+          <a class="directions-list__application" href="/application/?id=<?=$item['ID']?>"><?=svg('application')?><br>заполнить заявку <br>на этот <br>курс</a>
           </div>
           <div class="col-xs-10">
           <?
