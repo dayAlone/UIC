@@ -6450,10 +6450,10 @@ body {
   max-width: 40px;
   left: 0;
 }
-.page__sidebar .block--shedule {
+.page__sidebar .block--application + .block--shedule {
   padding: 15px 0 25px;
 }
-.page__sidebar .block--shedule:after {
+.page__sidebar .block--application + .block--shedule:after {
   position: absolute;
   top: 0;
   left: 10%;

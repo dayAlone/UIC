@@ -4,6 +4,7 @@ $APPLICATION->SetTitle('Заявка на обучение');
 $APPLICATION->SetPageProperty('body_class', "application");
 $APPLICATION->SetPageProperty('show_news', 'true');
 $APPLICATION->SetPageProperty('show_courses', 'true');
+$APPLICATION->SetPageProperty('hide_application', 'true');
 ?>
 <form class="application">
   <div class="application__frame">

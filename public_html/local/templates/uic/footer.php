@@ -2,18 +2,22 @@
 	<div class="page__sidebar">
 		<div class="page__picture" style="background-image: url(<?=$_GLOBALS['BG_IMAGE']?>)"></div>
 		<div class="page__sidebar-content">
+			<?if(!$APPLICATION->GetPageProperty('hide_application')):?>
 			<a href="#" class="block block--application">
 				<span class="block__content">
 					<?=svg('application')?>
 					Заполнить заявку<br>на обучение
 				</span>
 			</a>
+			<?endif;?>
+			<?if(!$APPLICATION->GetPageProperty('hide_shedule')):?>
 			<a href="#" class="block block--shedule">
 				<span class="block__content">
 					<?=svg('shedule')?>
 					Расписание<br>обучения
 				</span>
 			</a>
+			<?endif;?>
 			<?if($APPLICATION->GetPageProperty('show_courses')):?>
 			<div class="block block--courses">
 				<h2>Ближайшие курсы</h2>
