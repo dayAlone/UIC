@@ -24,78 +24,64 @@ if($result['status'] == 'ok') {
 		if($_REQUEST['form'] == 'ur'):
 		ob_start();
 		?>
-<table border="0">
+<table border="0" cellpadding="10" style="font-size:13px">
 	<tr>
 		<td colspan="4"><h2>Cведения о компании</h2></td>
 	</tr>
 	<tr>
 		<td colspan="4">
-			<strong>Полное наименование организации:</strong>
-				<?=$_REQUEST["company"]?>
+			Полное наименование организации: <?=$_REQUEST["company"]?>
 		</td>
 	</tr>
 	<tr>
 		<td colspan="2">
-			<strong>фамилия, имя, отчетсво руководителя</strong>
-				<?=$_REQUEST["director"]?>
+			Фамилия, имя, отчетсво руководителя: <?=$_REQUEST["director"]?>
 		</td>
 		<td colspan="2">
-			<strong>на основании какого документы действует</strong>
-				<?=$_REQUEST["director_document"]?>
+			На основании какого документы действует: <?=$_REQUEST["director_document"]?>
 		</td>
 	</tr>
 	<tr>
 		<td colspan="4">
-			<strong>адрес организции (с индексом)</strong>
-				<?=$_REQUEST["address"]?>
+			Адрес организции (с индексом): <?=$_REQUEST["address"]?>
 		</td>
 	</tr>
 	<tr>
 		<td>
-			<strong>инн</strong>
-			<?=$_REQUEST["inn"]?>
+			ИНН: <?=$_REQUEST["inn"]?>
 		</td>
 		<td>
-			<strong>кпп</strong>
-			<?=$_REQUEST["kpp"]?>
+			КПП: <?=$_REQUEST["kpp"]?>
 		</td>
 		<td>
-			<strong>банк</strong>
-			<?=$_REQUEST["bank"]?>
+			Банк: <?=$_REQUEST["bank"]?>
 		</td>
 		<td>
-			<strong>бик</strong>
-			<?=$_REQUEST["bik"]?>
+			БИК: <?=$_REQUEST["bik"]?>
 		</td>
 	</tr>
 	<tr>
 		<td colspan="2">
-			<strong>расчетный счет</strong>
-				<?=$_REQUEST["current_account"]?>
+			Расчетный счет: <?=$_REQUEST["current_account"]?>
 		</td>
 		<td colspan="2">
-			<strong>корреспондентский счет</strong>
-				<?=$_REQUEST["bank_account"]?>
+			Корреспондентский счет: <?=$_REQUEST["bank_account"]?>
 		</td>
 	</tr>
 	<tr>
 		<td colspan="2">
-			<strong>телефон</strong>
-			<?=$_REQUEST["phone"]?>
+			Телефон: <?=$_REQUEST["phone"]?>
 		</td>
 		<td colspan="2">
-			<strong>факс</strong>
-			<?=$_REQUEST["fax"]?>
+			Факс: <?=$_REQUEST["fax"]?>
 		</td>
 	</tr>
 	<tr>
 		<td colspan="2">
-			<strong>ФИО контактного лица</strong>
-			<?=$_REQUEST["fio"]?>
+			ФИО контактного лица: <?=$_REQUEST["fio"]?>
 		</td>
 		<td colspan="2">
-			<strong>контактный телефон</strong>
-			<?=$_REQUEST["contact_phone"]?>
+			Контактный телефон: <?=$_REQUEST["contact_phone"]?>
 		</td>
 	</tr>
 	<tr>
@@ -104,67 +90,57 @@ if($result['status'] == 'ok') {
 	<?if($_REQUEST['type']==1):?>
 		<tr>
 			<td colspan="4">
-				<strong>Обучение (повышение квалификации) по программе: </strong><?=$_REQUEST['programm']?>
+				Обучение (повышение квалификации) по программе: <?=$_REQUEST['programm']?>
 			</td>
 		</tr>
 		<tr>
 			<td colspan="4">
-				<strong>кол-во человек</strong>
-				<?=$_REQUEST["count"]?>
+				Кол-во человек: <?=$_REQUEST["count"]?>
 			</td>
 		</tr>
 		<tr>
 			<td colspan="2">
-				<strong>желаемый срок обучения. начало.</strong>
-				<?=$_REQUEST["date_start"]?>
+				Желаемый срок обучения. начало.: <?=$_REQUEST["date_start"]?>
 			</td>
 			<td colspan="2">
-				<strong>окончание</strong>
-				<?=$_REQUEST["date_end"]?>
+				Окончание: <?=$_REQUEST["date_end"]?>
 			</td>
 		</tr>
 		<tr>
 			<td colspan="4">
-				<strong>Дата предыдущего обучения (повышении квалификации), № удостоверения, уровень допуска, кем выдано (если раннее обучался)</strong>
+				Дата предыдущего обучения (повышении квалификации), № удостоверения, уровень допуска, кем выдано (если раннее обучался)
 				<?=$_REQUEST["last_education"]?>
 			</td>
 		</tr>
 	<?elseif($_REQUEST['type']==2):?>
 		<tr>
 			<td colspan="4">
-				<strong>Повышение квалификации по программе на базе установки аузк: </strong><?=$_REQUEST['base']?>
+				Повышение квалификации по программе на базе установки аузк: <?=$_REQUEST['base']?>
 			</td>
 		</tr>
 		<tr>
 			<td colspan="2">
-				<strong>фио слушателя</strong>
-				<?=$_REQUEST["fio"]?>
+				ФИО слушателя: <?=$_REQUEST["fio"]?>
 			</td>
 			<td colspan="2">
-				<strong>профессия (должность) слушателя</strong>
-				<?=$_REQUEST["profession"]?>
+				Профессия (должность) слушателя: <?=$_REQUEST["profession"]?>
 			</td>
 		</tr>
 		<tr>
 			<td colspan="2">
-				<strong>имеющийся уровень по узк</strong>
-				<?=$_REQUEST["level"]?>
+				Имеющийся уровень по узк: <?=$_REQUEST["level"]?>
 			</td>
 			<td colspan="2">
-				<strong>номер удостоверения по узк и дата выдачи</strong>
-				<?=$_REQUEST["number"]?>
+				Номер удостоверения по узк и дата выдачи: <?=$_REQUEST["number"]?>
 			</td>
 		</tr>
 		<tr>
 			<td colspan="1">
-				<strong>опыт работы по узк</strong>
-				<?=$_REQUEST["skills"]?>
+				Опыт работы по узк: <?=$_REQUEST["skills"]?>
 			</td>
 			<td colspan="3">
-				<strong>желаемый срок обучения.начало</strong>
-				<?=$_REQUEST["date_start2"]?>
-				<strong>окончание</strong>
-				<?=$_REQUEST["date_end2"]?>
+				Желаемый срок обучения. Начало: <?=$_REQUEST["date_start2"]?><br>
+				Окончание: <?=$_REQUEST["date_end2"]?>
 			</td>
 		</tr>
 	<?endif;?>
