@@ -86,7 +86,7 @@ $APPLICATION->SetPageProperty('show_courses', 'true');
       <div class="col-xs-9"><a href="#tab2" class="application__tabs-item ">Повышение квалификации по программе “методы наразрушающего контроля: автоматизированный ультразвуковой контроль при строительстве объектов промысловых и магистральных газопроводов ОАО ”газпром”</a></div>
     </div>
   </div>
-  <div class="application__frame application__tabs-content l-margin-bottom" id="tab1">
+  <div class=" l-margin-bottom application__frame application__tabs-content" id="tab1">
     <div class="row">
       <div class="col-xs-12">
         <select name="programm" class="application__chosen" data-placeholder="Выберите программу обучения">
@@ -123,7 +123,7 @@ $APPLICATION->SetPageProperty('show_courses', 'true');
       </div>
     </div>
   </div>
-  <div class="application__frame application__tabs-content application__tabs-content--disable l-margin-bottom" id="tab2">
+  <div class=" l-margin-bottom application__frame application__tabs-content application__tabs-content--disable" id="tab2">
     <div class="row">
       <div class="col-xs-6">
         <label for="">фио слушателя</label>

@@ -157,6 +157,7 @@ $(document).ready ->
 		$(this).mod('active', true)
 		$('.application').elem("tabs-content").each ->
 			if "#" + $(this).attr('id') == id
+				console.log id, $(this).attr('id')
 				$(this).mod('disable', false)
 			else
 				$(this).mod('disable', true)
