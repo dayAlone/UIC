@@ -85,7 +85,7 @@ if($result['status'] == 'ok') {
 		</td>
 	</tr>
 	<tr>
-		<td colspan="4"><h2>Cведения об обучении</h2></td>
+		<td colspan="4"><hr><h2>Cведения об обучении</h2></td>
 	</tr>
 	<?if($_REQUEST['type']==1):?>
 		<tr>
@@ -187,7 +187,7 @@ if($result['status'] == 'ok') {
 		</td>
 	</tr>
 	<tr>
-		<td colspan="4"><h2>Cведения об обучении</h2></td>
+		<td colspan="4"><hr><h2>Cведения об обучении</h2></td>
 	</tr>
 	<tr>
 		<td colspan="4">
