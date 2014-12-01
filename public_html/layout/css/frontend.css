@@ -5546,6 +5546,12 @@ body {
 .application__tabs-content--disable {
   display: none;
 }
+.application__divider {
+  float: left;
+  width: 100%;
+  margin: 10px 0;
+  border-bottom: 1px solid #eaeef3;
+}
 .application__frame {
   float: left;
   width: 100%;
@@ -5617,6 +5623,15 @@ body {
 }
 .application .captcha_refresh svg path {
   fill: #e8333d;
+}
+.application .iradio {
+  margin-top: 9px;
+  position: relative;
+  margin-right: 5px;
+  margin-left: 25px;
+}
+.application .iradio:first-of-type {
+  margin-left: -20px;
 }
 .application input[type="submit"] {
   float: right;
@@ -5706,6 +5721,19 @@ body {
 .application__tabs-item--active:after {
   border-color: #9eb3c1;
   background: #e11238;
+}
+.iradio {
+  float: left;
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  border: 1px solid #a0b4c2;
+  -webkit-box-shadow: inset 0 0 0 2px #fff;
+  box-shadow: inset 0 0 0 2px #fff;
+}
+.iradio.checked {
+  background: #e8333d;
 }
 .chosen {
   position: relative;

@@ -279,6 +279,10 @@ body
 		margin-top 0 !important
 		&--disable
 			display none
+	&__divider
+		full-width()
+		margin 10px 0
+		border-bottom 1px solid #eaeef3
 	&__frame
 		full-width()
 		border 1px solid #eb3037
@@ -333,6 +337,13 @@ body
 				path
 					fill #e8333d
 			float right
+	.iradio
+		&:first-of-type
+			margin-left -20px
+		margin-top 9px
+		position relative
+		margin-right 5px
+		margin-left 25px
 	input
 		&[type="submit"]
 			float right
@@ -395,6 +406,15 @@ body
 					border-color #9eb3c1
 					background #e11238
 
+.iradio
+	float left
+	width 15px
+	height 15px
+	border-radius 15px
+	border 1px solid #a0b4c2
+	box-shadow inset 0 0 0 2px white
+	&.checked
+		background #e8333d
 .chosen
 	position relative
 	z-index 30

@@ -211,7 +211,6 @@
       $(this).mod('active', true);
       $('.application').elem("tabs-content").each(function() {
         if ("#" + $(this).attr('id') === id) {
-          console.log(id, $(this).attr('id'));
           return $(this).mod('disable', false);
         } else {
           return $(this).mod('disable', true);
@@ -219,6 +218,7 @@
       });
       return e.preventDefault();
     });
+    $('input[type=radio], input[type=checkbox]').iCheck();
     $('.directions-list__trigger').click(function(e) {
       var block, blockHeight, c, item, items;
       c = $(this).block().attr('class');

@@ -125,6 +125,20 @@ $APPLICATION->SetPageProperty('show_courses', 'true');
   </div>
   <div class=" l-margin-bottom application__frame application__tabs-content application__tabs-content--disable" id="tab2">
     <div class="row">
+      <div class="col-xs-4">
+        <label class="application__label application__label--small">на базе установки аузк </label>
+      </div>
+      <div class="col-xs-8">
+        <input type="radio" id="type1">
+        <label class="application__label application__label--small" for="type1">argovision</label>
+        <input type="radio" id="type2">
+        <label class="application__label application__label--small" for="type2">pipe wizard</label>
+        <input type="radio" id="type3">
+        <label class="application__label application__label--small" for="type3">weld star</label>
+      </div>
+    </div>
+    <div class="application__divider"></div>
+    <div class="row">
       <div class="col-xs-6">
         <label for="">фио слушателя</label>
         <input type="text" name="fio">

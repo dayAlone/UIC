@@ -8,6 +8,9 @@
    "blurjs":{
       "js":"/blurjs/blur.js"
    },
+   "iCheck":{
+      "js":"/iCheck/icheck.js"
+   },
    "bootstrap":{
       "js":[
          "/bootstrap/js/transition.js",
