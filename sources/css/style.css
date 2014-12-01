@@ -3403,19 +3403,17 @@ body:not(.index) .block .courses__item + .courses__item,
 body:not(.index) .block .news__item + .courses__item {
   margin-top: 25px;
 }
-body:not(.index) .block .courses__item + .news__item--fixed,
-body:not(.index) .block .news__item + .news__item--fixed,
-body:not(.index) .block .courses__item + .courses__item--fixed,
-body:not(.index) .block .news__item + .courses__item--fixed {
-  position: absolute;
-  right: 35px;
-  bottom: 25px;
-}
 .block .courses__item,
 .block .news__item {
   float: left;
   width: 100%;
   line-height: 17px;
+}
+.block .courses__item--fixed,
+.block .news__item--fixed {
+  position: absolute;
+  right: 35px;
+  bottom: 25px;
 }
 .block .courses__title,
 .block .news__title {
