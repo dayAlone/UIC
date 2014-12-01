@@ -39,6 +39,9 @@
         $('.page__sidebar-content .block:last').remove();
       }
     }
+    if ($('.index .news .news__item:last').outerHeight() > $('.index .news .news__item:first').outerHeight()) {
+      $('.index .news .news__item:last').addClass('.news__item--fixed');
+    }
     $('body:not(.index) .page__content > .row').css({
       minHeight: function() {
         var h;

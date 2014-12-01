@@ -33,6 +33,9 @@ size = ->
 		while $('.page__sidebar-content').outerHeight() > $('.page__sidebar').outerHeight()
 			$('.page__sidebar-content .block:last').remove()
 
+	if $('.index .news .news__item:last').outerHeight() > $('.index .news .news__item:first').outerHeight()
+		$('.index .news .news__item:last').addClass '.news__item--fixed'
+
 	$('body:not(.index) .page__content > .row').css
 		minHeight : ->
 			h = $(window).height() - $('.footer').outerHeight()*2 - $('.page__content').offset().top - 25
@@ -293,7 +296,7 @@ $(document).ready ->
 		$('.form .file-trigger').removeClass 'error'
 		$('.file-name').text($(this).val().replace(/.+[\\\/]/, ""))
 
-	
+
 
 	$('.form').submit (e)->
 		data = new FormData(this)
