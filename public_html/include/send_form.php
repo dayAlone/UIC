@@ -24,7 +24,7 @@ if($result['status'] == 'ok') {
 		if($_REQUEST['form'] == 'ur'):
 		ob_start();
 		?>
-<table border="0" cellpadding="10" style="font-size:13px">
+<table border="0" cellpadding="6" style="font-size:13px">
 	<tr>
 		<td colspan="4"><h2>Cведения о компании</h2></td>
 	</tr>

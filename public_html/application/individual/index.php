@@ -50,7 +50,7 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
     <div class="row">
       <div class="col-xs-6">
         <label for="">телефон</label>
-        <input required type="text" name="phone">
+        <input required type="text" name="phone" data-parsley-pattern="/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}/" data-parsley-trigger="change">
       </div>
       <div class="col-xs-6">
         <label for="">электронная почта</label>
@@ -82,9 +82,9 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
       <div class="col-xs-12 ">
         <label for="">желаемый срок обучения</label>
         <label class="application__label application__label--small">начало</label>
-        <input required type="text" name="date_start" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
+        <input type="text" name="date_start" class="application__input application__input--small"  data-provide="datepicker" data-date-format="dd.mm.yyyy" data-date-language="ru" placeholder="<?=date('d.m.Y')?>">
         <label class="application__label application__label--small">окончание</label>
-        <input required type="text" name="date_end" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
+        <input type="text" name="date_end" class="application__input application__input--small"  data-provide="datepicker" data-date-format="dd.mm.yyyy" data-date-language="ru" placeholder="<?=date('d.m.Y')?>">
       </div>
     </div>
     <div class="row">
