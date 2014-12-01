@@ -130,11 +130,11 @@ $APPLICATION->SetPageProperty('show_courses', 'true');
       </div>
       <div class="col-xs-8">
         <input type="radio" id="type1">
-        <label class="application__label application__label--small" for="type1">argovision</label>
+        <label class="application__label application__label--small" for="type1" name="type">argovision</label>
         <input type="radio" id="type2">
-        <label class="application__label application__label--small" for="type2">pipe wizard</label>
+        <label class="application__label application__label--small" for="type2" name="type">pipe wizard</label>
         <input type="radio" id="type3">
-        <label class="application__label application__label--small" for="type3">weld star</label>
+        <label class="application__label application__label--small" for="type3" name="type">weld star</label>
       </div>
     </div>
     <div class="application__divider"></div>
