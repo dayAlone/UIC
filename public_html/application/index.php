@@ -96,7 +96,8 @@ $APPLICATION->SetPageProperty('show_courses', 'true');
                 "IBLOCK_TYPE"  => "news",
                 "IBLOCK_ID"    => "4",
                 "TOP_DEPTH"    => "2",
-                "CACHE_TYPE"   => "A"
+                "CACHE_TYPE"   => "A",
+                "TYPE"         => "ur"
             ),
             false);
           ?>

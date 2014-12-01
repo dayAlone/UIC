@@ -5633,6 +5633,24 @@ body {
 .application .iradio:first-of-type {
   margin-left: -20px;
 }
+.application .dropdown {
+  width: 135%;
+  float: right;
+  margin-top: 19px;
+}
+.application .dropdown__text {
+  width: 94%;
+}
+.application .dropdown__trigger {
+  background: #96adbc;
+  width: 100%;
+  font-size: 15px;
+  padding-top: 10px;
+}
+.application .dropdown__frame {
+  padding-top: 35px;
+  background: #96adbc;
+}
 .application input[type="submit"] {
   float: right;
   width: 120%;
