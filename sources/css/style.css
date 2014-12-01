@@ -3397,15 +3397,15 @@ body {
   float: left;
   width: 100%;
 }
+.block .courses__item + .block .courses__item,
+.block .news__item + .block .news__item {
+  margin-top: 22px;
+}
 .block .courses__item,
 .block .news__item {
   float: left;
   width: 100%;
   line-height: 17px;
-}
-.block .courses__item + .courses__item,
-.block .news__item + .courses__item {
-  margin-top: 22px;
 }
 .block .courses__title,
 .block .news__title {
@@ -3549,7 +3549,7 @@ body {
 .block .news__item {
   max-width: 45%;
 }
-.block .news__item+.news__item {
+.index .block .news__item+.news__item {
   margin-left: 10%;
 }
 .block .news__date span {

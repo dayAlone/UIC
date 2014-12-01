@@ -356,7 +356,7 @@
       return e.preventDefault();
     });
     $('.form input[type=submit]').click(function(e) {
-      if (!$('.form input[type=file]').val()) {
+      if (!$('.form input[type=file]').val() && $('.form input[type=file]').length > 0) {
         return $('.form .file-trigger').addClass('error');
       }
     });

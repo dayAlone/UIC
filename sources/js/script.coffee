@@ -282,7 +282,7 @@ $(document).ready ->
 		e.preventDefault()
 
 	$('.form input[type=submit]').click (e)->
-		if !$('.form input[type=file]').val()
+		if !$('.form input[type=file]').val() && $('.form input[type=file]').length > 0
 			$('.form .file-trigger').addClass 'error'
 
 	$('.file-trigger').click (e)->
@@ -292,6 +292,8 @@ $(document).ready ->
 	$('input[type=file]').on 'change', ()->
 		$('.form .file-trigger').removeClass 'error'
 		$('.file-name').text($(this).val().replace(/.+[\\\/]/, ""))
+
+	
 
 	$('.form').submit (e)->
 		data = new FormData(this)

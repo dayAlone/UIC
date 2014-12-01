@@ -12,71 +12,71 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
     <div class="row">
       <div class="col-xs-12">
         <label for="">полное наименование организации</label>
-        <input type="text" name="company">
+        <input required type="text" name="company">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-6">
         <label for="">фамилия, имя, отчетсво руководителя</label>
-        <input type="text" name="director">
+        <input required type="text" name="director">
       </div>
       <div class="col-xs-6">
         <label for="">на основании какого документы действует</label>
-        <input type="text" name="director_document">
+        <input required type="text" name="director_document">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12">
         <label for="">адрес организции (с индексом)</label>
-        <input type="text" name="address">
+        <input required type="text" name="address">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-3">
         <label for="">инн</label>
-        <input type="text" name="inn">
+        <input required type="text" name="inn">
       </div>
       <div class="col-xs-3">
         <label for="">кпп</label>
-        <input type="text" name="kpp">
+        <input required type="text" name="kpp">
       </div>
       <div class="col-xs-3">
         <label for="">банк</label>
-        <input type="text" name="bank">
+        <input required type="text" name="bank">
       </div>
       <div class="col-xs-3">
         <label for="">бик</label>
-        <input type="text" name="bik">
+        <input required type="text" name="bik">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-6">
         <label for="">расчетный счет</label>
-        <input type="text" name="current_account">
+        <input required type="text" name="current_account">
       </div>
       <div class="col-xs-6">
         <label for="">корреспондентский счет</label>
-        <input type="text" name="bank_account">
+        <input required type="text" name="bank_account">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-6">
         <label for="">телефон</label>
-        <input type="text" name="phone">
+        <input required type="text" name="phone">
       </div>
       <div class="col-xs-6">
         <label for="">факс</label>
-        <input type="text" name="fax">
+        <input required type="text" name="fax">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-6">
         <label for="">ФИО контактного лица</label>
-        <input type="text" name="fio">
+        <input required type="text" name="fio">
       </div>
       <div class="col-xs-6">
         <label for="">контактный телефон</label>
-        <input type="text" name="contact_phone">
+        <input required type="text" name="contact_phone">
       </div>
     </div>
   </div>
@@ -109,20 +109,20 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
     <div class="row">
       <div class="col-xs-2">
         <label for="">кол-во человек</label>
-        <input type="text" name="count">
+        <input required type="text" name="count">
       </div>
       <div class="col-xs-9 col-xs-offset-1">
         <label for="">желаемый срок обучения</label>
         <label class="application__label application__label--small">начало</label>
-        <input type="text" name="start" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
+        <input required type="text" name="start" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
         <label class="application__label application__label--small">окончание</label>
-        <input type="text" name="end" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
+        <input required type="text" name="end" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12">
         <label for="">Дата предыдущего обучения (повышении квалификации), № удостоверения, уровень допуска, кем выдано (если раннее обучался)</label>
-        <input type="text" name="last_date">
+        <input required type="text" name="last_date">
       </div>
     </div>
   </div>
@@ -132,11 +132,11 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
         <label class="application__label application__label--small">на базе установки аузк </label>
       </div>
       <div class="col-xs-8">
-        <input type="radio" id="type1" name="type">
+        <input required type="radio" id="type1" name="type">
         <label class="application__label application__label--small" for="type1" name="type">argovision</label>
-        <input type="radio" id="type2" name="type">
+        <input required type="radio" id="type2" name="type">
         <label class="application__label application__label--small" for="type2" name="type">pipe wizard</label>
-        <input type="radio" id="type3" name="type">
+        <input required type="radio" id="type3" name="type">
         <label class="application__label application__label--small" for="type3" name="type">weld star</label>
       </div>
     </div>
@@ -144,34 +144,34 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
     <div class="row">
       <div class="col-xs-6">
         <label for="">фио слушателя</label>
-        <input type="text" name="fio">
+        <input required type="text" name="fio">
       </div>
       <div class="col-xs-6">
         <label for="">профессия (должность) слушателя</label>
-        <input type="text" name="count">
+        <input required type="text" name="count">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-6">
         <label for="">имеющийся уровень по узк</label>
-        <input type="text" name="fio">
+        <input required type="text" name="fio">
       </div>
       <div class="col-xs-6">
         <label for="">номер удостоверения по узк и дата выдачи</label>
-        <input type="text" name="count">
+        <input required type="text" name="count">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-6">
         <label for="">опыт работы по узк</label>
-        <input type="text" name="count">
+        <input required type="text" name="count">
       </div>
       <div class="col-xs-6">
         <label for="">желаемый срок обучения</label>
         <label class="application__label application__label--small xxs-margin-left">начало</label>
-        <input type="text" name="start" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
+        <input required type="text" name="start" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
         <label class="application__label application__label--small">окончание</label>
-        <input type="text" name="end" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
+        <input required type="text" name="end" class="application__input application__input--small" placeholder="<?=date('d.m.Y')?>">
       </div>
     </div>
     <small>
@@ -194,14 +194,14 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
         $code=$cpt->GetSID();
       ?>
       <div class="captcha" style="background-image:url(/include/captcha.php?captcha_sid=<?=$code?>)"></div>
-      <input type="hidden" name="captcha_code" value="<?=$code?>">
+      <input required type="hidden" name="captcha_code" value="<?=$code?>">
       <a href="#" class="captcha_refresh">
         <?=svg('refresh')?>
       </a>
     </div>
     <div class="col-xs-3">
       <label class="application__label application__label--small">сюда</label>
-      <input type="text"  class="application__input application__input--small">
+      <input required type="text"  class="application__input application__input--small">
     </div>
     <div class="col-xs-3">
       <input type="submit" value="отправить заявку">

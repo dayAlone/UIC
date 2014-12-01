@@ -945,11 +945,11 @@ body
 			background #2c374a
 	.courses, .news
 		full-width()
+		&__item + &__item
+			margin-top 22px
 		&__item
 			full-width()
 			line-height 17px
-			& + .courses__item
-				margin-top 22px
 		&__title
 			color #b1cffd
 			text-transform: uppercase
@@ -1010,7 +1010,8 @@ body
 		&__item
 			max-width 45%
 			&+.news__item
-				margin-left 10%
+				.index &
+					margin-left 10%
 		&__date
 			span
 				background #337ef0
