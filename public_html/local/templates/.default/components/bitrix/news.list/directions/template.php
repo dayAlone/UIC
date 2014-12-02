@@ -1,8 +1,14 @@
 <div class="directions-list">
 <?
+global $ID;
+$ID = false;
 function showItems($items)
 {
-  foreach ($items as $item):?>
+  foreach ($items as $item):
+      global $ID;
+      if($_REQUEST['ELEMENT_CODE']==$item['CODE'])
+        $ID = $item['CODE'];
+    ?>
     <div class="directions-list__item <?=($_REQUEST['ELEMENT_CODE']==$item['CODE']?"directions-list__item--open":"")?>" id="<?=$item['CODE']?>">
       <a href="#" class="directions-list__trigger">
         <?=svg('arrow-right')?>
@@ -129,4 +135,12 @@ else
     </div>
   </div>
 </div>
+<?if(strlen($ID)>0):?>
+<script>
+  $(function(){
+    offset = $("#<?=$ID?>").offset()
+    $('body').velocity("scroll", {'offset': offset.top});
+  })
+</script>
+<?endif?>
 <?$this->EndViewTarget();?>
