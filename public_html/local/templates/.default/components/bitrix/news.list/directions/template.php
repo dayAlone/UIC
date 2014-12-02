@@ -15,7 +15,7 @@ function showItems($items)
             <div class="directions-list__label">Код<br>профессии</div>
             <div class="directions-list__value"><?=$item['PROPERTIES']['CODE']['VALUE']?></div>
           <?endif;?>
-          <a class="directions-list__application" href="/application/?id=<?=$item['ID']?>"><?=svg('application')?><br>заполнить заявку <br>на этот <br>курс</a>
+          <a class="directions-list__application" data-target="#checkType" data-toggle="modal" href="#checkType" data-id="<?=$item['ID']?>"><?=svg('application')?><br>заполнить заявку <br>на этот <br>курс</a>
           </div>
           <div class="col-xs-10">
           <?
@@ -104,3 +104,25 @@ else
   showItems($arResult['ITEMS']);
 ?>
 </div>
+<?$this->SetViewTarget('footer');?>
+<div id="checkType" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content modal-content--white"><a data-dismiss="modal" href="#" class="close"><?=svg('close')?></a>
+      <div class="types">
+        <div class="types__title">
+          Выберите тип слушателя
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <a href="/application/" class="types__item">Юридическое лицо</a>
+          </div>
+          <div class="col-xs-6">
+            <a href="/application/user/" class="types__item types__item--red">Физическое лицо</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<?$this->EndViewTarget();?>

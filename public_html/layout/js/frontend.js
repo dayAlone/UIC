@@ -24656,6 +24656,13 @@ var pp_alreadyInitialized = false; // Used for the deep linking to make sure not
         return setHash($(this).attr('id'));
       }
     });
+    $('#checkType').on('show.bs.modal', function(a, b) {
+      return $(this).data('id', $(a.relatedTarget).data('id'));
+    });
+    $('#checkType .types__item').click(function(e) {
+      window.location.href = $(this).attr('href') + '?id=' + $('#checkType').data('id');
+      return e.preventDefault();
+    });
     $('.modal').on('hide.bs.modal', function(a, b) {
       $(this).find('input[type="email"], input[type="text"], textarea').removeClass('parsley-error').removeAttr("value").val("");
       $(this).find('form').trigger('reset').show();

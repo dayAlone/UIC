@@ -375,6 +375,13 @@ $(document).ready ->
 		else
 			setHash($(this).attr('id'))
 	
+	$('#checkType').on 'show.bs.modal', (a,b)->
+		$(this).data 'id', $(a.relatedTarget).data 'id'
+
+	$('#checkType .types__item').click (e)->
+		window.location.href = $(this).attr('href') + '?id=' + $('#checkType').data('id')
+		e.preventDefault()
+
 	$('.modal').on 'hide.bs.modal', (a,b)->
 		
 		$(this).find('input[type="email"], input[type="text"], textarea').removeClass('parsley-error').removeAttr("value").val("")

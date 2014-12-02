@@ -4522,6 +4522,36 @@ span.sub-collapser i {
   border-radius: 0;
   padding: 5px 2px 0px;
 }
+#checkType .modal-dialog {
+  max-width: 600px;
+}
+#checkType .types {
+  float: left;
+  width: 100%;
+}
+#checkType .types__title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  float: left;
+  width: 100%;
+  margin-bottom: 25px;
+}
+#checkType .types__item {
+  line-height: 40px;
+  height: 35px;
+  float: left;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #0082dc;
+  color: #fff;
+}
+#checkType .types__item--red {
+  background: #e12042;
+}
 .sidebar {
   width: 100%;
   z-index: 10;
