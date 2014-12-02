@@ -25,6 +25,7 @@ if(intval($_GLOBALS['currentCatalogSection'])>0):
       "DETAIL_URL"     => "/press/#ELEMENT_CODE#/",
       "CACHE_TYPE"     => "A",
       "SET_TITLE"      => "N",
+      "CACHE_NOTES"    => $_REQUEST['ELEMENT_CODE'],
       "PROPERTY_CODE"  => array("DATA", "DESCRIPTION", "CODE"),
       "PARENT_SECTION" => $_GLOBALS['currentCatalogSection']
     ),
