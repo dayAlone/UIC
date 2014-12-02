@@ -3,12 +3,12 @@
 function showItems($items)
 {
   foreach ($items as $item):?>
-    <div class="directions-list__item" id="<?=$item['CODE']?>">
+    <div class="directions-list__item <?=($_REQUEST['ELEMENT_CODE']==$item['CODE']?"directions-list__item--open":"")?>" id="<?=$item['CODE']?>">
       <a href="#" class="directions-list__trigger">
         <?=svg('arrow-right')?>
         <?=$item['NAME']?>
       </a>
-      <div class="directions-list__content">
+      <div class="directions-list__content <?=($_REQUEST['ELEMENT_CODE']==$item['CODE']?"directions-list__content--open":"")?>">
         <div class="row">
           <div class="col-xs-2">
           <?if(strlen($item['PROPERTIES']['CODE']['VALUE']['TEXT'])>0):?>
@@ -88,13 +88,17 @@ function showItems($items)
 }
 if(isset($arResult['DATA']))
   foreach($arResult['DATA'] as $item):
+      $open = false;
+      foreach ($item['ITEMS'] as $z)
+        if($z['CODE']==$_REQUEST['ELEMENT_CODE'])
+          $open = true;
     ?>
-      <div class="directions-list__section" id="<?=$item['CODE']?>">
+      <div class="directions-list__section <?=($open?"directions-list__section--open":"")?>" id="<?=$item['CODE']?>">
         <a href="#" class="directions-list__trigger">
           <?=svg('arrow-right')?>
           <?=$item['NAME']?>
         </a>
-        <div class="directions-list__content">
+        <div class="directions-list__content  <?=($open?"directions-list__content--open":"")?>">
           <? showItems($item['ITEMS']);?>
         </div>
       </div>
@@ -117,7 +121,7 @@ else
             <a href="/application/" class="types__item">Юридическое лицо</a>
           </div>
           <div class="col-xs-6">
-            <a href="/application/user/" class="types__item types__item--red">Физическое лицо</a>
+            <a href="/application/individual/" class="types__item types__item--red">Физическое лицо</a>
           </div>
         </div>
 

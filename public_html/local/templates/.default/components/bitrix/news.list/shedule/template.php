@@ -21,7 +21,7 @@
 	  			<div class="shedule__label">
 	  				наименование программы (курса) обучения
 	  			</div>
-	  			<p><?=$item['NAME']?></p>
+	  			<p><a href="/directions/<?=$item['CODE']?>/"><?=$item['NAME']?></a></p>
 	  			
 	  			<?
 	  			foreach ($item['PROPERTIES']['GROUPS']['VALUE'] as $g):?>

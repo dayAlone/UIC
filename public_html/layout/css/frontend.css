@@ -6589,6 +6589,9 @@ body {
   width: 100%;
   display: none;
 }
+.directions-list__content--open {
+  display: block;
+}
 .directions-list__value + .directions-list__application {
   margin-top: 62px;
 }

@@ -45,8 +45,21 @@
 					$First = $s;
 				$Sections[] = $s['ID'];
 			}
+
+			if(!$Current&&isset($params['CHECK'])):
+				$arSelect = Array("ID", 'IBLOCK_SECTION_ID');
+				$arFilter = Array("IBLOCK_ID"=>$params['IBLOCK'], 'CODE' => $_REQUEST['ELEMENT_CODE']);
+				$res      = CIBlockElement::GetList(Array(), $arFilter, false, false, $arSelect);
+				$item     = $res->Fetch();
+				$rsPath   = GetIBlockSectionPath($item['IBLOCK_ID'], $item['IBLOCK_SECTION_ID']);
+				$Open     = $item['IBLOCK_SECTION_ID'];
+				$arPath   = $rsPath->GetNext();
+				$Current  = $arPath['ID'];
+			endif;
+
 			if(strlen($_REQUEST['ELEMENT_CODE'])==0&&isset($params['NOEMPTY']))
 				$Current = $Sections[0];
+			
 			$_GLOBALS['currentCatalogSection'] = $Current;
 			$_GLOBALS['openCatalogSection']    = $Open;
 			
