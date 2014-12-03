@@ -24231,6 +24231,11 @@ var pp_alreadyInitialized = false; // Used for the deep linking to make sure not
         $('.page__sidebar-content .block:last').remove();
       }
     }
+    if ($('.page__sidebar-content').position().top < 200) {
+      while ($('.page__sidebar-content').position().top < 200) {
+        $('.page__sidebar-content .block:last').remove();
+      }
+    }
     if ($('.index .news .news__item:last').outerHeight() > $('.index .news .news__item:first').outerHeight()) {
       $('.index .news .news__item:last').addClass('news__item--fixed');
     }
