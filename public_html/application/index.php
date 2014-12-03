@@ -2,7 +2,6 @@
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle('Заявка на обучение');
 $APPLICATION->SetPageProperty('body_class', "application");
-$APPLICATION->SetPageProperty('show_news', 'true');
 $APPLICATION->SetPageProperty('show_courses', 'true');
 $APPLICATION->SetPageProperty('hide_application', 'true');
 ?>
@@ -144,12 +143,12 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
         <label class="application__label application__label--small">на базе установки аузк </label>
       </div>
       <div class="col-xs-8">
-        <input type="radio" id="type1" name="type">
-        <label class="application__label application__label--small" for="type1" name="base" value="argovision">argovision</label>
-        <input type="radio" id="type2" name="type">
-        <label class="application__label application__label--small" for="type2" name="base" value="pipe wizard">pipe wizard</label>
-        <input type="radio" id="type3" name="type">
-        <label class="application__label application__label--small" for="type3" name="base" value="weld star">weld star</label>
+        <input type="radio" id="type1" name="base">
+        <label class="application__label application__label--small" for="type1" value="argovision">argovision</label>
+        <input type="radio" id="type2" name="base">
+        <label class="application__label application__label--small" for="type2" value="pipe wizard">pipe wizard</label>
+        <input type="radio" id="type3" name="base">
+        <label class="application__label application__label--small" for="type3" value="weld star">weld star</label>
       </div>
     </div>
     <div class="application__divider"></div>
