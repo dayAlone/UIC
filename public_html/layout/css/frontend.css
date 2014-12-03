@@ -5712,7 +5712,7 @@ body {
   -ms-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-.news .page__sidebar {
+.directions .page__sidebar {
   background: #3b4f6c;
 }
 .page__sidebar-content {
@@ -6237,6 +6237,7 @@ body {
   left: 23px;
   margin: 0 !important;
   top: 14px;
+  pointer-events: none;
 }
 .application__tabs-item--active {
   border: 1px solid #e8333d;

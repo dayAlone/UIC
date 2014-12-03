@@ -1,8 +1,8 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle("О Центре");
-//$APPLICATION->SetPageProperty('show_news', 'true');
-//$APPLICATION->SetPageProperty('show_courses', 'true');
+$APPLICATION->SetPageProperty('show_news', 'true');
+$APPLICATION->SetPageProperty('show_courses', 'true');
 ?><p>
 	<big>
 	АНО «Учебно-Исследовательский Центр РОНКТД «Спектр» под руководством академика Клюева В.В.» создан для обучения специалистов по всем видам неразрушающего контроля и технической диагностики и является единственным и востребованным Учебным Центром в области Автоматизированного Ультразвукового Контроля.
