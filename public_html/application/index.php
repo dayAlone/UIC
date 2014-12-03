@@ -156,7 +156,7 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
     <div class="row">
       <div class="col-xs-6">
         <label for="">фио слушателя</label>
-        <input type="text" name="fio">
+        <input type="text" name="fio2">
       </div>
       <div class="col-xs-6">
         <label for="">профессия (должность) слушателя</label>

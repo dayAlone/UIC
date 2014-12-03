@@ -120,7 +120,7 @@ if($result['status'] == 'ok') {
 		</tr>
 		<tr>
 			<td colspan="2">
-				ФИО слушателя: <?=$_REQUEST["fio"]?>
+				ФИО слушателя: <?=$_REQUEST["fio2"]?>
 			</td>
 			<td colspan="2">
 				Профессия (должность) слушателя: <?=$_REQUEST["profession"]?>
