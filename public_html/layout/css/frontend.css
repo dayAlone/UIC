@@ -5680,6 +5680,7 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
+  background-position: center center;
   height: 900px;
   -webkit-transition-property: height;
   -moz-transition-property: height;
@@ -5697,7 +5698,7 @@ body {
   overflow: hidden;
   top: 0;
   left: -15px;
-  background: #1c2537;
+  background: #2c3749;
   height: 100%;
   width: 23%;
   -webkit-transition-property: height;
@@ -5710,6 +5711,9 @@ body {
   -o-transition-duration: 0.3s;
   -ms-transition-duration: 0.3s;
   transition-duration: 0.3s;
+}
+.news .page__sidebar {
+  background: #3b4f6c;
 }
 .page__sidebar-content {
   position: absolute;
