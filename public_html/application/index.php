@@ -18,71 +18,71 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
     <div class="application__frame-title">сведения о компании</div>
     <div class="row">
       <div class="col-xs-12">
-        <label for="">Полное наименование организации</label>
+        <label >Полное наименование организации</label>
         <input required type="text" name="company">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-6">
-        <label for="">фамилия, имя, отчетсво руководителя</label>
+        <label >фамилия, имя, отчетсво руководителя</label>
         <input required type="text" name="director">
       </div>
       <div class="col-xs-6">
-        <label for="">на основании какого документы действует</label>
+        <label >на основании какого документы действует</label>
         <input required type="text" name="director_document">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12">
-        <label for="">адрес организции (с индексом)</label>
+        <label >адрес организции (с индексом)</label>
         <input required type="text" name="address">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-3">
-        <label for="">инн</label>
+        <label >инн</label>
         <input required type="text" name="inn">
       </div>
       <div class="col-xs-3">
-        <label for="">кпп</label>
+        <label >кпп</label>
         <input required type="text" name="kpp">
       </div>
       <div class="col-xs-3">
-        <label for="">банк</label>
+        <label >банк</label>
         <input required type="text" name="bank">
       </div>
       <div class="col-xs-3">
-        <label for="">бик</label>
+        <label >бик</label>
         <input required type="text" name="bik">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-6">
-        <label for="">расчетный счет</label>
+        <label >расчетный счет</label>
         <input required type="text" name="current_account">
       </div>
       <div class="col-xs-6">
-        <label for="">корреспондентский счет</label>
+        <label >корреспондентский счет</label>
         <input required type="text" name="bank_account">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-6">
-        <label for="">телефон</label>
+        <label >телефон</label>
         <input required type="text" name="phone" data-parsley-pattern="/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}/" data-parsley-trigger="change">
       </div>
       <div class="col-xs-6">
-        <label for="">факс</label>
+        <label >факс</label>
         <input required type="text" name="fax" data-parsley-pattern="/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}/" data-parsley-trigger="change">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-6">
-        <label for="">ФИО контактного лица</label>
+        <label >ФИО контактного лица</label>
         <input required type="text" name="fio">
       </div>
       <div class="col-xs-6">
-        <label for="">контактный телефон</label>
+        <label >контактный телефон</label>
         <input required type="text" name="contact_phone" data-parsley-pattern="/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}/" data-parsley-trigger="change">
       </div>
     </div>
@@ -119,11 +119,11 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
     </div>
     <div class="row">
       <div class="col-xs-2">
-        <label for="">кол-во человек</label>
+        <label >кол-во человек</label>
         <input required type="text" name="count">
       </div>
       <div class="col-xs-9 col-xs-offset-1">
-        <label for="">желаемый срок обучения</label>
+        <label >желаемый срок обучения</label>
         <label class="application__label application__label--small">начало</label>
         <input required type="text" name="date_start" class="application__input application__input--small" data-provide="datepicker" data-date-format="dd.mm.yyyy" data-date-language="ru" placeholder="<?=date('d.m.Y')?>">
         <label class="application__label application__label--small">окончание</label>
@@ -132,7 +132,7 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
     </div>
     <div class="row">
       <div class="col-xs-12">
-        <label for="">Дата предыдущего обучения (повышении квалификации), № удостоверения, уровень допуска, кем выдано (если раннее обучался)</label>
+        <label >Дата предыдущего обучения (повышении квалификации), № удостоверения, уровень допуска, кем выдано (если раннее обучался)</label>
         <input required type="text" name="last_education">
       </div>
     </div>
@@ -154,31 +154,31 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
     <div class="application__divider"></div>
     <div class="row">
       <div class="col-xs-6">
-        <label for="">фио слушателя</label>
+        <label >фио слушателя</label>
         <input type="text" name="fio2">
       </div>
       <div class="col-xs-6">
-        <label for="">профессия (должность) слушателя</label>
+        <label >профессия (должность) слушателя</label>
         <input type="text" name="profession">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-6">
-        <label for="">имеющийся уровень по узк</label>
+        <label >имеющийся уровень по узк</label>
         <input type="text" name="level">
       </div>
       <div class="col-xs-6">
-        <label for="">номер удостоверения по узк и дата выдачи</label>
+        <label >номер удостоверения по узк и дата выдачи</label>
         <input type="text" name="number">
       </div>
     </div>
     <div class="row">
       <div class="col-xs-6">
-        <label for="">опыт работы по узк</label>
+        <label >опыт работы по узк</label>
         <input type="text" name="skills">
       </div>
       <div class="col-xs-6">
-        <label for="">желаемый срок обучения</label>
+        <label >желаемый срок обучения</label>
         <label class="application__label application__label--small xxs-margin-left">начало</label>
         <input type="text" name="date_start2" class="application__input application__input--small"  data-provide="datepicker" data-date-format="dd.mm.yyyy" data-date-language="ru" placeholder="<?=date('d.m.Y')?>">
         <label class="application__label application__label--small">окончание</label>
@@ -194,7 +194,7 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
   </div>
   <div class="row">
     <div class="col-xs-3">
-      <label for="" class="application__label application__label--rows">введите, пожалуйста<br>защиный код</label>
+      <label  class="application__label application__label--rows">введите, пожалуйста<br>защиный код</label>
     </div>
     <div class="col-xs-3">
       <?
