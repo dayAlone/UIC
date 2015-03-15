@@ -21,7 +21,7 @@ if($APPLICATION->GetPageProperty('popup')):?>
         array(
             "ALLOW_MULTI_SELECT" => "Y",
             "MENU_CACHE_TYPE"    => "A",
-            "ROOT_MENU_TYPE"     => "left",
+            "ROOT_MENU_TYPE"     => "top",
             "MAX_LEVEL"          => "1",
             ),
         false);?>
