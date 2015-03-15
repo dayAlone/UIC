@@ -4184,6 +4184,7 @@ article {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 26px;
+  overflow: hidden;
 }
 #Sites .nav-popup__item {
   font-size: 16px;
