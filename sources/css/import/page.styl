@@ -713,16 +713,17 @@ body
 		@media (max-width: scr_md)
 			background-size cover
 	.page__content
-		padding-top 80px
+		
 		> .row
 			padding 0
 			background transparent
-		bottom 75px
 		@media (min-width: scr_xs)
 			width 100%
 		@media (min-width: scr_sm)
 			width 720px
 		@media (min-width: scr_md)
+			bottom 75px
+		
 			padding-top 0
 			width 960px
 			position absolute
@@ -748,9 +749,11 @@ body
 			position absolute
 			top 50%
 			left 0
-			padding 0px 35px 0px
+			padding 0px 25px 0px
 			width 100%
 			transform translateY(-50%)
+			@media (min-width: scr_sm)
+				padding 0px 35px 0px
 	&--shedule, &--application
 		full-width()
 		text-align center
@@ -897,7 +900,9 @@ body
 					margin-right 10%
 		img
 			vertical-align: bottom
-			max-width 48%
+			max-width 46%
+			@media (min-width: scr_sm)
+				max-width 48%
 	&--news
 		background #2d7bf4
 		min-height 138px
