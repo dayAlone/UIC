@@ -757,8 +757,7 @@ body
 		background #c21734
 		min-height 114px
 		font-size 10px
-		@media (min-width: scr_sm)
-			margin-top 10px
+		margin-top 10px
 		@media (min-width: scr_md)
 			margin-top 0
 		@media (min-width: scr_lg)
@@ -870,6 +869,9 @@ body
 	&--courses
 		background #424f6c
 		min-height 361px
+		margin-top 10px
+		@media (min-width: scr_sm)
+			margin-top 0
 		h2
 			margin-top 0
 			font-weight: bold
@@ -877,7 +879,9 @@ body
 	&--partners
 		min-height 138px
 		background white
-		
+		margin-top 10px
+		@media (min-width: scr_sm)
+			margin-top 0
 		@media (min-width: scr_md)
 			margin-top 8px
 		h4
@@ -1061,11 +1065,14 @@ body
 					fill white
 	.news
 		&__item
-			max-width 45%
 			& + .news__item
-				margin-top 0
-				.index &
-					margin-left 10%
+				margin-top 15px
+			@media (min-width: scr_sm)
+				max-width 45%
+				& + .news__item
+					margin-top 0
+					.index &
+						margin-left 10%
 		&__date
 			span
 				background #337ef0

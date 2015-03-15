@@ -127,7 +127,7 @@ $APPLICATION->SetPageProperty('body_class', "index");
 
 	<div class="visible-sm visible-xs col-xs-12 col-sm-6">
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-xs-6">
 				<a href="/shedule/" class="block block--shedule" subsidiary data-parent="block--courses" data-factor="3"  data-offset="10">
 					<span class="block__content">
 						<?=svg('shedule')?><br>
@@ -135,7 +135,7 @@ $APPLICATION->SetPageProperty('body_class', "index");
 					</span>
 				</a>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-xs-6">
 				<a href="/application/" class="block block--application" subsidiary data-parent="block--courses" data-factor="3"  data-offset="10">
 					<span class="block__content">
 						<?=svg('application')?><br>
