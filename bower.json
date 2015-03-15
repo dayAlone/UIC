@@ -12,6 +12,7 @@
     "jquery": "latest",
     "bootstrap": "latest",
     "fotorama": "latest",
+    "photoswipe": "latest",
     "slick": "git@github.com:kenwheeler/slick.git",
     "hoverIntent": "git@github.com:briancherne/jquery-hoverIntent.git",
     "hypher": "git@github.com:bramstein/hypher.git",

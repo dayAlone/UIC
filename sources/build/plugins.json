@@ -11,6 +11,11 @@
    "iCheck":{
       "js":"/iCheck/icheck.js"
    },
+   "photoswipe":{
+      "js": ["/photoswipe/dist/photoswipe.js", "/photoswipe/dist/photoswipe-ui-default.js"],
+      "css": [ "/photoswipe/dist/photoswipe.css", "/photoswipe/dist/default-skin/default-skin.css" ],
+      "files": ["/photoswipe/dist/default-skin/default-skin.svg", "/photoswipe/dist/default-skin/default-skin.png", "/photoswipe/dist/default-skin/preloader.gif"]
+   },
    "datepicker":{
       "js":["/bootstrap-datepicker/js/bootstrap-datepicker.js", "/bootstrap-datepicker/js/locales/bootstrap-datepicker.ru.js"],
       "css": "/bootstrap-datepicker/css/datepicker.css"

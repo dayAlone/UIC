@@ -3,7 +3,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle('График обучения');
 $APPLICATION->SetPageProperty('hide_shedule', 'true');
 global $shedule;
-$shedule = array(">=PROPERTY_START"=>date('Y-m-d')." 00:00:00");
+$shedule = array(">=PROPERTY_END"=>date('Y-m-d')." 00:00:00");
 $APPLICATION->IncludeComponent(
   "bitrix:news.list", 
   "shedule",

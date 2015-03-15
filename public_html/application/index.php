@@ -24,11 +24,11 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
     </div>
     <div class="row">
       <div class="col-xs-6">
-        <label >фамилия, имя, отчетсво руководителя</label>
+        <label >фамилия, имя, отчество руководителя</label>
         <input required type="text" name="director">
       </div>
       <div class="col-xs-6">
-        <label >на основании какого документы действует</label>
+        <label >на основании какого документа действует</label>
         <input required type="text" name="director_document">
       </div>
     </div>

@@ -18,7 +18,7 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
     <div class="application__frame-title">персональные сведения</div>
     <div class="row">
       <div class="col-xs-10">
-        <label for="">фамилия, имя, отчетсво</label>
+        <label for="">фамилия, имя, отчество</label>
         <input required type="text" name="fio">
       </div>
       <div class="col-xs-2">

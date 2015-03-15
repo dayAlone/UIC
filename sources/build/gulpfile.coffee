@@ -20,7 +20,7 @@ replace      = require 'gulp-replace'
 watch        = require 'gulp-watch'
 imageop      = require 'gulp-image-optimization'
 
-plugins  = [ 'jquery', 'bootstrap', 'browser', 'fotorama', 'cookie', 'bem', 'chosen', 'iCheck', 'datepicker', 'hoverIntent', 'spin', 'velocity', 'parsley', 'prettyPhoto', 'slick' ]
+plugins  = [ 'jquery', 'bootstrap', 'browser', 'fotorama', 'cookie', 'bem', 'chosen', 'iCheck', 'datepicker', 'hoverIntent', 'spin', 'photoswipe', 'velocity', 'parsley', 'prettyPhoto', 'slick' ]
 
 layout   = './public_html/layout'
 sources  = './sources/'

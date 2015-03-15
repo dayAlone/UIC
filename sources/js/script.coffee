@@ -37,9 +37,9 @@ size = ->
 		if $('.page__sidebar-content').position().top < 200
 			while $('.page__sidebar-content').position().top < 200
 				$('.page__sidebar-content .block:last').remove()
-
-	if $('.index .news .news__item:last').outerHeight() > $('.index .news .news__item:first').outerHeight()
-		$('.index .news .news__item:last').addClass 'news__item--fixed'
+	$('.index .news').each ->
+		if $(this).find('.news__item:last').outerHeight() > $(this).find('.news__item:first').outerHeight()
+			$(this).find('.news__item:last').addClass 'news__item--fixed'
 
 	$('body:not(.index) .page__content > .row').css
 		minHeight : ->
@@ -54,7 +54,7 @@ size = ->
 		$el     = $(this)
 		factor  = $(this).data 'factor'
 		offset  = $(this).data 'offset'
-		$parent = $(".#{$el.data('parent')}")
+		$parent = $(".#{$el.data('parent')}:visible")
 		offset  = 0 if !offset
 		factor  = 1 if !factor
 		$el.removeAttr 'style'

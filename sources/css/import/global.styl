@@ -4,10 +4,6 @@ body
 	height 100%
 	color black
 
-.container
-	
-	min-width 980px
-
 .wrap 
 	full-width()
 	min-height: 100%
@@ -37,7 +33,14 @@ article
 				max-width 80%
 			@media (min-width: scr_lg)
 				max-width 220px
-		
+	.nav
+		&__item
+			@media (min-width: scr_sm)
+				font-size 14px
+				padding 3px 11.2px 0
+			@media (min-width: scr_lg)
+				font-size 16px
+				padding 3px 17.4px 0	
 
 .modal
 	padding 0
@@ -132,12 +135,3 @@ article
 	@media (min-width: scr_sm)
 		display block
 
-.toolbar
-	.nav
-		&__item
-			@media (min-width: scr_sm)
-				font-size 15px
-				padding 3px 10.2px 0
-			@media (min-width: scr_lg)
-				font-size 16px
-				padding 3px 17.4px 0

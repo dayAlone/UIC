@@ -4,7 +4,6 @@
 	src local('☺'), url('../fonts/ProximaNova-Black.ttf') format('truetype')
 	font-weight 800
 body
-	min-width 960px
 	background #151f31
 	
 .page
@@ -42,6 +41,7 @@ body
 		> .row
 			background white
 			padding 25px
+		margin-top 45px
 		position relative
 		min-height 200px
 		t(height)
@@ -710,14 +710,22 @@ body
 		background rgba(47,57,79,.75)
 	.wrap
 		b('bg_index.jpg', bottom center no-repeat, #2c374a)
-	
+		@media (max-width: scr_md)
+			background-size cover
 	.page__content
-		position absolute
+		padding-top 80px
 		> .row
 			padding 0
 			background transparent
 		bottom 75px
-		width 960px
+		@media (min-width: scr_xs)
+			width 100%
+		@media (min-width: scr_sm)
+			width 720px
+		@media (min-width: scr_md)
+			padding-top 0
+			width 960px
+			position absolute
 		@media (min-width: scr_lg)
 			width 1140px
 		color white
@@ -749,6 +757,10 @@ body
 		background #c21734
 		min-height 114px
 		font-size 10px
+		@media (min-width: scr_sm)
+			margin-top 10px
+		@media (min-width: scr_md)
+			margin-top 0
 		@media (min-width: scr_lg)
 			font-size 12px
 		text-transform: uppercase
@@ -821,6 +833,10 @@ body
 		background #16223f
 		min-height 114px
 		.students
+			@media (min-width: scr_sm)
+				padding-top 9px
+			@media (min-width: scr_lg)
+				padding-top 0
 			&__item
 				full-width()
 				text-align: left
@@ -861,7 +877,9 @@ body
 	&--partners
 		min-height 138px
 		background white
-		margin-top 8px
+		
+		@media (min-width: scr_md)
+			margin-top 8px
 		h4
 			font-size 12px
 			text-transform: uppercase
@@ -885,6 +903,29 @@ body
 			margin-top 0
 			font-weight: bold
 			font-size 25px
+	&--about
+		background #2c374b
+		.button
+			color white
+			margin-bottom 0
+		h1
+			margin-top 0
+			font-weight bold
+			font-size 34px
+			line-height 34px
+			margin-bottom 0px
+			@media (min-width: scr_lg)
+				font-size 40px
+				line-height 40px
+		h3
+			font-size 16px
+			line-height 20px
+			color #b1cffd
+			margin-top 10px
+			margin-bottom 0px
+			@media (min-width: scr_lg)
+				font-size 18px
+				line-height 23px
 	.page__sidebar &--application, .page__sidebar &--shedule
 		background #c21734
 		text-align: left
@@ -945,7 +986,6 @@ body
 				
 			&__more
 				margin-bottom 20px
-	
 	.page__sidebar &--courses + &--news
 		background #2c374a
 		.news__date span
@@ -1022,7 +1062,8 @@ body
 	.news
 		&__item
 			max-width 45%
-			&+.news__item
+			& + .news__item
+				margin-top 0
 				.index &
 					margin-left 10%
 		&__date
@@ -1038,29 +1079,7 @@ body
 			&:hover
 				color #2c374a
 				border-line(#2c374a)
-	&--about
-		background #2c374b
-		.button
-			color white
-			margin-bottom 0
-		h1
-			margin-top 0
-			font-weight bold
-			font-size 34px
-			line-height 34px
-			margin-bottom 0px
-			@media (min-width: scr_lg)
-				font-size 40px
-				line-height 40px
-		h3
-			font-size 16px
-			line-height 20px
-			color #b1cffd
-			margin-top 10px
-			margin-bottom 0px
-			@media (min-width: scr_lg)
-				font-size 18px
-				line-height 23px
+	
 
 #map
 	width 100%

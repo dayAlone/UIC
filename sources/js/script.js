@@ -46,9 +46,11 @@
         }
       }
     }
-    if ($('.index .news .news__item:last').outerHeight() > $('.index .news .news__item:first').outerHeight()) {
-      $('.index .news .news__item:last').addClass('news__item--fixed');
-    }
+    $('.index .news').each(function() {
+      if ($(this).find('.news__item:last').outerHeight() > $(this).find('.news__item:first').outerHeight()) {
+        return $(this).find('.news__item:last').addClass('news__item--fixed');
+      }
+    });
     $('body:not(.index) .page__content > .row').css({
       minHeight: function() {
         var h;
@@ -65,7 +67,7 @@
       $el = $(this);
       factor = $(this).data('factor');
       offset = $(this).data('offset');
-      $parent = $("." + ($el.data('parent')));
+      $parent = $("." + ($el.data('parent')) + ":visible");
       if (!offset) {
         offset = 0;
       }
