@@ -23,7 +23,7 @@ if(count($arResult['SECTIONS'])>1):
 	</span>
 	<select class="dropdown__select">
 		<?foreach ($arResult['SECTIONS'] as $key => &$item):?>
-		<option value="/press/<?=$item['NAME']?>/"><?=$item['NAME']?></a>
+		<option value="/press/<?=$item['NAME']?>/" <?=($arParams["CACHE_NOTES"]==$item['ID']?'selected':'')?>><?=$item['NAME']?></a>
 		<?endforeach;?>
 	</select>
 </span>

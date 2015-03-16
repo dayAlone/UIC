@@ -24,19 +24,29 @@ map = undefined
 
 size = ->
 	#autoHeight($('.page .tech'), '.tech__item', '.tech__title', false, true)
-	if $('.page__sidebar').length > 0
-		if $('.page__sidebar').height() > $('.page__picture').height()+$('.page__sidebar-content').height()
-			$('.page__sidebar-content').mod('fixed', true)
-		else
-			$('.page__sidebar-content').mod('fixed', false)
 
-		if $('.page__sidebar-content').outerHeight() > $('.page__sidebar').outerHeight()
-			while $('.page__sidebar-content').outerHeight() > $('.page__sidebar').outerHeight()
-				$('.page__sidebar-content .block:last').remove()
+	autoHeight 
 
-		if $('.page__sidebar-content').position().top < 200
-			while $('.page__sidebar-content').position().top < 200
-				$('.page__sidebar-content .block:last').remove()
+	heights = []
+	$('.application__tabs-item').removeAttr 'style'
+	$.each $('.application__tabs-item'), ()->
+		heights.push $(this).height()
+	$('.application__tabs-item').height Math.max.apply(Math,heights)
+
+	if $(window).width() > 992
+		if $('.page__sidebar').length > 0
+			if $('.page__sidebar').height() > $('.page__picture').height()+$('.page__sidebar-content').height()
+				$('.page__sidebar-content').mod('fixed', true)
+			else
+				$('.page__sidebar-content').mod('fixed', false)
+
+			if $('.page__sidebar-content').outerHeight() > $('.page__sidebar').outerHeight()
+				while $('.page__sidebar-content').outerHeight() > $('.page__sidebar').outerHeight()
+					$('.page__sidebar-content .block:last').remove()
+
+			if $('.page__sidebar-content').position().top < 200
+				while $('.page__sidebar-content').position().top < 200
+					$('.page__sidebar-content .block:last').remove()
 	$('.index .news').each ->
 		if $(this).find('.news__item:last').outerHeight() > $(this).find('.news__item:first').outerHeight()
 			$(this).find('.news__item:last').addClass 'news__item--fixed'
@@ -226,7 +236,22 @@ $(document).ready ->
 		infinite: false
 		customPaging: 10
 		responsive: [{
+			breakpoint: 396,
+			settings:{
+					slidesToShow: 1
+				}
+			},{
+			breakpoint: 480,
+			settings:{
+					slidesToShow: 2
+				}
+			},{
 			breakpoint: 768,
+			settings:{
+					slidesToShow: 3
+				}
+			},{
+			breakpoint: 992,
 			settings:{
 					slidesToShow: 4
 				}
@@ -489,15 +514,20 @@ $(document).ready ->
 	
 	$('.dropdown').hoverIntent
 			over : ()->
-				if($(window).width()>970)
-					openDropdown($(this))
+				if !$.browser.mobile
+					openDropdown $(this)
 				else
-					$(this).elem('select').focus()
-					$(this).mod('open', true)
+					$(this).find('select').focus()
+					$(this).mod 'open', true
 			out : ()->
-				
-				if($(window).width()>970)
-					closeDropdown($(this))
+				if !$.browser.mobile
+					closeDropdown $(this)
+
+	$('.dropdown').elem('trigger').click (e)->
+		if $.browser.mobile
+			$(this).parent().find('select').focus()
+			$(this).block().mod 'open', true
+		e.preventDefault()
 
 	$('.toolbar a.phone').click (e)->
 		if $(window).width() <= 768

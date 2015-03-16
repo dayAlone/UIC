@@ -19,35 +19,63 @@ body
 		height 900px
 		t(height)
 	&__sidebar
-		position absolute
-		overflow hidden
-		top 0
-		left -15px
-		background #2c3749
+		
 		height 100%
-		width 23%
 		t(height)
-		.directions &
-			background #3b4f6c
-		&-content
+		width 100%
+		position relative
+		float left
+		overflow hidden
+		padding 0 15px
+		margin-top 20px
+		@media (max-width: scr_xs)
+			.row
+				.col-xs-6
+					width 100%
+		.block
+			margin-top 20px
+			@media (min-width: scr_md)
+				margin-top 0
+		@media (min-width: scr_md)
+			margin-top 0
+			background #2c3749
+			width 23%
 			position absolute
-			bottom 0
-			left 0
-			width 100%
-			&--fixed
-				top 900px
-				bottom auto
+			padding 0
+			top 0
+			left -15px
+			&-content
+				position absolute
+				bottom 0
+				left 0
+				width 100%
+				&--fixed
+					top 900px
+					bottom auto
+			.directions &
+				background #3b4f6c
+		
 	&__content
 		> .row
 			background white
-			padding 25px
+			padding 15px 5px
+			@media (min-width: scr_sm)
+				padding 25px
 		margin-top 45px
 		position relative
 		min-height 200px
 		t(height)
+	nobr
+		white-space: normal
+		@media (min-width: scr_sm)
+			white-space: nowrap
 	big
-		font-size 20px
-		line-height 30px
+		font-size 17px
+		line-height 25px
+		@media (min-width: scr_sm)
+			font-size 20px
+			line-height 30px
+		
 	&--text
 		background white
 	.text &
@@ -203,10 +231,14 @@ body
 	&__title
 		padding 20px 0
 		margin 0
-		font-size 44px
-		line-height 44px
+		
 		color #233347
 		font-weight bold
+		font-size 34px
+		line-height 34px
+		@media (min-width: scr_lg)
+			font-size 44px
+			line-height 44px
 		
 	&__sub-title
 		font-size 22px
@@ -273,6 +305,10 @@ body
 		text-transform: uppercase
 		color #1d2a3a
 		font-size 13px
+		&--smallest
+			font-size 10px
+			@media (min-width: scr_lg)
+				font-size 11px
 		&--small
 			line-height 39px
 			padding-right 10px
@@ -310,7 +346,9 @@ body
 			full-width()
 			text-transform: uppercase
 			color #1d2a3a
-			font-size 13px
+			font-size 12px
+			@media (min-width: scr_lg)
+				font-size 13px
 		.row
 			margin-right: -5px
 			margin-left -5px
@@ -334,7 +372,8 @@ body
 		width 60%
 		height 35px
 		background-position center center
-		background-size cover
+		background-size contain
+		background-repeat no-repeat
 		&_refresh
 			width 30%
 			margin-top 2px
@@ -376,10 +415,17 @@ body
 			font-weight: bold
 			text-transform: uppercase
 			border 0
+			border-radius none
+			appearance none
+			border-radius 0
+			.bx-ios &
+				padding-top 2px
 		&[type="text"], &[type="email"]
 			background #eaeef3
 			full-width()
 			border 1px solid white
+			appearance none
+			border-radius 0
 			&.parsley-error
 				border 1px solid #e8333d !important
 			line-height 38px
@@ -398,12 +444,14 @@ body
 		&-item
 			full-width()
 			font-weight bold
-			font-size 13px
+			font-size 12px
 			text-transform: uppercase
 			color #96adbc
 			padding 15px 15px 10px 55px
 			background white
 			position relative
+			@media (min-width: scr_md)
+				font-size 13px
 			&:hover
 				color #1d2a3a
 				&:after
@@ -529,7 +577,11 @@ body
 		margin-bottom 8px
 	&__value
 		font-weight: bold
-		font-size 20px
+		font-size 17px
+		@media (max-width: scr_md)
+			margin-bottom 10px
+		@media (min-width: scr_lg)
+			font-size 20px
 	&__value + &__label
 		margin-top 25px
 	&__group
@@ -553,19 +605,31 @@ body
 		&__title
 			display inline-block
 			vertical-align: middle
-			line-height 20px
-			font-size 15px
+			line-height 15px
+			font-size 12px
+			@media (min-width: scr_sm)
+				font-size 13px
+			@media (min-width: scr_md)
+				font-size 15px
+				line-height 20px
 		&__item
 			height 90px
 			line-height 100px
-			padding 0 20px
+			
 			background #eff3f6
-			width (100/3)%
+			width 100%
 			float left
-			box-shadow -3px 0 0 0 white
+			padding 0 10px
 			text-align: center
 			font-weight: bold
 			color #6f8094
+			box-shadow 0 -3px 0 0 white
+			@media (min-width: scr_xs)
+				width (100/3)%
+				box-shadow -3px 0 0 0 white
+				
+			@media (min-width: scr_sm)
+				padding 0 20px
 			&:hover
 				color blue
 			&--active
@@ -595,7 +659,9 @@ body
 				color white
 				padding-left 50px
 				padding-right 25px
-				font-size 15px
+				font-size 13px
+				@media (min-width: scr_sm)
+					font-size 15px
 				svg
 					left 15px
 					path
@@ -608,9 +674,12 @@ body
 		&__item
 			background #e2e8ed
 			full-width()
-			padding-left 50px
+			
 			margin-bottom 8px
 			t(min-height, background)
+			padding 0 15px
+			@media (min-width: scr_xs)
+				padding 0 0 0 50px
 			&--open
 				background #f8f9fa
 				.directions-list__trigger
@@ -622,15 +691,24 @@ body
 		&__trigger
 			full-width()
 			position relative
-			font-size 20px
-			line-height 22px
+			font-size 17px
+			line-height 19px
 			color black
 			padding 22px 0 15px
+			padding-left 35px
+			@media (min-width: scr_xs)
+				padding-left 0
+			@media (min-width: scr_sm)
+				font-size 20px
+				line-height 22px
+				padding-left 0
 			svg
 				position absolute
-				left -35px
+				left 0px
 				top 18px
 				t(transform)
+				@media (min-width: scr_xs)
+					left -35px
 				path
 					t(fill)
 					fill #8797a2
@@ -643,23 +721,24 @@ body
 			display block
 			border-top 1px solid #d6d7da
 			padding 25px 0
-			max-width 95%
 			full-width()
 			display none
+			@media (max-width: scr_xs)
+				> .row
+					> .col-xs-2, > .col-xs-10
+						width 100%
+			@media (min-width: scr_xs)
+				max-width 95%
 			&--open
 				display block
-		&__value + .directions-list__application
-			margin-top 62px
-		&__application
-			&:hover
-				color blue
-				svg path
-					fill blue
-			svg
-				max-width 40px
-				path
-					t(fill)
-					fill #2f4458
+		&__code
+			& + .directions-list__application
+				@media (min-width: scr_xs)
+					margin-top 62px
+			@media (max-width: scr_xs)
+				float left
+				margin-right 50px
+		
 					
 		&__divider
 			full-width()
@@ -698,10 +777,29 @@ body
 			font-weight: bold
 			font-size 10px
 			margin-bottom 7px
+			@media (max-width: scr_xs)
+				font-size 8px
+		&__application
+			@media (max-width: scr_xs)
+				width 50%
+				margin-top -10px
+				br:last-of-type
+					display none
+			&:hover
+				color blue
+				svg path
+					fill blue
+			svg
+				max-width 40px
+				path
+					t(fill)
+					fill #2f4458
 		&__label--black
 			color black
 		&__value
 			font-size 20px
+			@media (max-width: scr_xs)
+				font-size 17px
 
 .index
 	min-height 950px
@@ -759,10 +857,11 @@ body
 		text-align center
 		background #c21734
 		min-height 114px
-		font-size 10px
+		font-size 12px
 		margin-top 10px
 		@media (min-width: scr_md)
 			margin-top 0
+			font-size 10px
 		@media (min-width: scr_lg)
 			font-size 12px
 		text-transform: uppercase
@@ -955,6 +1054,11 @@ body
 		svg
 			max-width 40px
 			left 0
+	@media (max-width: scr_md)
+		.page__sidebar .center &--application, .page__sidebar .center &--shedule
+			.block__content
+				left 50%
+				transform translateY(-50%) translateX(-50%)
 	.page__sidebar &--application + &--shedule
 		padding 15px 0 25px
 		&:after
@@ -967,10 +1071,12 @@ body
 			content ""
 	.page__sidebar &--news, .page__sidebar &--courses
 		background #3a4e6d
-		margin-top 0
+		margin-top 30px
 		min-height 0
 		padding-top 25px
 		padding-bottom 0
+		@media (min-width: scr_md)
+			margin-top 0
 		h2
 			text-transform: uppercase
 			margin-bottom 15px !important
@@ -1053,10 +1159,12 @@ body
 			color white
 			font-weight: bold
 			margin-bottom 25px
-			border-line(alpha(white,.5))
+			span
+				border-line(alpha(white,.5))
 			&:hover
 				color blue2
-				border-line(alpha(blue2,.3))
+				span
+					border-line(alpha(blue2,.3))
 				svg
 					path
 						fill blue2
@@ -1095,7 +1203,9 @@ body
 
 #map
 	width 100%
-	min-height 570px
+	min-height 270px
+	@media (min-width: scr_sm)
+		min-height 570px
 
 p.vacancy
 	font-size 15px
@@ -1157,11 +1267,16 @@ body:not(.index)
 				text-align: center
 				padding 35px 40px 30px
 				color black
-				font-size 18px
-				line-height 26px
+				font-size 16px
+				line-height 20px
+				@media (min-width: scr_sm)
+					font-size 18px
+					line-height 26px
 				big
-					font-size: 26px
+					font-size: 18px
 					margin-bottom 15px
+					@media (min-width: scr_sm)
+						font-size: 26px
 					display inline-block
 		ul
 			margin-top 17px
@@ -1319,8 +1434,11 @@ body:not(.index)
 
 .dropdown
 	.news &
-		float right
-		margin-top 24px
+		margin-bottom 30px
+		margin-left 0
+		@media (min-width: scr_sm)
+			margin-top 24px
+			float right
 	margin-left 5px
 	margin-right -10px
 	position relative
@@ -1335,7 +1453,7 @@ body:not(.index)
 		right 0
 		top 0
 		opacity 0
-		z-index 20
+		z-index -20
 		@media (min-width: scr_md)
 			display none
 	&--open

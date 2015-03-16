@@ -3,21 +3,28 @@
     <?foreach ($arResult['ITEMS'] as $item):?>
 	  <div class="shedule__item">
 	  	<div class="row">
-	  		<div class="col-xs-2">
-	  			<div class="shedule__label">
-	  				Начало
+	  		<div class="col-md-2">
+	  			<div class="row">
+	  				<div class="col-sm-3 col-md-12">
+			  			<div class="shedule__label">
+			  				Начало
+			  			</div>
+			  			<div class="shedule__value">
+			  				<?=date('d.m.Y', strtotime($item['PROPERTIES']['START']["VALUE"]))?>
+			  			</div>
+		  			</div>
+		  			<div class="col-sm-4 col-md-12">
+			  			<div class="shedule__label">
+			  				Конец
+			  			</div>
+			  			<div class="shedule__value">
+			  				<?=date('d.m.Y', strtotime($item['PROPERTIES']['END']["VALUE"]))?>
+			  			</div>
+			  		</div>
 	  			</div>
-	  			<div class="shedule__value">
-	  				<?=date('d.m.Y', strtotime($item['PROPERTIES']['START']["VALUE"]))?>
-	  			</div>
-	  			<div class="shedule__label">
-	  				Конец
-	  			</div>
-	  			<div class="shedule__value">
-	  				<?=date('d.m.Y', strtotime($item['PROPERTIES']['END']["VALUE"]))?>
-	  			</div>
+	  			<div class="shedule__divider visible-sm visible-xs"></div>
 	  		</div>
-	  		<div class="col-xs-10">
+	  		<div class="col-md-10">
 	  			<div class="shedule__label">
 	  				наименование программы (курса) обучения
 	  			</div>

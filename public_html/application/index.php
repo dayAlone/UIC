@@ -17,71 +17,71 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
   <div class="application__frame">
     <div class="application__frame-title">сведения о компании</div>
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-sm-12">
         <label >Полное наименование организации</label>
         <input required type="text" name="company">
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-6">
+      <div class="col-sm-6">
         <label >фамилия, имя, отчество руководителя</label>
         <input required type="text" name="director">
       </div>
-      <div class="col-xs-6">
+      <div class="col-sm-6">
         <label >на основании какого документа действует</label>
         <input required type="text" name="director_document">
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-sm-12">
         <label >адрес организции (с индексом)</label>
         <input required type="text" name="address">
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-3">
+      <div class="col-sm-3">
         <label >инн</label>
         <input required type="text" name="inn">
       </div>
-      <div class="col-xs-3">
+      <div class="col-sm-3">
         <label >кпп</label>
         <input required type="text" name="kpp">
       </div>
-      <div class="col-xs-3">
+      <div class="col-sm-3">
         <label >банк</label>
         <input required type="text" name="bank">
       </div>
-      <div class="col-xs-3">
+      <div class="col-sm-3">
         <label >бик</label>
         <input required type="text" name="bik">
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-6">
+      <div class="col-sm-6">
         <label >расчетный счет</label>
         <input required type="text" name="current_account">
       </div>
-      <div class="col-xs-6">
+      <div class="col-sm-6">
         <label >корреспондентский счет</label>
         <input required type="text" name="bank_account">
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-6">
+      <div class="col-sm-6">
         <label >телефон</label>
         <input required type="text" name="phone" data-parsley-pattern="/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}/" data-parsley-trigger="change">
       </div>
-      <div class="col-xs-6">
+      <div class="col-sm-6">
         <label >факс</label>
         <input required type="text" name="fax" data-parsley-pattern="/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}/" data-parsley-trigger="change">
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-6">
+      <div class="col-sm-6">
         <label >ФИО контактного лица</label>
         <input required type="text" name="fio">
       </div>
-      <div class="col-xs-6">
+      <div class="col-sm-6">
         <label >контактный телефон</label>
         <input required type="text" name="contact_phone" data-parsley-pattern="/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}/" data-parsley-trigger="change">
       </div>
@@ -90,17 +90,17 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
   <div class="application__frame application__frame--short"><div class="application__frame-title">сведения об обучении</div></div>
   <div class="application__tabs">
     <div class="row no-gutter">
-      <div class="col-xs-3"><a href="#tab1" class="application__tabs-item application__tabs-item--active">
+      <div class="col-sm-4 col-lg-3"><a href="#tab1" class="application__tabs-item application__tabs-item--active">
         <input type="radio" name="type" checked value="1">
         Обучение <br>(повышение квалификации) по программе:</a></div>
-      <div class="col-xs-9"><a href="#tab2" class="application__tabs-item ">
+      <div class="col-sm-8 col-lg-9"><a href="#tab2" class="application__tabs-item ">
         <input type="radio" name="type" value="2">
         Повышение квалификации по программе “методы наразрушающего контроля: автоматизированный ультразвуковой контроль при строительстве объектов промысловых и магистральных газопроводов ОАО ”газпром”</a></div>
     </div>
   </div>
   <div class=" l-margin-bottom application__frame application__tabs-content" id="tab1">
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-sm-12">
         <select name="programm" required class="application__chosen" data-placeholder="Выберите программу обучения">
           <option value=""></option>
           <?
@@ -118,11 +118,11 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-2">
-        <label >кол-во человек</label>
+      <div class="col-sm-2">
+        <label ><nobr>кол-во человек</nobr></label>
         <input required type="text" name="count">
       </div>
-      <div class="col-xs-9 col-xs-offset-1">
+      <div class="col-sm-9 col-sm-offset-1">
         <label >желаемый срок обучения</label>
         <label class="application__label application__label--small">начало</label>
         <input required type="text" name="date_start" class="application__input application__input--small" data-provide="datepicker" data-date-format="dd.mm.yyyy" data-date-language="ru" placeholder="<?=date('d.m.Y')?>">
@@ -131,7 +131,7 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-sm-12">
         <label >Дата предыдущего обучения (повышении квалификации), № удостоверения, уровень допуска, кем выдано (если раннее обучался)</label>
         <input required type="text" name="last_education">
       </div>
@@ -139,10 +139,10 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
   </div>
   <div class=" l-margin-bottom application__frame application__tabs-content application__tabs-content--disable" id="tab2">
     <div class="row">
-      <div class="col-xs-4">
+      <div class="col-sm-4">
         <label class="application__label application__label--small">на базе установки аузк </label>
       </div>
-      <div class="col-xs-8">
+      <div class="col-sm-8">
         <input type="radio" id="type1" name="base">
         <label class="application__label application__label--small" for="type1" value="argovision">argovision</label>
         <input type="radio" id="type2" name="base">
@@ -153,31 +153,31 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
     </div>
     <div class="application__divider"></div>
     <div class="row">
-      <div class="col-xs-6">
+      <div class="col-sm-6">
         <label >фио слушателя</label>
         <input type="text" name="fio2">
       </div>
-      <div class="col-xs-6">
+      <div class="col-sm-6">
         <label >профессия (должность) слушателя</label>
         <input type="text" name="profession">
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-6">
+      <div class="col-sm-6">
         <label >имеющийся уровень по узк</label>
         <input type="text" name="level">
       </div>
-      <div class="col-xs-6">
+      <div class="col-sm-6">
         <label >номер удостоверения по узк и дата выдачи</label>
         <input type="text" name="number">
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-6">
+      <div class="col-sm-6">
         <label >опыт работы по узк</label>
         <input type="text" name="skills">
       </div>
-      <div class="col-xs-6">
+      <div class="col-sm-6">
         <label >желаемый срок обучения</label>
         <label class="application__label application__label--small xxs-margin-left">начало</label>
         <input type="text" name="date_start2" class="application__input application__input--small"  data-provide="datepicker" data-date-format="dd.mm.yyyy" data-date-language="ru" placeholder="<?=date('d.m.Y')?>">
@@ -193,10 +193,10 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
     </small>
   </div>
   <div class="row">
-    <div class="col-xs-3">
-      <label  class="application__label application__label--rows">введите, пожалуйста<br>защиный код</label>
+    <div class="col-sm-2">
+      <label  class="application__label application__label--rows application__label--smallest">введите, пожалуйста<br>защиный код</label>
     </div>
-    <div class="col-xs-3">
+    <div class="col-sm-3">
       <?
         include_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/classes/general/captcha.php");
         $cpt = new CCaptcha();
@@ -210,11 +210,11 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
         <?=svg('refresh')?>
       </a>
     </div>
-    <div class="col-xs-3">
+    <div class="col-sm-4">
       <label class="application__label application__label--small">сюда</label>
       <input required type="text" name="captcha_word" class="application__input application__input--small">
     </div>
-    <div class="col-xs-3">
+    <div class="col-sm-3">
       <input type="submit" value="отправить заявку">
     </div>
   </div>

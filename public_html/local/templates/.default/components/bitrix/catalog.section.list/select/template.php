@@ -22,8 +22,8 @@ if(count($arResult['SECTIONS'])>1):?>
 		<a href="/application/individual/<?=($_REQUEST['id']?"?id=".$_REQUEST['id']:"")?>" <?=($arParams["TYPE"]=='ind'?'style="display:none"':'')?> class="dropdown__item">от физического лица</a>
 	</span>
 	<select class="dropdown__select">
-		<option value="/application/<?=($_REQUEST['id']?"?id=".$_REQUEST['id']:"")?>">от юридического лица</option>
-		<option value="/application/individual/<?=($_REQUEST['id']?"?id=".$_REQUEST['id']:"")?>">от физического лица</option>
+		<option value="/application/<?=($_REQUEST['id']?"?id=".$_REQUEST['id']:"")?>" <?=($arParams["TYPE"]=='ur'?'selected':'')?>>от юридического лица</option>
+		<option value="/application/individual/<?=($_REQUEST['id']?"?id=".$_REQUEST['id']:"")?>" <?=($arParams["TYPE"]=='ind'?'selected':'')?>>от физического лица</option>
 	</select>
 </span>
 <?$this->EndViewTarget();?>

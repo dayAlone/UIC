@@ -11,7 +11,7 @@ if($arParams['BLOCK']):?>
 		  </div>
 		<?endforeach;?>
 		<?if(isset($arParams['MORE_TEXT'])):?>
-		<a href="<?=$arParams['MORE_LINK']?>" class="<?=$arParams['CLASS']?>__more"><?=svg('arrow4')?> <?=$arParams['MORE_TEXT']?></a>
+		<a href="<?=$arParams['MORE_LINK']?>" class="<?=$arParams['CLASS']?>__more"><?=svg('arrow4')?> <span><?=$arParams['MORE_TEXT']?></span></a>
 		<?endif;?>
 	</div>
 	<?

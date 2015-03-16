@@ -2,22 +2,28 @@
 	<div class="page__sidebar">
 		<div class="page__picture" style="background-image: url(<?=$_GLOBALS['BG_IMAGE']?>)"></div>
 		<div class="page__sidebar-content">
+			<div class="row">
 			<?if(!$APPLICATION->GetPageProperty('hide_application')):?>
-			<a href="/application/" class="block block--application">
-				<span class="block__content">
-					<?=svg('application')?>
-					Заполнить заявку<br>на обучение
-				</span>
-			</a>
+			<div class="<?=(!$APPLICATION->GetPageProperty('hide_shedule')?"col-xs-6":"col-xs-12 center")?> col-md-12">
+				<a href="/application/" class="block block--application">
+					<span class="block__content">
+						<?=svg('application')?>
+						Заполнить заявку<br>на обучение
+					</span>
+				</a>
+			</div>
 			<?endif;?>
 			<?if(!$APPLICATION->GetPageProperty('hide_shedule')):?>
-			<a href="/shedule/" class="block block--shedule">
-				<span class="block__content">
-					<?=svg('shedule')?>
-					Расписание<br>обучения
-				</span>
-			</a>
+			<div class="<?=(!$APPLICATION->GetPageProperty('hide_application')?"col-xs-6":"col-xs-12 center")?> col-md-12">
+				<a href="/shedule/" class="block block--shedule">
+					<span class="block__content">
+						<?=svg('shedule')?>
+						Расписание<br>обучения
+					</span>
+				</a>
+			</div>
 			<?endif;?>
+			</div>
 			<?if($APPLICATION->GetPageProperty('show_courses')):?>
 				<?
 				global $shedule;

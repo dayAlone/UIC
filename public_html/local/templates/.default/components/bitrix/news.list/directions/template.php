@@ -18,8 +18,10 @@ function showItems($items)
         <div class="row">
           <div class="col-xs-2">
           <?if(strlen($item['PROPERTIES']['CODE']['VALUE']['TEXT'])>0):?>
-            <div class="directions-list__label">Код<br>профессии</div>
-            <div class="directions-list__value"><?=$item['PROPERTIES']['CODE']['VALUE']?></div>
+            <div class="directions-list__code">
+              <div class="directions-list__label">Код<br>профессии</div>
+              <div class="directions-list__value"><?=$item['PROPERTIES']['CODE']['VALUE']?></div>
+            </div>
           <?endif;?>
           <a class="directions-list__application" data-target="#checkType" data-toggle="modal" href="#checkType" data-id="<?=$item['ID']?>"><?=svg('application')?><br>заполнить заявку <br>на этот <br>курс</a>
           </div>
