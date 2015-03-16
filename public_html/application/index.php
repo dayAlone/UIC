@@ -102,7 +102,7 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
     <div class="row">
       <div class="col-sm-12">
         <select name="programm" required class="application__chosen" data-placeholder="Выберите программу обучения">
-          <option value=""></option>
+          <option value="">Выберите программу обучения</option>
           <?
              $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "select", array(
                 "IBLOCK_TYPE"  => "news",
@@ -142,13 +142,19 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
       <div class="col-sm-4">
         <label class="application__label application__label--small">на базе установки аузк </label>
       </div>
-      <div class="col-sm-8">
+      <div class="col-sm-8 col-xs-12">
+      <span class="iradio__frame">
         <input type="radio" id="type1" name="base">
         <label class="application__label application__label--small" for="type1" value="argovision">argovision</label>
+      </span>
+      <span class="iradio__frame">
         <input type="radio" id="type2" name="base">
         <label class="application__label application__label--small" for="type2" value="pipe wizard">pipe wizard</label>
+      </span>
+      <span class="iradio__frame">  
         <input type="radio" id="type3" name="base">
         <label class="application__label application__label--small" for="type3" value="weld star">weld star</label>
+      </span>
       </div>
     </div>
     <div class="application__divider"></div>
@@ -193,10 +199,10 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
     </small>
   </div>
   <div class="row">
-    <div class="col-sm-2">
+    <div class="col-sm-2 col-xs-5">
       <label  class="application__label application__label--rows application__label--smallest">введите, пожалуйста<br>защиный код</label>
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-3 col-xs-7">
       <?
         include_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/classes/general/captcha.php");
         $cpt = new CCaptcha();
@@ -210,7 +216,7 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
         <?=svg('refresh')?>
       </a>
     </div>
-    <div class="col-sm-4">
+    <div class="col-xs-7 col-xs-offset-5 col-sm-4">
       <label class="application__label application__label--small">сюда</label>
       <input required type="text" name="captcha_word" class="application__input application__input--small">
     </div>

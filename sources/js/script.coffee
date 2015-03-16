@@ -29,9 +29,10 @@ size = ->
 
 	heights = []
 	$('.application__tabs-item').removeAttr 'style'
-	$.each $('.application__tabs-item'), ()->
-		heights.push $(this).height()
-	$('.application__tabs-item').height Math.max.apply(Math,heights)
+	if $(window).width() >= 600
+		$.each $('.application__tabs-item'), ()->
+			heights.push $(this).height()
+		$('.application__tabs-item').height Math.max.apply(Math,heights)
 
 	if $(window).width() > 992
 		if $('.page__sidebar').length > 0

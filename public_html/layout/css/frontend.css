@@ -8291,9 +8291,11 @@ body {
 .application__frame + .application__frame {
   margin-top: 30px;
 }
-.application__input + .application__label,
-.parsley-errors-list + .application__label {
-  margin-left: 20px;
+@media (min-width: 768px) {
+  .application__input + .application__label,
+  .parsley-errors-list + .application__label {
+    margin-left: 20px;
+  }
 }
 .application__label {
   float: left;
@@ -8310,18 +8312,22 @@ body {
     font-size: 11px;
   }
 }
-.application__label--small {
+label.application__label--small {
   line-height: 39px;
   padding-right: 10px;
   width: auto !important;
+  margin-top: 0 !important;
+  max-height: 30px;
 }
 .application__input--small {
   padding: 0 5px !important;
   text-align: center;
   width: 95px !important;
 }
-.application__tabs-content {
-  margin-top: 0 !important;
+@media (min-width: 768px) {
+  .application__tabs-content {
+    margin-top: 0 !important;
+  }
 }
 .application__tabs-content--disable {
   display: none;
@@ -8336,8 +8342,13 @@ body {
   float: left;
   width: 100%;
   border: 1px solid #eb3037;
-  padding: 35px 25px;
+  padding: 5px 15px 15px;
   position: relative;
+}
+@media (min-width: 768px) {
+  .application__frame {
+    padding: 35px 25px;
+  }
 }
 .application__frame small {
   font-size: 10px;
@@ -8361,6 +8372,17 @@ body {
   text-transform: uppercase;
   color: #1d2a3a;
   font-size: 12px;
+  margin-top: 20px;
+  float: left;
+  clear: both;
+  min-width: 85px;
+}
+@media (min-width: 768px) {
+  .application__frame label {
+    margin-top: 0;
+    float: none;
+    clear: none;
+  }
 }
 @media (min-width: 1200px) {
   .application__frame label {
@@ -8374,8 +8396,10 @@ body {
 .application__frame .row > [class*='col-'] {
   padding: 0 5px;
 }
-.application__frame .row+.row {
-  margin-top: 25px;
+@media (min-width: 768px) {
+  .application__frame .row+.row {
+    margin-top: 25px;
+  }
 }
 .application__frame-title {
   position: absolute;
@@ -8419,10 +8443,29 @@ body {
 .application .iradio:first-of-type {
   margin-left: -20px;
 }
+@media (max-width: 768px) {
+  .application .iradio__frame {
+    padding-left: 25px;
+    float: left;
+    width: 100%;
+  }
+}
+.application .iradio + label {
+  float: none;
+}
 .application .dropdown {
-  width: 135%;
-  float: right;
-  margin-top: 19px;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-left: 0px;
+}
+@media (min-width: 768px) {
+  .application .dropdown {
+    margin-left: 0;
+    margin-top: 19px;
+    margin-bottom: 0;
+    width: 135%;
+    float: right;
+  }
 }
 .application .dropdown__text {
   width: 94%;
@@ -8437,9 +8480,27 @@ body {
   padding-top: 35px;
   background: #96adbc;
 }
+.application select {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background: #a3b6c2;
+  text-transform: uppercase;
+  border: 0;
+  line-height: 35px;
+  padding: 0 10px;
+  height: 30px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 15px;
+}
 .application input[type="submit"] {
   float: right;
-  width: 120%;
+  width: 100%;
   line-height: 37px;
   height: 35px;
   background: #e8333d;
@@ -8452,6 +8513,13 @@ body {
   appearance: none;
   -webkit-border-radius: 0;
   border-radius: 0;
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .application input[type="submit"] {
+    width: 120%;
+    margin-top: 0;
+  }
 }
 .bx-ios .application input[type="submit"] {
   padding-top: 2px;
@@ -8487,6 +8555,12 @@ body {
   margin-bottom: -1px;
   position: relative;
   z-index: 2;
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .application__tabs {
+    margin-top: 0;
+  }
 }
 .application__tabs .no-gutter {
   margin: 0;
@@ -8498,9 +8572,14 @@ body {
   font-size: 12px;
   text-transform: uppercase;
   color: #96adbc;
-  padding: 15px 15px 10px 55px;
+  padding: 15px 15px 10px 35px;
   background: #fff;
   position: relative;
+}
+@media (min-width: 768px) {
+  .application__tabs-item {
+    padding: 15px 15px 10px 55px;
+  }
 }
 @media (min-width: 992px) {
   .application__tabs-item {
@@ -8515,22 +8594,29 @@ body {
 }
 .application__tabs-item .iradio {
   position: absolute;
-  left: 23px;
+  left: 3px;
   margin: 0 !important;
   top: 14px;
   pointer-events: none;
 }
-.application__tabs-item--active {
-  border: 1px solid #e8333d;
-  border-bottom: 0px;
-  color: #1d2a3a;
+@media (min-width: 768px) {
+  .application__tabs-item .iradio {
+    left: 23px;
+  }
 }
-.application__tabs-item--active:hover {
-  color: #1d2a3a;
-}
-.application__tabs-item--active:after {
-  border-color: #9eb3c1;
-  background: #e11238;
+@media (min-width: 768px) {
+  .application__tabs-item--active {
+    border: 1px solid #e8333d;
+    border-bottom: 0px;
+    color: #1d2a3a;
+  }
+  .application__tabs-item--active:hover {
+    color: #1d2a3a;
+  }
+  .application__tabs-item--active:after {
+    border-color: #9eb3c1;
+    background: #e11238;
+  }
 }
 .iradio {
   float: left;

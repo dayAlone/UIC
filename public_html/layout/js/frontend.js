@@ -32607,10 +32607,12 @@ var pp_alreadyInitialized = false; // Used for the deep linking to make sure not
     var heights;
     heights = [];
     $('.application__tabs-item').removeAttr('style');
-    $.each($('.application__tabs-item'), function() {
-      return heights.push($(this).height());
-    });
-    $('.application__tabs-item').height(Math.max.apply(Math, heights));
+    if ($(window).width() >= 600) {
+      $.each($('.application__tabs-item'), function() {
+        return heights.push($(this).height());
+      });
+      $('.application__tabs-item').height(Math.max.apply(Math, heights));
+    }
     if ($(window).width() > 992) {
       if ($('.page__sidebar').length > 0) {
         if ($('.page__sidebar').height() > $('.page__picture').height() + $('.page__sidebar-content').height()) {
