@@ -17,25 +17,25 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
   <div class="application__frame">
     <div class="application__frame-title">персональные сведения</div>
     <div class="row">
-      <div class="col-sm-10">
+      <div class="col-sm-9 col-md-10">
         <label for="">фамилия, имя, отчество</label>
         <input required type="text" name="fio">
       </div>
-      <div class="col-sm-2">
+      <div class="col-sm-3 col-md-2">
         <label for="">дата рождения</label>
         <input required type="text" name="bith" data-provide="datepicker" data-date-format="dd.mm.yyyy" data-date-language="ru">
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-2">
+      <div class="col-sm-2 col-md-2">
         <label for="">серия и номер</label>
         <input required type="text" name="passport_number">
       </div>
-      <div class="col-sm-2">
+      <div class="col-sm-2 col-md-2">
         <label for="">дата выдачи</label>
         <input required type="text" name="passport_date">
       </div>
-      <div class="col-sm-8">
+      <div class="col-sm-7 col-md-8">
         <label for="">кем выдан</label>
         <input required type="text" name="passport_who">
       </div>
