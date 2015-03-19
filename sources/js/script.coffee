@@ -164,11 +164,24 @@ setCaptcha = (code)->
 	$('.captcha').css 'background-image', "url(/include/captcha.php?captcha_sid=#{code})"
 
 init_popup = ->
+	###
 	$('a[rel^="prettyPhoto"]').prettyPhoto
 		social_tools: ''
 		overlay_gallery: false
 		deeplinking: false
-
+	###
+	$('.gallery').elem('item').on 'click', (e)->
+		pswpElement = document.querySelectorAll('.pswp')[0];
+		items = $('.gallery').elem('slider').data('images')
+		console.log items
+		galleryOptions = 
+			history : false
+			focus   : false
+			shareEl : false
+			index   : $(this).data('index')
+		gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, galleryOptions);
+		gallery.init();
+		e.preventDefault()
 $(document).ready ->
 
 	$('.application').elem('tabs-item').click (e)->

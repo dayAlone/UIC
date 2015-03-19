@@ -79,7 +79,7 @@
    },
    "slick":{
       "js":"/slick/slick/slick.js",
-      "css":"/slick/slick/slick.css"
+      "css":["/slick/slick/slick.css","/slick/slick/slick-theme.css"]
    },
    "slimmenu":{
       "js":"/slimmenu/jquery.slimmenu.js"

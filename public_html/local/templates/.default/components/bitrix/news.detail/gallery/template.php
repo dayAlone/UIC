@@ -5,7 +5,7 @@ $this->setFrameMode(true);
 	<div class="gallery__title">
 		<span>фотогалерея</span>
 	</div>
-	<div class="gallery__slider">
-    <?foreach ($arResult['PHOTOS'] as $img):?><div class="gallery__item"><a href="<?=$img['value']?>" rel="prettyPhoto[]" style="background-image: url(<?=$img['small']?>)"></a></div><? endforeach;?>
+	<div class="gallery__slider" data-images='<?=json_encode($arResult['PHOTOS'])?>'>
+    <?foreach ($arResult['PHOTOS'] as $key=>$img):?><div class="gallery__item" data-index="<?=$key?>"><a href="#" style="background-image: url(<?=$img['small']?>)"></a></div><? endforeach;?>
     </div>
 </div>

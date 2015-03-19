@@ -32793,10 +32793,27 @@ var pp_alreadyInitialized = false; // Used for the deep linking to make sure not
   };
 
   init_popup = function() {
-    return $('a[rel^="prettyPhoto"]').prettyPhoto({
-      social_tools: '',
-      overlay_gallery: false,
-      deeplinking: false
+
+    /*
+    	$('a[rel^="prettyPhoto"]').prettyPhoto
+    		social_tools: ''
+    		overlay_gallery: false
+    		deeplinking: false
+     */
+    return $('.gallery').elem('item').on('click', function() {
+      var gallery, galleryOptions, items, pswpElement;
+      pswpElement = document.querySelectorAll('.pswp')[0];
+      items = $('.gallery').elem('slider').data('images');
+      console.log(items);
+      galleryOptions = {
+        history: false,
+        focus: false,
+        shareEl: false,
+        index: $(this).data('index')
+      };
+      gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, galleryOptions);
+      gallery.init();
+      return e.preventDefault();
     });
   };
 
