@@ -111,7 +111,7 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
         <?=svg('refresh')?>
       </a>
     </div>
-    <div class="col-xs-7 col-xs-offset-5 col-sm-4">
+    <div class="col-xs-7 col-xs-offset-5 col-sm-4 col-sm-offset-0">
       <label class="application__label application__label--small">сюда</label>
       <input required type="text" name="captcha_word" class="application__input application__input--small">
     </div>

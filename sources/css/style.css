@@ -4630,10 +4630,67 @@ body {
 .page .application {
   margin-top: 20px;
 }
+.page .application input[type="submit"] {
+  float: right;
+  width: 100%;
+  line-height: 37px;
+  height: 35px;
+  background: #e8333d;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .page .application input[type="submit"] {
+    width: 120%;
+    margin-top: 0;
+  }
+}
+.bx-ios .page .application input[type="submit"] {
+  padding-top: 2px;
+}
+.page .application input[type="text"],
+.page .application input[type="email"] {
+  background: #eaeef3;
+  float: left;
+  width: 100%;
+  border: 1px solid #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  line-height: 38px;
+  height: 35px;
+  padding: 0 15px;
+  -webkit-box-shadow: inset 1px 1px 2px 0 #b6b8bc;
+  box-shadow: inset 1px 1px 2px 0 #b6b8bc;
+}
+.page .application input[type="text"].parsley-error,
+.page .application input[type="email"].parsley-error {
+  border: 1px solid #e8333d !important;
+}
+.page .application input[type="text"]::-webkit-input-placeholder,
+.page .application input[type="email"]::-webkit-input-placeholder {
+  line-height: 38px !important;
+}
 .application__frame + .application__frame {
   margin-top: 30px;
 }
 @media (min-width: 768px) {
+  .application__input + .application__label,
+  .parsley-errors-list + .application__label {
+    margin-left: 10px;
+  }
+}
+@media (min-width: 1200px) {
   .application__input + .application__label,
   .parsley-errors-list + .application__label {
     margin-left: 20px;
@@ -4656,15 +4713,34 @@ body {
 }
 label.application__label--small {
   line-height: 39px;
-  padding-right: 10px;
+  padding-right: 5px;
   width: auto !important;
   margin-top: 0 !important;
   max-height: 30px;
+  font-size: 11px !important;
+}
+@media (min-width: 1200px) {
+  label.application__label--small {
+    font-size: 13px !important;
+    padding-right: 10px;
+  }
 }
 .application__input--small {
   padding: 0 5px !important;
   text-align: center;
-  width: 95px !important;
+}
+@media (min-width: 768px) {
+  .application__input--small {
+    float: none !important;
+    width: 74px !important;
+    font-size: 12px;
+  }
+}
+@media (min-width: 1200px) {
+  .application__input--small {
+    width: 90px !important;
+    font-size: 14px;
+  }
 }
 @media (min-width: 768px) {
   .application__tabs-content {
@@ -4724,6 +4800,7 @@ label.application__label--small {
     margin-top: 0;
     float: none;
     clear: none;
+    min-width: 0;
   }
 }
 @media (min-width: 1200px) {
@@ -4780,14 +4857,16 @@ label.application__label--small {
   margin-top: 9px;
   position: relative;
   margin-right: 5px;
-  margin-left: 25px;
 }
 .application .iradio:first-of-type {
   margin-left: -20px;
 }
+.application .iradio__frame {
+  float: left;
+  margin-left: 25px;
+}
 @media (max-width: 768px) {
   .application .iradio__frame {
-    padding-left: 25px;
     float: left;
     width: 100%;
   }
@@ -4839,57 +4918,6 @@ label.application__label--small {
   font-weight: bold;
   color: #fff;
   margin-top: 15px;
-}
-.application input[type="submit"] {
-  float: right;
-  width: 100%;
-  line-height: 37px;
-  height: 35px;
-  background: #e8333d;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  border: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  margin-top: 20px;
-}
-@media (min-width: 768px) {
-  .application input[type="submit"] {
-    width: 120%;
-    margin-top: 0;
-  }
-}
-.bx-ios .application input[type="submit"] {
-  padding-top: 2px;
-}
-.application input[type="text"],
-.application input[type="email"] {
-  background: #eaeef3;
-  float: left;
-  width: 100%;
-  border: 1px solid #fff;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  line-height: 38px;
-  height: 35px;
-  padding: 0 15px;
-  -webkit-box-shadow: inset 1px 1px 2px 0 #b6b8bc;
-  box-shadow: inset 1px 1px 2px 0 #b6b8bc;
-}
-.application input[type="text"].parsley-error,
-.application input[type="email"].parsley-error {
-  border: 1px solid #e8333d !important;
-}
-.application input[type="text"]::-webkit-input-placeholder,
-.application input[type="email"]::-webkit-input-placeholder {
-  line-height: 38px !important;
 }
 .application__tabs {
   float: left;
@@ -5157,6 +5185,11 @@ label.application__label--small {
   }
 }
 @media (min-width: 992px) {
+  .directions-tabs__title {
+    line-height: 17px;
+  }
+}
+@media (min-width: 1200px) {
   .directions-tabs__title {
     font-size: 15px;
     line-height: 20px;
@@ -6700,7 +6733,7 @@ body:not(.index) .page__content li a:hover:hover {
   filter: alpha(opacity=0);
   z-index: -20;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .dropdown__select {
     display: none;
   }
