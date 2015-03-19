@@ -4233,6 +4233,12 @@ body {
   -o-transition-duration: 0.3s;
   -ms-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  display: none;
+}
+@media (min-width: 992px) {
+  .page__picture {
+    display: block;
+  }
 }
 .page__sidebar {
   height: 100%;
