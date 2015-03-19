@@ -8434,6 +8434,11 @@ article {
     max-width: 80%;
   }
 }
+@media (min-width: 992px) {
+  .toolbar .logo svg {
+    max-width: 70%;
+  }
+}
 @media (min-width: 1200px) {
   .toolbar .logo svg {
     max-width: 220px;
@@ -10834,8 +10839,15 @@ body:not(.index) .page__content img {
 }
 body:not(.index) .page__content img.left,
 body:not(.index) .page__content img.right {
-  max-width: 45%;
+  width: 100%;
   margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  body:not(.index) .page__content img.left,
+  body:not(.index) .page__content img.right {
+    max-width: 45%;
+    width: auto;
+  }
 }
 body:not(.index) .page__content img.left {
   float: left;
