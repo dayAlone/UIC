@@ -27,7 +27,7 @@ $APPLICATION->SetPageProperty('hide_application', 'true');
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-2 col-md-2">
+      <div class="col-sm-3 col-md-2">
         <label for="">серия и номер</label>
         <input required type="text" name="passport_number">
       </div>
