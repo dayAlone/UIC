@@ -1,6 +1,6 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
-$APPLICATION->SetPageProperty('section', array('IBLOCK'=>1, 'CODE'=>'news', "NOEMPTY"=>true));
+$APPLICATION->SetPageProperty('section', array('IBLOCK'=>1, 'CODE'=>'news', "NOEMPTY"=>true, 'SORT'=>array('NAME'=>'DESC')));
 $APPLICATION->SetPageProperty('hide_right', true);
 $APPLICATION->SetPageProperty('show_courses', 'true');
 require($_SERVER['DOCUMENT_ROOT'].'/include/section.php');
