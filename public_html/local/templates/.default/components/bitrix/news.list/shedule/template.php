@@ -14,7 +14,7 @@
 			  			</div>
 		  			</div>
 		  			<div class="col-sm-4 col-md-12">
-			  			<div class="shedule__label">
+			  			<div class="shedule__label l-margin-top-md">
 			  				Конец
 			  			</div>
 			  			<div class="shedule__value">

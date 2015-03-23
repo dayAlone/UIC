@@ -226,7 +226,7 @@
     		overlay_gallery: false
     		deeplinking: false
      */
-    return $('.gallery').elem('item').on('click', function() {
+    return $('.gallery').elem('item').on('click', function(e) {
       var gallery, galleryOptions, items, pswpElement;
       pswpElement = document.querySelectorAll('.pswp')[0];
       items = $('.gallery').elem('slider').data('images');
