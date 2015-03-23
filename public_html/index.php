@@ -17,10 +17,10 @@ $APPLICATION->SetPageProperty('body_class', "index");
 	</div>
 	<div class="col-xs-12 col-sm-6 col-md-4">
 		<div class="block block--courses">
-			<h2>Ближайшие курсы</h2>
+			<h2>График обучения</h2>
 			<?
 			global $shedule;
-			$shedule = array(">=PROPERTY_START"=>date('Y-m-d')." 00:00:00");
+			$shedule = array(">=PROPERTY_END" => date('Y-m-d')." 00:00:00");
 			$APPLICATION->IncludeComponent(
 			  "bitrix:news.list", 
 			  "news_index",
