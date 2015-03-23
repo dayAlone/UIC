@@ -5768,6 +5768,7 @@ label.application__label--small {
   text-align: left;
   max-height: 40px;
   position: relative;
+  white-space: nowrap;
   top: -2px;
 }
 .block--students .students__number {
