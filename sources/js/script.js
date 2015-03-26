@@ -245,6 +245,20 @@
 
   $(document).ready(function() {
     var closeDropdown, mapInit, openDropdown, timer, x;
+    $('.news-item').elem('small-image').on('click', function(e) {
+      var gallery, galleryOptions, items, pswpElement;
+      pswpElement = document.querySelectorAll('.pswp')[0];
+      items = $('.news-item').elem('gallery').data('images');
+      galleryOptions = {
+        history: false,
+        focus: false,
+        shareEl: false,
+        index: $(this).data('index')
+      };
+      gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, galleryOptions);
+      gallery.init();
+      return e.preventDefault();
+    });
     $('.application').elem('tabs-item').click(function(e) {
       var id;
       id = $(this).attr('href');

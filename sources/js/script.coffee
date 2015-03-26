@@ -184,6 +184,18 @@ init_popup = ->
 		e.preventDefault()
 $(document).ready ->
 
+	$('.news-item').elem('small-image').on 'click', (e)->
+		pswpElement = document.querySelectorAll('.pswp')[0];
+		items = $('.news-item').elem('gallery').data('images')
+		galleryOptions = 
+			history : false
+			focus   : false
+			shareEl : false
+			index   : $(this).data('index')
+		gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, galleryOptions);
+		gallery.init();
+		e.preventDefault()
+
 	$('.application').elem('tabs-item').click (e)->
 		id = $(this).attr('href')
 		$('.application').elem('tabs-item').mod('active', false)
